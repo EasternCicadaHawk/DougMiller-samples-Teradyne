@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="CMS;SNMP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>SNMP screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's SNMP screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#snmp_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor91"></a>
+            <MadCap:concept term="Screens &amp; commands" />SNMP screen</h1>
+        <p>Click <span class="ControlName">CMS</span> &gt; <span class="ControlName">SNMP</span> in the web UI tool bar to display the SNMP screen for configuring the site's SNMP behavior. The same functionality is accessible via the CLI command <span class="CLIcommand">set snmp</span>.</p>
+        <p>The SNMP screen provides these controls:</p>
+        <ul>
+            <li value="1">Agent – Display the Agent screen for configuring the SNMP agent used by the <span class="VariablesApplicationNameShort">CMS</span>.<ul><li value="1">Enabled – Click this to activate the SNMP agent.</li><li value="2">IP – Specify the IP address on which the SNMP agent will listen for notifications. Keep the default.</li><li value="3">UDP Port – Specify the UDP port that the SNMP agent will use for communicating. The default is 161.</li></ul></li>
+            <li value="2">System – Type descriptive information for the person responsible for administering SNMP for this <span class="VariablesApplicationNameShort">CMS</span>.<ul><li value="1">Contact</li><li value="2">Name</li><li value="3">Location</li></ul></li>
+            <li value="3">Target – Display the Target screen to define a destination for the SNMP traps that the <span class="VariablesApplicationNameShort">CMS</span> sends.<ul><li value="1">Name – A descriptive name for the trap recipient.</li><li value="2">IP – The trap recipient's IP address.</li><li value="3">UDP Port – The UDP port on which the recipient listens for traps. The default is 162.</li><li value="4">Tag – Any specific tag values used to identify the recipient address.</li><li value="5">Timeout – This is for SNMP v3 only.</li><li value="6">Retries – This is for SNMP v3 only.</li><li value="7">Engine ID – This is for SNMP v3 only.</li></ul></li>
+            <li value="4">Community – Display the Community screen for defining a new SNMP community.<ul><li value="1">Index</li><li value="2">Name</li><li value="3">Sec Name</li><li value="4">Target Tag</li></ul></li>
+            <li value="5">Notify – Display the Notify screen for defining additional notification targets.</li>
+        </ul>
+    </body>
+</html>

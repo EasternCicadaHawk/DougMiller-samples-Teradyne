@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Overload Control Statistics Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Overload Control Statistics.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193599"></a>Overload Control Statistics Type</h3>
+        <p>Every 60 seconds the CMS creates a report that summarizes overload control statistics for packet processing on the Defense appliances. The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p>
+            <div style="margin-left: 9pt;margin-top: 10.15pt;width: 477pt;height: 63.1pt;visibility: visible;mso-height-relative: margin;v-text-anchor: middle;">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.corero.com cat=network,type=overload, v=1,cl=all,pg=all,iod=0,iodr=0,eop=134343,eopr=743,</p>
+            </div>
+        </p>
+        <p class="TableCaption">Example Overload Control Statistics Message</p>
+        <p>The specific content for the overload control message is:</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type </p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cat</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>network</p>
+                </td>
+                <td>
+                    <p>Network event category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>overload</p>
+                </td>
+                <td>
+                    <p>Overload control statistics</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group of these statistics</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ingress-overload-drops</p>
+                </td>
+                <td>
+                    <p>iod</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of packets dropped at ingress due to overload processing </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ingress-overload-drop-rate</p>
+                </td>
+                <td>
+                    <p>iodr</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Current ingress overload drop rate</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>egress-overload-packets</p>
+                </td>
+                <td>
+                    <p>eop</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of packets egressed directly due to overload processing </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>egress-overload-packet-rate</p>
+                </td>
+                <td>
+                    <p>eopr</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Current egress overload occurrence rate</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

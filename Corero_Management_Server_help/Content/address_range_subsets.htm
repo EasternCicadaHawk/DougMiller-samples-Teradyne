@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>IP Address Range Subsets</title>
+        <meta name="description" content="Describes the rules defining IP address ranges that are enclosed within larger address ranges, and using those subsets in client group and server group definitions." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#address_range_subsets.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor48"></a>
+            <MadCap:concept term="Explanations" />IP Address Range Subsets</h1>
+        <p>When defining <a href="host_group_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the host group glossary definition">host groups</a>, it is possible to specify ranges of IP addresses that are subsets of other address ranges, as long as each subset is completely enclosed within its superset, and no address is a member of more than one range. Subsets can exist within the same host group, or they can be used to define other host groups. A range can consist of a single address. Overlapping address ranges are not allowed. This is useful if you need to create a specialized profile for a subset of clients or servers.</p>
+        <h2>Address Range Rules and Examples</h2>
+        <p>An address range can be defined as a numerical range (e.g., 10.1.1.1 - 10.1.1.255) or as a block (10.1.1/24). A single address can constitute a range, as well. A single IP address needs to be removed explicitly from one host group in order to be added to another.</p>
+        <p>Some examples follow, using two host groups (Hg1 and Hg2):</p>
+        <ul>
+            <li value="1">Hg1: 10.1.1.100; Hg2: 10.1.1.100 - 10.1.1.125 <span class="Italics">This does not overlap; the single address gets moved from the smaller range to the larger range.</span></li>
+            <li value="2">Hg1: 10.1.1.125; Hg2: 10.1.1.100 – 10.1.1.150 <span class="Italics">This does not overlap; the single address gets moved from the smaller range to the larger range.</span></li>
+            <li value="3">Hg1: 10.1.1.125; Hg2: 10.1.1.100 – 10.1.1.125 <span class="Italics">This does not overlap; the single address gets moved from the smaller range to the larger range.</span></li>
+            <li value="4">Hg1: 10.0.0.0 – 10.255.255.255; Hg2 – 10.1.0.1 10.1.0.100 <span class="Italics">This does not overlap; the second range is completely enclosed within the first range.</span></li>
+            <li value="5">Hg1: 10.1.0.10 – 10.1.1.20; Hg2: 10.1.1.15 10.1.1.25 <span class="Italics">The second range overlaps with the first, and this is not allowed.</span></li>
+            <li value="6">Hg1: 10.1.0.10 - 10.1.1.20; Hg2: 10.1.1.20 10.1.1.25 <span class="Italics">The second range overlaps with the first, and this is not allowed.</span></li>
+        </ul>
+        <h2>Viewing IP Address Range Definitions in the <span class="VariablesApplicationNameShort">CMS</span> UI</h2>
+        <p>In the <span class="VariablesApplicationNameShort">CMS</span> web UI, each server group and client group has a column next to its name titled <span class="ControlName">Has Subsets</span>, which indicates whether one or more of the address ranges that make up that host group is a superset of any other address ranges. In the Server Addresses &amp; Ranges tab (for server groups) and the Client Addresses &amp; Ranges tab (for client groups), there is one column for the IP Address/Range, and another column, Subset Ranges Overview, that provides a graphical representation of any subsets that have been defined. Floating the cursor over one of these bars displays a balloon summarizing the subset ranges that have been defined, as well as the names of the associated host groups.</p>
+        <p>The CLI command <span class="CLIcommand">show defense address-summary host-group</span> summarizes in text, for each server group and each client group (including the default server and client groups), the following address range information:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Configured Ranges</span> – The address ranges that have been explicitly configured.</li>
+            <li value="2"><span class="ControlName">Enclosing Ranges</span> – The address ranges that enclose other ranges.</li>
+            <li value="3"><span class="ControlName">Enclosing Hosts</span> – The server or client groups that enclose the address ranges</li>
+            <li value="4"><span class="ControlName">Actual Ranges</span> – The effective address ranges.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>IP Option Exploit</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#ip_option_attack_def.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor194"></a>
+            <MadCap:concept term="Explanations" />Crafted IP Option Attack</h1>
+        <h2>Definition</h2>
+        <p>A.k.a., the "Christmas tree" attack. In this attack, IP packets sent to the target have all of their possible options set, including combinations that are invalid. Used singly or in small numbers, these packets are useful as probes, as they can be used to determine what services reside on which interfaces at the target. Used in large numbers, these packets constitute a denial of service attack, as it takes the target a considerable amount of time to sort through all the options specified in each packet.</p>
+        <h2>Observable characteristics</h2>
+        <p>Rule cns-003006 triggers, indicating invalid TCP packets arriving at the interface.</p>
+        <h2>Method of response</h2>
+        <p>Block packets bearing flag combinations outside of a set of known valid combinations.</p>
+        <h2><span class="VariablesApplicationNameShort">CMS</span> configuration steps</h2>
+        <p>None? Enabled by default?</p>
+        <h2>Relevant SmartWall rules</h2>
+        <p>This rule pertains to this attack type:</p>
+        <ul>
+            <li value="1">cns-003006: TCP frame header contains illegal flag combinations</li>
+        </ul>
+    </body>
+</html>

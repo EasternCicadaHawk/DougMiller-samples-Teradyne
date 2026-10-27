@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Syslog Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Interface Statistics Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Interface Statistics Type.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3">Interface Statistics Type</h3>
+        <p>Every 60 seconds the CMS creates a report that summarizes interface statistics for the external (from the Internet) and internal (toward the firewall and servers) ports of the protection groups on the Defense appliances. The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p class="FigureLegend"><span class="span_6">Example Interface </span><span class="span_6">Statistics </span><span class="span_6">Message</span>
+        </p>
+        <p>
+            <div style="height: 63.1pt;width: 477pt;" class="div_4">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.toplayer.com cat=network,type=interface, v=1,cl=all,pg=all,eprp=230922943,eptp=181472787,eprb=207772986979,eptb=61164066743,epbrr=4,epprr=670,epptr=443,epbtr=0,ipptr=670,ipbtr=4,ipprr=443,ipbrr=0,iprp=181473093,iptp=230922664, iprb=61164161900,iptb=207772844918,</p>
+            </div>
+        </p>
+        <p>The specific content for the interface statistics message is:</p>
+        <table class="TableStyle-ProcedureTable" style="mc-table-style: url('../Resources/TableStyles/ProcedureTable.css');" cellspacing="0">
+            <col style="width: 105pt;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 76pt;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 117pt;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 186pt;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p class="p_4">Field Name</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p class="p_4">Short Name</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p class="p_4">Specific Value / Type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p class="p_4">Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Category</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>cat</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>network</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Network event category</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>interface</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Protection group interface input and output usage statistics</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Version</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>v</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Cluster</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>cl</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Text</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Protection Group</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>pg</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Text</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The protection group of these statistics</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-packet-receive-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>epprr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate rate in packets per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-bit-receive-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>epbrr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate rate in Mbits per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-packet-transmit-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>epptr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate rate in packets per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-bit-transmit-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>epbtr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate rate in Mbits per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-packet-receive-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>ipprr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate rate in packets per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-bit-receive-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>ipbrr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate rate in Mbits per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-packet-transmit-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>ipptr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate rate in packets per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-bit-transmit-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>ipbtr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate rate in Mbits per second</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-received-packets</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>eprp</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-transmitted-packets</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>eptp</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate count </p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-received-bytes</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>eprb</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>external-port-transmitted-bytes</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>eptb</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>External mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-received-packets</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>iprp</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-transmitted-packets</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>iptp</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-received-bytes</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>iprb</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>internal-port-transmitted-bytes</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>iptb</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Internal mission port(s) aggregrate count</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

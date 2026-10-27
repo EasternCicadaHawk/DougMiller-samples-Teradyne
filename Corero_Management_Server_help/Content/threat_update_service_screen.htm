@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Threat Update screen</title>
+        <meta name="description" content="This topic describes the controls that are present in the Threat Update screen. These configure how the CMS communicates with Corero's Threat Update Service server for obtaining Protection Packs and Intelligence Packs to keep your site's threat definitions up to date." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#threat_update_service_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor23"></a>
+            <MadCap:concept term="Screens &amp; commands" /><a name="aanchor24"></a>
+            <MadCap:concept term="How to" />Threat Update screen</h1>
+        <p><a name="kanchor17"></a>The Threat Update screen enables you to configure the means by which the <span class="VariablesApplicationNameShort">CMS</span> will obtain updates to its threat definitions via <a href="protection_pack_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Protection Pack glossary definition">Protection Packs</a> and <a href="intelligence_pack_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Intelligence Pack glossary definition">Intelligence Packs</a>. You must have a valid <span class="VariablesThreatUpdater">Threat Update Service</span> license to be able to obtain these updates.</p>
+        <p>Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Threat Update Service</span> in the web UI tool bar to display the Threat Update screen. Access the same functionality in the CLI with the <span class="CLIcommand">set threat-update</span> command.</p>
+        <p><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <p>The Threat Update screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">License Key</span> – Type your <span class="VariablesThreatUpdater">Threat Update Service</span> license key. The CLI equivalent for this is <span class="CLIcommand">set threat-update license-key</span>.</li>
+            <li value="2"><span class="ControlName">Threat Update Server Address</span> – This is set explicitly to "tus.corero-cns.com", and cannot be modified.</li>
+            <li value="3"><span class="ControlName">Threat Update Schedule</span> – Click this link to display the <a href="threat_update_schedule_screen.htm" target="_self" title="Show the description of the Threat Update Schedule screen and its controls" alt="Show the description of the Threat Update Schedule screen and its controls">Threat Update Schedule screen</a> for specifying the frequency with which the <span class="VariablesApplicationNameShort">CMS</span> will seek <span class="VariablesThreatUpdater">Threat Update Service</span> updates from the server and push them to managed <span class="VariablesProtectionDevice">Defense appliance</span>s. You can choose to query and push updates every hour (the default), every day at a certain time, or at some custom interval. The CLI equivalent for this is <span class="CLIcommand">set threat-update threat-update-schedule</span>.</li>
+            <li value="4">License Information – This section displays information about the <span class="VariablesThreatUpdater">Threat Update Service</span> license associated with your license key. This includes the license's expiration date, current status, and the number of days remaining until it expires.</li>
+        </ul>
+    </body>
+</html>

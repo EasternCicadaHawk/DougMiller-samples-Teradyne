@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Push Files To Device screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Push Files/Images to Device screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#push_files_to_device.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor77"></a>
+            <MadCap:concept term="Screens &amp; commands" />Push Images To Device screen</h1>
+        <p>Clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Push Images To Device</span> in the web UI tool bar displays the Push Images To Device screen. This screen enables you to distribute a variety of different image file types to the <span class="VariablesPlatformNameShort">appliance</span>s in your site, including <a href="upgrading_software.htm" target="_self" title="Learn how to upgrade software on Corero devices" alt="Learn how to upgrade software on Corero devices" class="Popup">software upgrades</a>.</p>
+        <p>This screen enables you to upgrade the software on any <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span>:</p>
+        <ul>
+            <li value="1"><span class="VariablesPlatformNameLong">SmartWall Network Threat Defense Appliance</span>
+            </li>
+            <li value="2"><span class="VariablesBypassDeviceLong">SmartWall Network Bypass Appliance</span>
+            </li>
+            <li value="3"><span class="VariablesPcapDeviceLong">SmartWall Network Forensics Appliance</span>
+            </li>
+        </ul>
+        <p><span class="b">NOTE:</span> Make sure to <span class="ControlName">Save</span> your configuration after using this screen to make any changes to ensure that information about those changes is retained properly. For example, if you upload a file to the <span class="VariablesApplicationNameShort">CMS</span> for distribution to <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span>s, but exit the <span class="VariablesApplicationNameShort">CMS</span> before saving the configuration change, the file will be present in the directory to which it was uploaded, but will not be shown in <span class="VariablesApplicationNameShort">CMS</span> configuration.</p>
+        <p>The following information is shown for each image file, regardless of its type:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Name</span>
+            </li>
+            <li value="2"><span class="ControlName">URL</span>
+            </li>
+            <li value="3"><span class="ControlName">Date</span>
+            </li>
+            <li value="4"><span class="ControlName">Status</span>
+            </li>
+        </ul>
+        <p>The following controls are provided for handling the images:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Add</span> button – Display the Upload dialog to acquire a file that can be distributed to one or more <span class="VariablesPlatformNameShort">appliance</span>s. <br /><span class="Italics" data-mc-conditions="Default.804Issue">In the current release, you need to browse for the image in your local file system, rather than specifying its URL.</span></li>
+            <li value="2"><span class="ControlName">Delete</span> button – Select a file to remove it from the configuration and the directory in which it is stored.</li>
+            <li value="3"><span class="ControlName">Push selected file to</span> – Indicate whether the selected file will be pushed to every <span class="VariablesPlatformNameShort">appliance</span> in the site or to a single specific <span class="VariablesPlatformNameShort">appliance</span> only. Activate this button by selecting an image in the list.</li>
+            <li value="4"><span class="ControlName">Push File</span> button – Click this to execute the transfer of the selected file to the specified <span class="VariablesPlatformNameShort">appliance</span>s. Activate this button by selecting an image in the list.</li>
+        </ul>
+        <p>Upon being pushed to an <span class="VariablesPlatformNameShort">appliance</span>, the image is transferred, and it takes some time until it runs actively on the appliance. Go to the Device Status screen to verify that the applaince is back up and running the expected version of software.</p>
+    </body>
+</html>

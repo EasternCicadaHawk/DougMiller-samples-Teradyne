@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist" data-mc-ignored-words="clientgroupname;ipaddressrange;countryname;profilename;cmsipaddress;zzz">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configure Client Groups</title>
+        <meta name="description" content="Instructions for defining lists of IP addresses or countries for which incoming traffic is handled the same by the Corero appliances. " />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_client_groups.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor15"></a>
+            <MadCap:concept term="How to" />Configure Client Groups</h1>
+        <p data-mc-conditions="Default.RestAPI"><a name="kanchor9"></a>A client group is a list of IP addresses or countries from which incoming traffic is handled the same way by the <span class="VariablesPlatformNameShort">appliance</span>s.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Client Groups</span> in the web UI tool bar to display the <a href="client_groups_screen.htm" target="_self" title="See the description of the Client Groups screen and its controls" alt="See the description of the Client Groups screen and its controls">Client Groups screen</a> for defining and managing client groups. Alternatively, you can configure client groups using the CLI command <span class="CLIcommand">set defense profiles client-group</span>.</p>
+        <p data-mc-conditions="Default.RestAPI">The <span class="VariablesApplicationNameShort">CMS</span> provides a single built-in client group named, "IP addresses not in a specific group". This is a default, catch-all client group that implicitly contains all client IP addresses that are not explicitly included in another client group. To be clear: a client IP address that is not explicitly included in a user-defined client group is implicitly included in the built-in client group named, "IP addresses not in a specific group".</p>
+        <p data-mc-conditions="Default.notRESTAPI">Modify these settings to configure a client group:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0" data-mc-conditions="Default.notRESTAPI">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="3">Create the client group.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click <span class="ControlName">Add</span> above the list of client group names to display the Add New Group dialog.
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Type the client group name, specify its type (<span class="ControlName">IP Addresses</span> or <span class="ControlName">Geographical Locations</span>), and click <span class="ControlName">Add</span> to create the group.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles client-group <span class="CLIcommandItalic">clientgroupname</span> group-type [ip | geographic]</span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Type the name of the client group and specify whether it is an IP group or a geographic group.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles/client-groups -d '{"client-group": {"name": "<span class="CLIcommandItalic">clientgroupname</span>"} }' --header "Content-Type:application/vnd.yang.data+json"</span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Specify the name of the client group.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="3">Specify which IP addresses or countries are members of the client group, or members of any <a href="address_range_subsets.htm" target="_self" title="Show the explanation of IP address range subsets" alt="Show the explanation of IP address range subsets">IP address range subsets</a> that you want to define.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Select the client group name and click the <span class="ControlName">Client Addresses and Ranges</span> tab, then click <span class="ControlName">Add</span> to display the Add IP Address Range dialog or the Add Country dialog (as appropriate for the client group type).</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        For an IP address client group, type the address or address range and click <span class="ControlName">Add</span> to include it in the group. For a geographic client group, choose one or more countries to include, then click <span class="ControlName">Add</span>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span>
+                        <p><span class="CLIcommand">set defense profiles client-group <span class="CLIcommandItalic">clientgroupname</span> addresses <span class="CLIcommandItalic">ipaddressrange</span></span>
+                            <br />OR<br /><span class="CLIcommand">set defense profiles client-group <span class="CLIcommandItalic">clientgroupname</span> countries <span class="CLIcommandItalic">countryname</span></span></p>
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1" rowspan="2">
+                        Type the IP addresses or country names to include as members of the client group.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles/client-groups/client-group/<span class="CLIcommandItalic">clientgroupname</span> -d '{"client-addresses": {"ip-address": "<span class="CLIcommandItalic">ipaddressrange</span>"} }' --header "Content-Type:application/vnd.yang.data+json"</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="3">Specify the threshold and limit values that make up the client profile.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Select the client group name and click the <span class="ControlName">Thresholds &amp; Limits</span> tab.</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Choose an existing profile or specify custom values as necessary. The values are explained in the <a href="client_groups_screen.htm" target="_self" title="See the description of the Client Groups screen and its controls" alt="See the description of the Client Groups screen and its controls">Client Groups screen</a>.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <br />Specify an existing profile:<br /><span class="CLIcommand">set defense profiles client-group <span class="CLIcommandItalic">clientgroupname</span> assigned-profiles [connection-limit | packet-rate-limit | syn-flood]</span><br />OR create a custom profile:<br /><span class="CLIcommand">set defense profiles client-profiles [connection-limit | packet-rate-limit | syn-flood] <span class="CLIcommandItalic">profilename</span></span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Specify an existing profile by name or specify custom values as necessary. <span class="Italics">Note that the CLI exposes that the various threshold and limit values are actually divided between different types of profiles. Note also that profiles are assigned using a different command than that used to define them.</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">REST&#160;API</span>: <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles/client-profiles -d '{"syn-flood-profile": {"name": "<span class="CLIcommandItalic">profilename</span>", "trusted-threshold": "60", "suspicious-threshold": "70", "suspicious-exit-threshold": "65", "malicious-threshold": "90", "proxy-requests-from-unknown-ip": "true"} }' --header "Content-Type:application/vnd.yang.data+json"</span> <![CDATA[ ]]></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">&#160;</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1"><span class="Italics">Optional:</span> Export the client profile for re-use later.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click the link at the bottom of the <span class="ControlName">Thresholds &amp; Limits</span> tab to display the Add New Shared Profile dialog.
+                        <p><span class="UIname">CLI:</span> The CLI handles client profiles separately from client groups, so there's no reason to export the profile explicitly.</p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Type the name of the file to which you want to export the profile settings.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI: </span><span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span> <span class="UIname">REST API:</span> <span class="ControlName">Save</span>/<span class="CLIcommand">commit</span> occurs automatically upon execution of the cURL command.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p data-mc-conditions="Default.notRESTAPI">Return to the <a href="basic_configuration_checklist.htm" target="_self" title="Show the basic configuration checklist" alt="Show the basic configuration checklist">Basic Configuration Checklist</a> if you're configuring your site for the first time.</p>
+    </body>
+</html>

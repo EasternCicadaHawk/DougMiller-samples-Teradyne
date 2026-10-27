@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Rule Reference</title>
+        <meta name="description" content="A breif description of the rules provided in the SmartWall Threat Defense System." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#Rule_Overview.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor150"></a>
+            <MadCap:concept term="Explanations" />Rule Reference</h1>
+        <p>Rules are an essential building block of server protection. They are constructed to identify traffic that may be suspicious in origin, malicious in intent, and harmful in its results. Some rules define very strict conditions that you may not want to apply to every host, while other rules address definite known issues that should be applied universally. You can create a named set of rules, modify the treatment applied to individual rules within the set, and then use the named rule set as a component when defining server protection instances.</p>
+        <p><span class="b">NOTE:</span> Changing rule settings can affect system operation adversely. Consult with <span class="VariablesCompanyName">Corero Network Security</span> before changing these settings.</p>
+        <h2>Security Event Category</h2>
+        <p>Every rule begins with a five-character security event category prefix that enables you to sort by prefix anywhere a list of rules appears. Security event category prefixes and their descriptions follow. Broadly, each category describes two dimensions: whether the identified threat is application-based or network-based (this is the "APP" or "NET" portion of the prefix), and whether the nature of the threat involves access restrictions (AR), rate limits (RL), protocol validation (PV), or integrity analysis (IA).</p>
+        <ul>
+            <li value="1"> ARAPP - Access Restrictions (application threats; layer 7)</li>
+            <li value="2">
+                ARNET - Access Restrictions (network threats; layer 2 through layer 4)</li>
+            <li value="3">
+                RLAPP - Rate Limits (application threats; layer 7)</li>
+            <li value="4">
+                RLNET - Rate Limits (network threats; layer 2 through layer 4)</li>
+            <li value="5">
+                PVAPP - Protocol Validation (application threats; layer 7)</li>
+            <li value="6">
+                PVNET - Protocol Validation (network threats; layer 2 through layer 4)</li>
+            <li value="7">
+                IAAPP - Integrity Analysis (application threats; layer 7)</li>
+            <li value="8">
+                IANET - Integrity Analysis (network threats; layer 2 through layer 4)</li>
+        </ul>
+        <p>Each rule definition includes a short description and a long description.</p>
+    </body>
+</html>

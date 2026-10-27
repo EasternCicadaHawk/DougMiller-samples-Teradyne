@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Syslog Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Common keywords</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Common keywords.htm">Show search and navigation tools</a>
+        </p>
+        <h4 class="Heading4">Common keywords</h4>
+        <p>There are several keywords that appear in the different messages. When these names appear, they can always be interpreted as defined below.</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Syslog Short Name </p>
+                </td>
+                <td>
+                    <p>Definition</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Category</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>All messages start with the category of the message.&#160; The types are security, network, system, ops, diags, rt</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>Type within the category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Version of the Corero Syslog message format</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>The cluster of protection-groups in which the appliance is configured.&#160; The value “all” is used when data from all clusters are aggregated in the message</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>The protection group in which the appliance is operating. The value “all” is used when data from all protection groups are aggregated in the message</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Device/Appliance Name</p>
+                </td>
+                <td>
+                    <p>aname</p>
+                </td>
+                <td>
+                    <p>The name provisioned for a Corero Network device/appliance</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>IP</p>
+                </td>
+                <td>
+                    <p>ip</p>
+                </td>
+                <td>
+                    <p>An IP address.&#160; It could be a source or destination based on the conString of the message</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Source IP address</p>
+                </td>
+                <td>
+                    <p>sip</p>
+                </td>
+                <td>
+                    <p>The source IP address of a data packet that was processed in some way to create this data</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Destination IP address</p>
+                </td>
+                <td>
+                    <p>dip</p>
+                </td>
+                <td>
+                    <p>The destination IP address of a data packet that was processed in some way to create this data</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Source Port</p>
+                </td>
+                <td>
+                    <p>sprt</p>
+                </td>
+                <td>
+                    <p>The source IP port of a data packet that was processed in some way to create this data</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Destination Port</p>
+                </td>
+                <td>
+                    <p>dprt</p>
+                </td>
+                <td>
+                    <p>The destination IP port of a data packet that was processed in some way to create this data</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Packet Length</p>
+                </td>
+                <td>
+                    <p>plen</p>
+                </td>
+                <td>
+                    <p>The length of the packet including the Ethernet header but not including the 4-byte CRC </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>IP Packet Length</p>
+                </td>
+                <td>
+                    <p>iplen</p>
+                </td>
+                <td>
+                    <p>The length of the IP packet including the IP header</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Rule Name</p>
+                </td>
+                <td>
+                    <p>rule</p>
+                </td>
+                <td>
+                    <p>The Corero security event rule name </p>
+                    <p>(e.g. cns-001005)</p>
+                </td>
+            </tr>
+        </table>
+        <p class="TableCaption">Common Types</p>
+        <h4 class="Heading4">Multiple values or entries</h4>
+        <p>When there are multiple entries associated with the data in a message, e.g. a top-sip report of the top 10 source IP addresses observed over the the last time period, the different entries are indicated by the index number appended directly to the name, e.g. </p>
+        <p class="SyslogExample">ip1=3.4.5.6,ip2=5.6.7.8,ip3=1.2.3.4,ip4=2.3.4.5.&#160; </p>
+        <p>This is less structured than is possible in other representations of tabular data such as through an XML or JSON, but this is designed to allow for quick summarization via name* wildcarding.&#160;&#160; More sophisticated structures can be parsed by common tools, but plugins and additional tools are often required to perform the processing.</p>
+    </body>
+</html>

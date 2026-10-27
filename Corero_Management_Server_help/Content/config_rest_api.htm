@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Welcome to the CMS" data-mc-conditions="Default.RestAPI" data-mc-ignored-words="cmsipaddress">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Using the REST&#160;API</title>
+        <meta name="description" content="Describes how to use the REST&#160;API for accessing resources in the CMS&#160;data model." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_rest_api.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor9"></a>
+            <MadCap:concept term="How to" />Using the REST&#160;API</h1>
+        <p>The <span class="VariablesApplicationName">Corero Management Server</span> supports the use of a REST&#160;API over HTTP for performing configuration and monitoring tasks. You can use a variety of REST tools to exercise the API; the descriptions in this help set center around the UNIX/Linux command line tool, cURL, and the Postman REST client for the Google Chrome web browser.</p>
+        <h2>Supported HTTP Methods</h2>
+        <p data-mc-conditions="">The <span class="VariablesApplicationNameShort">CMS</span> REST server supports these HTTP methods:</p>
+        <ul>
+            <li value="1" data-mc-conditions="">GET – Retrieve a representation of a known resource. The XML representation has the list or container name as the XML document root.</li>
+            <li value="2" data-mc-conditions="">PATCH – Edit a known resource.</li>
+            <li value="3" data-mc-conditions="">POST – POST to the parent resource to create a new resource. The XML document root element specifies which resource is created. The new resource URI is returned in the "Location" HTTP header.</li>
+            <li value="4" data-mc-conditions="">DELETE – Remove a known resource.</li>
+        </ul>
+        <p data-mc-conditions="">You can use either XML or JSON format, both for data IN (PATCH or POST) and data OUT (GET).</p>
+        <h3>GET Request query parameters</h3>
+        <p>These parameters are supported for use with GET requests to provide more specific control over which resources should be returned from the request.</p>
+        <p>Use "?" to separate the parameter from the resource path. For example, <span class="CLIcommand">curl -k -v -u admin:admin https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense/profiles/service-protocols/service-protocol-group?deep --header "Accept: application/vnd.yang.data+json"</span></p>
+        <ul>
+            <li value="1">deep – Retrieve a resource and all its subresources.</li>
+            <li value="2">shallow – Retrieve a resource and none of its subresources.</li>
+            <li value="3">offset – Retrieve a subset of resources.</li>
+            <li value="4">limit – Retrieve a subset of resources.</li>
+            <li value="5">select – Specify exactly which nodes and subresources to retrieve from a resource.</li>
+        </ul>
+        <h2>HTTP Return Codes</h2>
+        <p>The REST server supports the following HTTP return codes:</p>
+        <ul>
+            <li value="1">200 – <span class="Italics">OK</span>. The request was successfully completed, and a response body is returned containing a representation of the resource.</li>
+            <li value="2">201 – <span class="Italics">Created</span>. A resource was created, and the new resource URI is returned in the "Location" header.</li>
+            <li value="3">202 – <span class="Italics">Accepted</span>. The request has been accepted, but has not been executed, and may not be executed at all.</li>
+            <li value="4">204 – <span class="Italics">No Content</span>. The request was completed successfully, but no response is returned.</li>
+            <li value="5">400 – <span class="Italics">Bad Request</span>. The request could not be processed because it contains missing or invalid information (such as a validation error on an input field, a missing required value, and so on).</li>
+            <li value="6">404 – <span class="Italics">Not Found</span>. The requested resource does not exist.</li>
+            <li value="7">406 – <span class="Italics">Not Acceptable</span>. The resource identified by this request is not capable of generating the requested representation, specified in the "Accept" header or in the "format" query parameter.</li>
+            <li value="8">409 – <span class="Italics">Conflict</span>. This code is used if a request tries to create a resource that already exists.</li>
+        </ul>
+        <h2>Media Type</h2>
+        <p>The media type of the resources exposed through the REST&#160;API is "application/vnd.yang.datastore".</p>
+        <h2>Secure and Insecure Connections</h2>
+        <p>Connections to the <span class="VariablesApplicationNameShort">CMS</span> web UI are made over SSL and port 443. When accessing the <span class="VariablesApplicationNameShort">CMS</span> via REST, you need  either to specify a certificate that will verify your identity to the <span class="VariablesApplicationNameShort">CMS</span>, or to use the <span class="Italics">-k/--insecure</span> option to execute the cURL command using a default certificate. For brevity, the examples shown throughout this help set use the <span class="Italics">-k/--insecure</span> option.</p>
+        <h2>Learning the <span class="VariablesApplicationNameShort">CMS</span> Data Model</h2>
+        <p>Resources are exposed to the REST API through the <span class="VariablesApplicationNameShort">CMS</span> <a href="Data_Models.htm" target="_self" title="Overview of CMS data models" alt="Overview of CMS data models">data model</a>, and it is necessary to be familiar with the data model in order to exercise the API effectively and use it to execute commands for retrieving data or configuring appliances. Prior to assembling a script or application that will execute numerous or complex instructions via the REST API, it is helpful to become familiar with the data model and the API at a smaller scale, by executing individual requests using cURL or a browser client.</p>
+        <p>One way of learning the <span class="VariablesApplicationNameShort">CMS</span> data model is by using the <span class="VariablesApplicationNameShort">CMS</span> CLI. to execute commands. While the <span class="VariablesApplicationNameShort">CMS</span> web UI sometimes abstracts the data model in order to collect multiple related resources in a single screen, CLI commands always match the corresponding nodes in the data model in a one-to-one manner. Another helpful approach to learning the <span class="VariablesApplicationNameShort">CMS</span> data model is to prepare a configuration using the <span class="VariablesApplicationNameShort">CMS</span> (using either the web UI or the CLI), then using  HTTP GET over the REST&#160;API to retrieve all or a portion of that configuration. This gives you a clear, reliable template that you can edit and use subsequently to modify the configuration via HTTP POST&#160;or PATCH.</p>
+        <p>The data model is structured in hierarchical levels such that it is easy to access multiple resources that reside at a single level, but it is difficult to work with resources across different levels.</p>
+        <h3 data-mc-conditions="">Resources</h3>
+        <p>The available resources reside under /api, as either "running" or "operational", and are accessible via XML or JSON. The media type of the resources is "application/vnd.yang.datastore".</p>
+        <h4 data-mc-conditions="">operational</h4>
+        <p>The read-only "operational" resource represents the device's state data. Use this resource with the GET method to view the existing data model and configuration.</p>
+        <h4>running</h4>
+        <p>The "running" resource represents the running configuration datastore, and is present on all devices. Use this resource with the POST, PATCH, and DELETE methods to create or change things.</p>
+        <h2>Simple Tools: cURL and REST Clients</h2>
+        <p>The UNIX/Linux command line tool, cURL, provides a simple means of composing and transmitting REST requests, though it lacks some of the amenities provided by browser-based REST clients (such as Postman) that can make it easier to compose requests.</p>
+        <p>The examples in this section use the Postman extension for Google Chrome, but any REST client plug-in for any major web browser probably will provide the functionality you need. You can download the Postman REST client from Google's Chrome Web Store.</p>
+        <h3>Using a REST Client</h3>
+        <p>An example Postman screen:</p>
+        <p>
+            <img src="Graphics/postman_basic_617x436.png" style="width: 617;height: 436;" />
+        </p>
+        <p>A Postman screen with the Basic Authentication header shown:</p>
+        <p>
+            <img src="Graphics/postman_auth_610x427.png" style="width: 610;height: 427;" />
+        </p>
+        <p>One good way of becoming familiar with the data model is to use a REST client to perform a GET of some or all of an existing <span class="VariablesApplicationNameShort">CMS</span> configuration.</p>
+        <p>This example shows the use of the GET method to obtain the default AAA configuration from the <span class="VariablesApplicationNameShort">CMS</span>:</p>
+        <ul>
+            <li value="1">Type <span class="CLIcommand">https://<span class="CLIcommandItalic">cmsipaddress</span>:443/api/running/aaa?deep</span> in the URL field</li>
+            <li value="2">Choose <span class="ControlName">GET</span> as the method</li>
+            <li value="3">Specify the content type: <span class="CLIcommand">application/vnd.yang.data+xml</span></li>
+            <li value="4">Click <span class="ControlName">SEND</span> to initiate the query.</li>
+        </ul>
+        <p>The result will look approximately like this:</p>
+        <p class="RESTexample">&lt;aaa xmlns="http://tail-f.com/ns/aaa/1.1" xmlns:y="http://tail-f.com/ns/rest"  xmlns:aaa="http://tail-f.com/ns/aaa/1.1"&gt;</p>
+        <p class="RESTexample">&lt;authentication&gt;</p>
+        <p class="RESTexample">&lt;users&gt;</p>
+        <p class="RESTexample">&lt;user&gt;</p>
+        <p class="RESTexample">&lt;name&gt;admin&lt;/name&gt;</p>
+        <p class="RESTexample">&lt;uid&gt;9251&lt;/uid&gt;</p>
+        <p class="RESTexample">&lt;gid&gt;9251&lt;/gid&gt;</p>
+        <p class="RESTexample">&lt;password&gt;$1$zjFs9SD/$qt7GOBe9y87zo5f3psJAu/&lt;/password&gt;</p>
+        <p class="RESTexample">&lt;ssh_keydir&gt;/var/corero/homes/admin/.ssh&lt;/ssh_keydir&gt;</p>
+        <p class="RESTexample">&lt;homedir&gt;/var/corero/homes/admin&lt;/homedir&gt;</p>
+        <p class="RESTexample">&lt;/user&gt;</p>
+        <p class="RESTexample">&lt;user&gt;</p>
+        <p class="RESTexample">&lt;name&gt;support&lt;/name&gt;</p>
+        <p class="RESTexample">&lt;uid&gt;9250&lt;/uid&gt;</p>
+        <p class="RESTexample">&lt;gid&gt;9250&lt;/gid&gt;</p>
+        <p class="RESTexample">&lt;password&gt;$1$dH2fOcDQ$wBECONVrKEN25GlSxpVIX/&lt;/password&gt;</p>
+        <p class="RESTexample">&lt;ssh_keydir&gt;/var/corero/homes/support/.ssh&lt;/ssh_keydir&gt;</p>
+        <p class="RESTexample">&lt;homedir&gt;/var/corero/homes/support&lt;/homedir&gt;</p>
+        <p class="RESTexample">&lt;/user&gt;</p>
+        <p class="RESTexample">&lt;/users&gt;</p>
+        <p class="RESTexample">&lt;/authentication&gt;</p>
+        <p class="RESTexample">&lt;external-authentication xmlns="http://www.corero.com/extauth"&gt;</p>
+        <p class="RESTexample">&lt;/external-authentication&gt;</p>
+        <p class="RESTexample">&lt;/aaa&gt;</p>
+        <p>Use the results of the GET request in the previous example as a template for changing the password of the admin user:</p>
+        <p class="RESTexample">&lt;aaa xmlns="http://tail-f.com/ns/aaa/1.1" xmlns:y="http://tail-f.com/ns/rest"  xmlns:aaa="http://tail-f.com/ns/aaa/1.1"&gt;</p>
+        <p class="RESTexample">&lt;authentication&gt;</p>
+        <p class="RESTexample">&lt;users&gt;</p>
+        <p class="RESTexample">&lt;user&gt;</p>
+        <p class="RESTexample">&lt;name&gt;admin&lt;/name&gt;</p>
+        <p class="RESTexample">&lt;uid&gt;9251&lt;/uid&gt;</p>
+        <p class="RESTexample">&lt;gid&gt;9251&lt;/gid&gt;</p>
+        <p class="RESTexample">&lt;password&gt;adminpassword&lt;/password&gt;</p>
+        <p class="RESTexample">&lt;ssh_keydir&gt;/var/corero/homes/admin/.ssh&lt;/ssh_keydir&gt;</p>
+        <p class="RESTexample">&lt;homedir&gt;/var/corero/homes/admin&lt;/homedir&gt;</p>
+        <p class="RESTexample">&lt;/user&gt;</p>
+        <p class="RESTexample">&lt;/users&gt;</p>
+        <p class="RESTexample">&lt;/authentication&gt;</p>
+        <p class="RESTexample">&lt;/aaa&gt;</p>
+        <p>This example uses the results of the GET request in the first example as a template for adding a new user named "supv":</p>
+        <p class="RESTexample">&lt;aaa xmlns="http://tail-f.com/ns/aaa/1.1" xmlns:y="http://tail-f.com/ns/rest"  xmlns:aaa="http://tail-f.com/ns/aaa/1.1"&gt;</p>
+        <p class="RESTexample">&lt;authentication&gt;</p>
+        <p class="RESTexample">&lt;users&gt;</p>
+        <p class="RESTexample">&lt;user&gt;</p>
+        <p class="RESTexample">&lt;name&gt;supv&lt;/name&gt;</p>
+        <p class="RESTexample">&lt;uid&gt;875&lt;/uid&gt;</p>
+        <p class="RESTexample">&lt;gid&gt;80&lt;/gid&gt;</p>
+        <p class="RESTexample">&lt;password&gt;supvpassword&lt;/password&gt;</p>
+        <p class="RESTexample">&lt;ssh_keydir&gt;/var/corero/homes/supv/.ssh&lt;/ssh_keydir&gt;</p>
+        <p class="RESTexample">&lt;homedir&gt;/var/corero/homes/supv&lt;/homedir&gt;</p>
+        <p class="RESTexample">&lt;/user&gt;</p>
+        <p class="RESTexample">&lt;/users&gt;</p>
+        <p class="RESTexample">&lt;/authentication&gt;</p>
+        <p class="RESTexample">&lt;/aaa&gt;</p>
+        <h3>Considerations For Using a REST Client</h3>
+        <p>Some considerations to bear in mind when using a REST client such as Postman:</p>
+        <ul>
+            <li value="1">Authenticate to your <span class="VariablesApplicationNameShort">CMS</span> first using the browser associated with your REST client. Also, make certain to enter your credentials in the <span class="ControlName">Basic Auth</span> tab.</li>
+            <li value="2">Type the URI and choose the HTTP method from the pulldown menu.</li>
+            <li value="3">Use the <span class="ControlName">raw</span> tab for viewing and composing content.</li>
+            <li value="4">Some REST clients may display more markup content than others. When using GET to retrieve resources to use as a template, you may find it best to edit out all markup that does not pertain explicitly to the resource you want to modify.</li>
+        </ul>
+        <h2>REST Examples</h2>
+        <p>Some simple examples follow. These are intended to illustrate the execution of some different basic tasks using the REST&#160;API, and are not intended to demonstrate a comprehensive configuration.</p>
+        <p>The REST&#160;API examples provided in this help set's procedural topics use cURL for two reasons: 1.) it's a convenient way of including the REST command along with the corresponding web UI and CLI commands, and, 2.) the cURL syntax indicates each resource's position in the <span class="VariablesApplicationNameShort">CMS</span> data model more explicitly than the corresponding syntax entered into a REST client session. This, in turn, is part of why you may find it more comfortable and effective to use such a REST client, and <span class="VariablesCompanyNameShort">Corero</span> encourages you to do so, unless you are already familiar with cURL and prefer it.</p>
+        <p>In general, when using the REST&#160;API:</p>
+        <ul>
+            <li value="1">For the REST&#160;API, <span class="ControlName">Save</span>/<span class="CLIcommand">commit</span> occurs automatically upon execution of each request.</li>
+            <li value="2">As with the web UI and the CLI, you can type an IP address range as a spread of IP addresses (200.1.1.1 - 200.1.1.255), with a subnet mask (200.1.1.0 255.255.255.0), or as an offset (200.1.1.0/24).</li>
+        </ul>
+        <p>There are several things to note in these examples, specifically:</p>
+        <ul>
+            <li value="1">For simplicity, each example shows the built-in admin user account being used along with the default admin account password of "admin", shown in cleartext. Make certain to take appropriate security precautions when using passwords for your own accounts.</li>
+            <li value="2">The examples uses the "running" resource, except for the one that demonstrates the display of defense statistics. That example uses the "operational" resource.</li>
+            <li value="3">Note the differences in the headers that are used for GET and POST/PATCH operations, specifying the format of each operation.</li>
+        </ul>
+        <h3>Perform&#160;a GET of all resources at a single level</h3>
+        <p>This example shows how all resources at a single level are obtained at once; note that this request does not obtain subresources:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X GET https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense --header "Accept: application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Perform a recursive GET of all resources</h3>
+        <p>This example shows how all resources and their corresponding subresources are obtained at once. Note how the "?deep" parameter is appended to the GET request to cause it to be recursive:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X GET https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/site?deep --header "Accept: application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Display a List of Connected Devices</h3>
+        <p>This example shows the use of the GET method to display a list of devices connected to the <span class="VariablesApplicationNameShort">CMS</span>.</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:smartwall  -X GET https://<span class="CLIcommandItalic">cmsipaddress</span>:443/api/operational/site/topology-settings/device-list --header "Accept: application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Enable/disable a rule</h3>
+        <p>This example shows the PATCH method used to change the configuration of an existing rule. (It shows rule CNS-000006 being disabled.)</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X PATCH https://<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense/profiles/rule-groups/packet-rules/rule/ -d '{"rule": {"rule-name": "cns-000006", "admin-state": "disabled"} }' --header "Content-Type:application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Define a new Flex Rule</h3>
+        <p>This example shows how to define a new filter using Flex Rule. Note the use of the PATCH method, rather than POST.</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X PATCH https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense/flex-rule-blocking/filter/ -d '{"filter": {"name": "TCPblock", "definition": "tcp port 80", "admin-state": "disabled"} }' --header "Content-Type:application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Delete an existing Flex Rule</h3>
+        <p>This example shows how to delete an existing Flex Rule:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X DELETE https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense/flex-rule-blocking/filter/TCPblock/ --header "Content-Type:application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Configure Smart Rule parameters</h3>
+        <p>This example demonstrates Smart Rule configuration, using the PATCH method:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X PATCH https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/running/defense/early-access-capabilities/smart-rule-parameters/ -d '{"smart-rule-parameters": {"udp-server-bit-rate-limit": "5G", "udp-server-bit-threshold": "8G"} }' --header "Content-Type:application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Display defense statistics</h3>
+        <p>This example shows the use of the GET method and the operational resource to display defense statistics:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X GET https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/operational/defense/statistics?deep --header "Accept: application/vnd.yang.data+json"</span>
+        </p>
+        <h3>Display a specific statistic</h3>
+        <p>This example shows the use of the GET method and the operational resource to display a single specific statistic, that for in-use suspicious addresses:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:admin -X GET https://[<span class="CLIcommandItalic">cmsipaddress</span>]:443/api/operational/defense/statistics/ip-address-statistics/in-use-suspicious-addresses --header "Accept: application/vnd.yang.data+json"</span>
+        </p>
+    </body>
+</html>

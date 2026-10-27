@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Defense Mode</title>
+        <meta name="description" content="This topic describes the use of the site's Defense mode and its three possible settings: Mitigate, Monitor, and Bypass." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#bypass_mode.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor41"></a>
+            <MadCap:concept term="Explanations" />Bypass Mode and Defense Mode</h1>
+        <p>This topic describes the options that can be configured for Bypass mode/Defense mode.</p>
+        <p>Refer to <a href="network_bypass_behavior.htm" target="_self" title="Learn how the traffic bypass feature works" alt="Learn how the traffic bypass feature works">Network Bypass Behavior</a> for a full description of how the network bypass feature works.</p>
+        <p>Refer to <a href="bypass_control_access.htm" target="_self" title="Learn how to access the controls that set Bypass mode and Defense mode" alt="Learn how to access the controls that set Bypass mode and Defense mode">Accessing Bypass Controls</a> for instructions on where to access the Bypass mode and Defense mode controls in different configuration contexts.</p>
+        <p>The <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> provides two configurable modes for controlling how individual <a href="cluster_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the cluster glossary definition">clusters</a> or  the <a href="site_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the site glossary definition">site</a> as a whole handle serverbound traffic as they encounter it. <span class="Italics">Defense mode</span> controls the behavior of Defense appliances, and <span class="Italics">Bypass mode</span> controls the behavior of a Bypass appliance, if one is in use. The two modes comprise settings that control whether incoming traffic should be inspected and treated according to configured rules (Mitigate/Inline), inspected and logged according to configured rules without being treated (Monitor), or simply passed through without being touched (Bypass).</p>
+        <p>The Bypass/Defense mode can be set to one of the following states. By default, the mode is set to <span class="ControlName">Monitor</span> for newly added appliances and clusters. You must change the mode explicitly for appliances to operate in Mitigate/Inline mode.</p>
+        <ul>
+            <li value="1"><a href="mitigate_mode_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Mitigate mode glossary definition">Mitigate</a> – Inspect all traffic and treat it as specified by the server protection instances that are in effect. Specifically, for each appliance type:<ul><li value="1">Bypass appliance – Mitigate mode is called Inline mode for the Bypass appliance. The Bypass appliance passes all traffic through, leaving it to be handled by the attached devices as they are configured to do.</li><li value="2">Forensics appliance - Apply filters and record activity before passing the traffic through to attached devices.</li><li value="3">Defense appliance - Inspect all traffic and pass through only good traffic, as defined by the server protection instances in effect.</li></ul></li>
+            <li value="2"><a href="monitor_mode_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Monitor mode glossary definition">Monitor</a> – Pass traffic through to the servers without treating it, but log the way that server protection instances would respond to the traffic if the operational mode was set to Mitigate. Specifically, for each appliance type:<ul><li value="1">Bypass appliance – Copy traffic to attached devices.</li><li value="2">Forensics appliance - Apply filters without recording activity, and pass the traffic through to attached devices.</li><li value="3">Defense appliance – Inspect all traffic and pass it through.</li></ul></li>
+            <li value="3"><a href="bypass_mode_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Bypass mode glossary definition">Bypass</a> – Pass traffic through to the servers without treating it, completely untouched, without any logging or event reporting. <span class="Italics">This mode is available only if a Bypass appliance is in use.</span> Specifically, for each appliance type:<ul><li value="1">Bypass appliance – Pass through all traffic. In the event of power loss, this happens automatically as a result of the Bypass appliance's passive optical passthrough capability.</li><li value="2">Forensics appliance - Pass through all traffic without applying any filters or recording any activity.</li><li value="3">Defense appliance – Pass through all traffic without inspecting or treating any of it.</li></ul></li>
+        </ul>
+        <p>Depending on the context in which you are configuring the mode, two other options may be available:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Inherit Global</span> – This option causes a cluster to use the Global Bypass/Global Defense setting, whatever that is configured to be.</li>
+            <li value="2"><span class="ControlName">Auto</span> – The Bypass appliance determines whether it can be in Inline mode or Monitor mode, or needs to be in Bypass mode, depending on whether it is receiving heartbeat from the devices attached to it.</li>
+        </ul>
+    </body>
+</html>

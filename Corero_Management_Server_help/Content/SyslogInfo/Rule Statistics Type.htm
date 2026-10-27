@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Syslog Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Rule Statistics Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Rule Statistics Type.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193593"></a>Rule Statistics Type</h3>
+        <p>Every 60 seconds the CMS creates one message for each active security rule in the system that contains the counts of the number of packets blocked or just detected and the number of security events issued for these two situations for that rule. The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p>
+            <div style="margin-left: 9pt;margin-top: 10.15pt;width: 477pt;height: 63.1pt;visibility: visible;mso-height-relative: margin;v-text-anchor: middle;">
+                <p class="SyslogExample">Apr 6 12:56:34 12.12.12.5 Apr 6 08:58:03 cat=security,type=rule-stats,v=1,cl=all,pg=all, name=cns-001005,rule=cns-001005, desc=PVNET: Connection containing UDP port zero, bec=1819,bpc=1819,dec=0,dpc=0,bpr=34,dpr=0,</p>
+            </div>
+        </p>
+        <p class="TableCaption">Example Rule Statistics Content</p>
+        <p>The specific content for the security event data is defined below:</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type</p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Category</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>security</p>
+                </td>
+                <td>
+                    <p>Security event category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>rule-stats</p>
+                </td>
+                <td>
+                    <p>Security rule counts in the system</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group of these statistics</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>rule-name</p>
+                </td>
+                <td>
+                    <p>name</p>
+                </td>
+                <td>
+                    <p>Text: cns-xxxxxx</p>
+                </td>
+                <td>
+                    <p>The Corero security event rule name </p>
+                    <p>Deprecated.&#160; To be removed in V8.10</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>rule-name</p>
+                </td>
+                <td>
+                    <p>rule</p>
+                </td>
+                <td>
+                    <p>Text: cns-xxxxxx</p>
+                </td>
+                <td>
+                    <p>The Corero security event rule name </p>
+                    <p>(e.g. cns-001005)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>rule-description</p>
+                </td>
+                <td>
+                    <p>desc</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>Short description that includes rule classification</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>block-event-count</p>
+                </td>
+                <td>
+                    <p>bec</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of block events for this rule</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>block-packet-count</p>
+                </td>
+                <td>
+                    <p>bpc</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of packets blocked by the rule</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>detect-event-count</p>
+                </td>
+                <td>
+                    <p>dec</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of detect events for this rule where the packet is not blocked</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>detect-packet-count</p>
+                </td>
+                <td>
+                    <p>dpc</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>Total number of packets detected by the rule</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>block-packet-rate</p>
+                </td>
+                <td>
+                    <p>bpr</p>
+                </td>
+                <td>
+                    <p>Rate</p>
+                </td>
+                <td>
+                    <p>The rate of packets being blocked for the rule</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>detect-packet-rate</p>
+                </td>
+                <td>
+                    <p>dpr</p>
+                </td>
+                <td>
+                    <p>Rate</p>
+                </td>
+                <td>
+                    <p>The rate of events being detected for the rule</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

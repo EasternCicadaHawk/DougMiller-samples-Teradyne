@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Client Groups screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Client Groups screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#client_groups_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor57"></a>
+            <MadCap:concept term="Screens &amp; commands" />Client Groups screen</h1>
+        <p>Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Client Groups</span> to display the Client Groups screen for defining a list of IP addresses from which incoming traffic is handled the same way by the <span class="VariablesPlatformNameShort">appliance</span>s. The same controls are available in the CLI by using the <span class="CLIcommand">set defense profiles client-group</span> command.</p>
+        <p>The <a href="config_client_groups.htm" target="_self" title="Learn how to define and modify client groups" alt="Learn how to define and modify client groups">Configure Client Groups</a> topic describes how to define and modify client groups.</p>
+        <p>The Client Groups screen provides these controls:</p>
+        <p><span class="ControlName">Name</span> – A descriptive identifier for the client group. This is all that is required to create the client group, though it isn't useful until the rest of fields are populated.</p>
+        <p><span class="ControlName">Add</span>/<span class="ControlName">Delete</span> buttons – Click <span class="ControlName">Add</span> to display the Add New Group dialog box and define a new client group. The client group can be based on IP addresses or geographical locations (countries of origin).<br />Click <span class="ControlName">Delete</span> to remove a selected client group from the site.</p>
+        <p><span class="ControlName">Client Addresses and Ranges</span> tab – Select an existing client group and click this tab to specify one or more IP addresses to include as members of the client group. For a geographical client group, select one or more countries to include in the client group.</p>
+        <ul>
+            <li value="1"><span class="ControlName">IP Address/Range</span> – For an IP address range client group, this shows the ranges of IP addresses that define the client group.</li>
+            <li value="2"><span class="ControlName">Subset Ranges Overview</span> – If there are <a href="address_range_subsets.htm" target="_self" title="See an explanation of IP address range subsets" alt="See an explanation of IP address range subsets">subsets of the IP address ranges</a> that define the client group, this provides a graphical representation of where the subsets exist within the overall range. If there are no subsets, this field will say that there are no subranges.</li>
+        </ul>
+        <p><span class="ControlName">Thresholds &amp; Limits</span> tab – Select an existing client group and click this tab to select or define a client profile that specifies what constitutes acceptable traffic from these clients.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Manage Profiles</span> – Display the <a href="client_profiles_screen.htm" target="_self" title="Show the description of the Client Profiles screen and its controls" alt="Show the description of the Client Profiles screen and its controls">Client Profiles screen</a> for working with <a href="client_profile_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the client profile glossary definition">client profiles</a> independently of client groups.</li>
+            <li value="2"><span class="ControlName">Use a shared profile</span> – Choose an existing client profile. The profiles <span class="ControlName">High Limits</span>, <span class="ControlName">Low Limits</span>, and <span class="ControlName">Megaproxy Limits</span> are built-in and provided by default.</li>
+            <li value="3"><span class="ControlName">Use a custom profile</span> – Specify explicit values for the profile parameters:<ul><li value="1"><span class="ControlName">Trusted client connection threshold (minimum)</span> – The number of successful and well-executed connections required to establish this IP address as a <a href="trusted_ip_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Trusted IP Address glossary definition">trusted IP address</a>. Requests from trusted clients are forwarded to the destination address.</li><li value="2"><span class="ControlName">Suspicious client connection threshold</span> – The source IP address has reached a user-specified threshold (<a href="trusted_ip_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Suspicious IP Address glossary definition">Suspicious Threshold</a>) due to the number of open SYNs. The device will proxy all connection requests to any device from that source IP address.</li><li value="3"><span class="ControlName">Suspicious client connection exit threshold</span> – The device maintains a count of the number of incomplete TCP connections destined to a server group and allows the user to set a value for this threshold (known as the Connection Threshold). When a source Client Group is in the Unknown or Trusted states, and the destination's Server Connection Threshold has not been reached, then SYN packets received from this source to the given destination are passed directly on to the server group (subject to other security policy checks).</li><li value="4"><span class="ControlName">Malicious client connection threshold</span> – The source IP address has reached a user-specified threshold (<a href="trusted_ip_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the Malicious IP Address glossary definition">Malicious Threshold</a>) due to the number of open SYNs. The device will drop all connection requests to any device from that source IP address.</li><li value="5"><span class="ControlName">Initial treatment for clients in this group</span> – Click <span class="ControlName">Treat as trusted</span> or <span class="ControlName">Treat as suspicious</span> (the default).</li><li value="6"><span class="ControlName">Maximum connections for this entire group</span></li><li value="7"><span class="ControlName">Maximum connections for any client in this group</span></li><li value="8"><span class="ControlName">Maximum packet rate for any client in this group</span> – Specify the packet rate limit for this client.</li><li value="9"><span class="ControlName">Click here to export as a shared profile</span> – Save the custom profile to a file so it can be re-used.</li></ul></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist" data-mc-ignored-words="serviceprotocolname;portnumber;cmsipaddress">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configure a Service Protocol</title>
+        <meta name="description" content="Instructions for defining how traffic for a particular application is handled." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_service_protocol.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor21"></a>
+            <MadCap:concept term="How to" />Configure a Service Protocol</h1>
+        <p data-mc-conditions="Default.RestAPI"><a name="kanchor15"></a>A service protocol specifies how traffic corresponding to a particular application is handled by the <span class="VariablesPlatformNameShort">appliance</span>. A large number of service protocols are built-in to the <span class="VariablesApplicationNameShort">CMS</span> and provided by default. You can modify these built-in service protocols or define your own custom ones, as necessary. Some of these built-in service protocols correspond to legitimate applications, or to applications that otherwise are not originally intended to be attack vectors, while others correspond to specific well-known attack vectors.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Service Protocols</span> in the web UI tool bar to display the Service Protocol screen for defining service protocols. Alternatively, type <span class="CLIcommand">set defense profiles service-protocol</span> in the CLI.</p>
+        <p data-mc-conditions="Default.notRESTAPI">To configure a service protocol:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0" data-mc-conditions="Default.notRESTAPI">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Name a new service protocol.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Service Protocols</span> to display the Service Protocol screen, then click <span class="ControlName">Add</span>.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles service-protocol <span class="CLIcommandItalic">serviceprotocolname</span></span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles:profiles/service-protocols -d '{"service-protocol": [ {"name": "<span class="CLIcommandItalic">serviceprotocolname</span>" } ] }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        In the web UI, click <span class="ControlName">Create</span> to add the service protocol to the list.
+                        <p>Note the large number of predefined service protocols. You may find the one that you need in the list already, without having to create a new one.</p></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                        <p>Specify the transport protocol and transport port, as well as a connection timeout.</p>
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click the service protocol name to edit it.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles service-protocol <span class="CLIcommandItalic">serviceprotocolname</span> transport-protocol <span class="CLIcommandItalic">protocolname</span> transport-port <span class="CLIcommandItalic">portnumber</span></span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X PATCH https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles:profiles/service-protocols/service-protocol -d '{"service-protocol": {"name": "<span class="CLIcommandItalic">serviceprotocolname</span>", "connection-timeout": <span class="CLIcommandItalic">value</span>, "transport-protocol": "<span class="CLIcommandItalic">value</span>", "transport-port": "<span class="CLIcommandItalic">value</span>" } }' --header "Content-Type:application/vnd.yang.data</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Specify a transport protocol, connection timeout value, and transport port.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Configure any other service protocol parameters you want to change from their defaults.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click the service protocol name to edit it.<p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles service-protocol <span class="CLIcommandItalic">serviceprotocolname</span></span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        See the parameter descriptions in the <a href="service_protocol_screen.htm" target="_self" title="See the description of the Service Protocol screen" alt="See the description of the Service Protocol screen">Service Protocol screen</a> topic for details.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

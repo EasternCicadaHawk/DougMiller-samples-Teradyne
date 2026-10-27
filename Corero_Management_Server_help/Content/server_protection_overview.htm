@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Server Protection Overview</title>
+        <meta name="description" content="A high-level description of how server protection works in the SmartWall Threat Defense System." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#server_protection_overview.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor45"></a>
+            <MadCap:concept term="Explanations" />Server Protection Overview</h1>
+        <p>All <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> functionality exists to protect your servers, but the term "server protection," used explicitly within the <span class="VariablesApplicationNameShort">CMS</span>, refers to the set of responses (treatments) that are configured to occur when incoming traffic matches one or more profiles associated with a service protocol for a server group. Server protection is configured per server group, and a server protection instance combines a server group (and the service protocol and profiles that it comprises) with default responses, called treatments, for traffic coming inbound to the servers and going back outbound to the clients. As a result of the nature of their components, server protection instances incorporate all aspects of <span class="VariablesApplicationNameShort">CMS</span> protection configuration, including client groups, client profiles, and rule sets, each of which is a component of a server protection instance at some level.</p>
+        <p>The default traffic treatment is <span class="ControlName">Default network-wide server protection</span>, and it is used when no other traffic treatment has been configured. This default treatment handles traffic as being Random (asymmetric), with all rules off for both security rule sets and reputation rule sets.</p>
+        <p>Server protection is <a href="configuring_protection.htm" target="_self" title="Learn how to configure server protection" alt="Learn how to configure server protection">configured</a> using the Server Protection screen.</p>
+    </body>
+</html>

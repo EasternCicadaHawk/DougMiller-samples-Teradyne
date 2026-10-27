@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Syslog Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Block Rate Statistics Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Block Rate Statistics Type.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3">Block Rate Statistics Type</h3>
+        <p>Every 60 seconds the CMS creates a report that summarizes rate of packet blocking in the system for each of the overall classifications for security rules on the Defense appliances.&#160;There are several hundred security rules that may be protecting a specific network, and these rules are categorized into 8 categories so that the block rate per classification can be calculated.&#160;These classifications are provided below.</p>
+        <p>
+            <img src="../Resources/Images/SyslogInfo/03000002_630x175.png" style="width: 630;height: 175;" class="img_1" />
+        </p>
+        <p>The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p class="FigureLegend">Example Block Rate Message</p>
+        <p>
+            <div style="height: 63.1pt;width: 477pt;" class="div_4">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.toplayer.com cat=security,v=1,cl=all,pg=all,type=block-rate,arbr=800343,narbr=600450,aarbr=0,nrlbr=0,arlbr=0,npvbr=40003,apvbr=0,niabr=0,aiabr=0,</p>
+            </div>
+        </p>
+        <p>The specific content for the block rate message is:</p>
+        <table class="TableStyle-ProcedureTable" style="mc-table-style: url('../Resources/TableStyles/ProcedureTable.css');" cellspacing="0">
+            <col style="width: 104pt;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 77pt;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 115pt;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 188pt;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p class="p_4">Field Name</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p class="p_4">Short Name</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p class="p_4">Specific Value / Type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p class="p_4">Description</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Category</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>cat</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>security</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Security event category</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>type</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>Block rate statistics per rule classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Version</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>v</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Number</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Cluster</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>cl</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Text</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>Protection Group</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>pg</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Text</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The protection group of these statistics</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>all-rules-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>arbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The total rate of packet blocking for all rules in the system</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>network-access-restriction-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>narbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the ARNET classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>application-access-restriction-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>aarbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the ARAPP classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>network-rate-limit-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>nrlbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the RLNET classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>application-rate-limit-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>arlbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the RLAPP classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>network-protocol-validation-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>npvbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the PVNET classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>application-protocol-validation-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>apvbr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the PVAPP classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>network-integrity-analysis-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>niabr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the IANET classification</p>
+                </td>
+            </tr>
+            <tr class="TableStyle-ProcedureTable-Body-Body1">
+                <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                    <p>application-integrity-analysis-block-rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">
+                    <p>aiabr</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">
+                    <p>Rate</p>
+                </td>
+                <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">
+                    <p>The rate of packet blocking for rules of the IAAPP classification</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

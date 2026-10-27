@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultSearchFilterSet>
+    <SearchFilter Name="Pictures only" Concepts="Pictures">
+    </SearchFilter>
+    <SearchFilter Name="&quot;How to&quot; only" Comment="" Concepts="How to" />
+    <SearchFilter Name="Screens &amp; commands only" Comment="" Concepts="Screens &amp; commands" />
+    <SearchFilter Name="Explanations only" Comment="" Concepts="Explanations" />
+</CatapultSearchFilterSet>

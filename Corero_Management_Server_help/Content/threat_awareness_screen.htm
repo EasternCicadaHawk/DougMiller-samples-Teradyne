@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Threat Awareness screen</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#threat_awareness_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor95"></a>
+            <MadCap:concept term="Screens &amp; commands" />Threat Awareness screen</h1>
+        <p>Clicking <span class="ControlName">Defense Monitoring</span> &gt; <span class="ControlName">Threat Awareness</span> in the web UI tool bar displays the Threat Awareness screen, providing controls for adjusting the broad, high-level behavior of the <span class="VariablesProtectionDevice">Defense appliance</span>'s DDoS identification functionality. When one or more of these thresholds is crossed, the <span class="VariablesProtectionDevice">Defense appliance</span> uses functionality that is optimized to respond to massive amounts of incoming traffic.</p>
+        <p>The equivalent CLI command is:<span class="CLIcommand">set defense threat-awareness [activation-thresholds | exit-thresholds]</span></p>
+        <p>The Threat Awareness controls are:</p>
+        <p>Activation Thresholds – These parameters specify thresholds above which the <span class="VariablesProtectionDevice">Defense appliance</span> characterizes incoming traffic as constituting a DDoS attack.</p>
+        <ul>
+            <li value="1"><span class="ControlName">New IP Addresses</span> – The maximum number of new IP addresses allowed per second.</li>
+            <li value="2"><span class="ControlName">TCP Setup Rate</span> – If a DDoS attack is not under way, already, this is the rate at which TCP traffic will be allowed to pass before reporting an interval as an attack.</li>
+        </ul>
+        <p>Exit Thresholds – These parameters specify thresholds below which the <span class="VariablesProtectionDevice">Defense appliance</span> determines that it is not encountering DDoS attack traffic.</p>
+        <ul>
+            <li value="1"><span class="ControlName">New IP Addresses</span> – The number of new IP addresses allowed per second.</li>
+            <li value="2"><span class="ControlName">TCP Setup Rate</span> – The TCP Setup Rate exit threshold; this should be lower than the TCP Setup Rate activation threshold.</li>
+        </ul>
+    </body>
+</html>

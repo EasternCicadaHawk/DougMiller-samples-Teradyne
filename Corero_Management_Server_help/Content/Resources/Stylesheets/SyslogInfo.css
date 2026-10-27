@@ -1,0 +1,460 @@
+/*<meta />*/
+
+p
+{
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ol
+{
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+ul
+{
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+li
+{
+	font-family: Calibri;
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+}
+
+td
+{
+	font-family: Calibri;
+	font-size: 11pt;
+	vertical-align: top;
+}
+
+p.Footer
+{
+	font-size: 11pt;
+	font-family: Calibri;
+}
+
+h1.Heading1
+{
+	border-bottom-style: solid;
+	border-bottom-width: 2pt;
+	border-bottom-color: #365F91;
+	margin-top: 30pt;
+	margin-bottom: 4pt;
+	mc-heading-level: 1;
+	font-family: Cambria;
+	font-weight: bold;
+	color: #365F91;
+	font-size: 12pt;
+}
+
+p.Caption
+{
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 9pt;
+}
+
+p.p_1
+{
+	margin-left: 5pt;
+	margin-right: 5pt;
+	text-align: center;
+}
+
+div.div_1
+{
+	left: 0;
+	text-align: left;
+	margin-left: 95.35pt;
+	visibility: visible;
+	mso-height-percent: 200;
+	mso-height-percent: 200;
+	mso-width-relative: margin;
+	mso-height-relative: margin;
+	margin-top: 0pt;
+}
+
+p.p_2
+{
+	text-align: center;
+	font-weight: bold;
+	color: #1F497D;
+	text-decoration: underline;
+}
+
+img.img_1
+{
+	visibility: visible;
+	mso-wrap-style: square;
+}
+
+p.p_3
+{
+	page-break-after: avoid;
+}
+
+p.Caption_1
+{
+	font-family: Calibri;
+	font-weight: bold;
+	font-size: 9pt;
+	text-align: center;
+}
+
+span.span_1
+{
+	font-size: 11pt;
+}
+
+h2.Heading2
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: #4F81BD;
+	margin-top: 10pt;
+	margin-bottom: 4pt;
+	mc-heading-level: 2;
+	font-family: Cambria;
+	color: #365F91;
+	font-size: 12pt;
+	font-weight: normal;
+}
+
+li.ListParagraph
+{
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+}
+
+p.ListParagraph
+{
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+}
+
+p.p_4
+{
+	font-weight: bold;
+}
+
+td.td_1
+{
+	border-top-style: solid;
+	border-top-width: 1pt;
+	border-top-color: black;
+	border-left-style: solid;
+	border-left-width: 1pt;
+	border-left-color: black;
+	border-right-style: solid;
+	border-right-width: 1pt;
+	border-right-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: black;
+}
+
+td.td_2
+{
+	border-top-style: solid;
+	border-top-width: 1pt;
+	border-top-color: black;
+	border-right-style: solid;
+	border-right-width: 1pt;
+	border-right-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: black;
+}
+
+p.p_5
+{
+	font-size: 10pt;
+}
+
+td.td_3
+{
+	border-left-style: solid;
+	border-left-width: 1pt;
+	border-left-color: black;
+	border-right-style: solid;
+	border-right-width: 1pt;
+	border-right-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: black;
+}
+
+td.td_4
+{
+	border-right-style: solid;
+	border-right-width: 1pt;
+	border-right-color: black;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: black;
+}
+
+li.ListParagraph_1
+{
+	margin-left: 36pt;
+	font-family: Calibri;
+	list-style-type: disc;
+	font-size: 10pt;
+}
+
+ul.ul_1
+{
+	list-style-type: disc;
+	margin-left: 36pt;
+}
+
+span.span_2
+{
+	font-size: 10pt;
+}
+
+li.ListParagraph_2
+{
+	font-size: 11pt;
+	margin-left: 36pt;
+	font-family: Calibri;
+	list-style-type: disc;
+}
+
+table.table_1
+{
+	border-collapse: collapse;
+}
+
+p.TOC1
+{
+	margin-top: 6pt;
+	font-family: Cambria;
+	font-weight: bold;
+	color: #548DD4;
+	font-size: 12pt;
+}
+
+p.TOC2
+{
+	font-size: 11pt;
+	font-family: Calibri;
+}
+
+p.TOC3
+{
+	font-size: 11pt;
+	margin-left: 11pt;
+	font-family: Calibri;
+	font-style: italic;
+}
+
+ol.ol_1
+{
+	list-style-type: decimal;
+	margin-left: 36pt;
+}
+
+span.span_3
+{
+	font-style: italic;
+}
+
+span.span_4
+{
+	color: #C00000;
+}
+
+span.span_5
+{
+	color: #000000;
+}
+
+div.div_2
+{
+	left: 0;
+	text-align: left;
+	margin-left: 0;
+	margin-top: 6.2pt;
+	visibility: visible;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+span.span_6
+{
+	font-weight: bold;
+}
+
+p.p_6
+{
+	text-align: center;
+}
+
+h3.Heading3
+{
+	font-size: 11pt;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: #95B3D7;
+	margin-top: 10pt;
+	margin-bottom: 4pt;
+	mc-heading-level: 3;
+	font-family: Cambria;
+	color: #4F81BD;
+	font-weight: normal;
+}
+
+span.span_7
+{
+	font-family: Times;
+	font-size: 10pt;
+}
+
+h4.Heading4
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-bottom-color: #B8CCE4;
+	margin-top: 10pt;
+	margin-bottom: 4pt;
+	mc-heading-level: 4;
+	font-family: Cambria;
+	font-style: italic;
+	color: #4F81BD;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+p.p_7
+{
+	text-align: center;
+	font-weight: bold;
+}
+
+span.Hyperlink
+{
+	color: #0000FF;
+	text-decoration: underline;
+}
+
+p.p_8
+{
+	color: #FFFFFF;
+}
+
+div.div_3
+{
+	margin-left: 0;
+	margin-top: 22.2pt;
+	visibility: visible;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+div.div_4
+{
+	margin-left: 9pt;
+	margin-top: 10.15pt;
+	visibility: visible;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+span.span_8
+{
+	color: #FFFFFF;
+}
+
+div.div_5
+{
+	margin-left: 9pt;
+	margin-top: 23.55pt;
+	visibility: visible;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+p.p_9
+{
+	margin-right: 0pt;
+	font-weight: bold;
+}
+
+div.div_6
+{
+	margin-left: 0;
+	margin-top: 5.75pt;
+	visibility: visible;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+div.div_7
+{
+	margin-left: 9pt;
+	margin-top: 23.6pt;
+	visibility: visible;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+div.div_8
+{
+	margin-left: 9pt;
+	margin-top: 10.15pt;
+	visibility: visible;
+	mso-width-relative: margin;
+	mso-height-relative: margin;
+	v-text-anchor: middle;
+	background-color: #254163;
+}
+
+span.span_9
+{
+	font-weight: bold;
+	color: #1F497D;
+	font-size: 14pt;
+}
+
+p.p_10
+{
+	font-weight: bold;
+	color: #1F497D;
+	font-size: 14pt;
+}
+
+span.span_10
+{
+	font-weight: bold;
+	font-style: italic;
+}
+
+p.Footer_1
+{
+	font-size: 11pt;
+	font-family: Calibri;
+	margin-left: 5pt;
+	margin-right: 5pt;
+	text-align: right;
+}
+

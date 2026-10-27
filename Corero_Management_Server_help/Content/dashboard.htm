@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>CMS Dashboard</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Dashboard." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#dashboard.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor63"></a>
+            <MadCap:concept term="Screens &amp; commands" /><span class="VariablesApplicationNameShort">CMS</span> Dashboard</h1>
+        <p>The <span class="VariablesApplicationNameShort">CMS</span> dashboard appears by default when you log in to the <span class="VariablesApplicationNameShort">CMS</span>, displaying a number of graphs and tables that, together, summarize the overall threat status of the traffic seeking entry to your network. You can re-display the dashboard at any time by clicking <span class="ControlName">Home</span> in the path in the web UI tool bar.</p>
+        <h2>Security Rule Block Rates (per second)</h2>
+        <p>This tool graphs the rates at which rules of the different major categories are triggered on your Defense appliances by incoming traffic. This provides a broad sense of the type of unwanted traffic that your network is encountering, providing insight into possible attack methods. The graph is refreshed every 60 seconds.</p>
+        <p>Every 60 seconds the <span class="VariablesApplicationNameShort">CMS</span> creates a report that summarizes rate of packet blocking in the system for each of the overall classifications for security rules on the Defense appliances.</p>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">All Rules</span> – The total rate of packet blocking for all rules in the system.</li>
+            <li value="2"><span class="ControlName">Access Restriction Rules (Network Threats)</span> – The rate of packet blocking for rules of the ARNET classification.</li>
+            <li value="3"><span class="ControlName">Rate Limit Rules (Network Threats)</span> – The rate of packet blocking for rules of the RLNET classification.</li>
+            <li value="4"><span class="ControlName">Protocol Validation Rules (Network Threats)</span> – The rate of packet blocking for rules of the PVNET classification.</li>
+            <li value="5"><span class="ControlName">Integrity Analysis Rules (Network Threats)</span> – The rate of packet blocking for rules of the IANET classification.</li>
+            <li value="6"><span class="ControlName">Integrity Analysis Rules (Application Threats)</span> – The rate of packet blocking for rules of the IAAPP classification.</li>
+        </ul>
+        <p>This information is carried in  Block&#160;Rate Statistics Type syslog messages.</p>
+        <h2>Excessive Rate Indications (per second)</h2>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">TCP Setup Rate</span> – The current TCP flow setup rate.</li>
+            <li value="2"><span class="ControlName">Non-TCP Setup Rate</span> – The current non-TCP flow setup rate.</li>
+            <li value="3"><span class="ControlName">Protocol Validation Block&#160;Rates</span> – The rate of packet blocking for rules of the PVNET classification.</li>
+        </ul>
+        <p>This information is carried in Setup Rate Statistics Type and Block&#160;Rate Statistics Type syslog messages.</p>
+        <h2>IP Address Classifications (counts)</h2>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">In Use Trusted Addresses</span> – IP addresses in use classified as trusted.</li>
+            <li value="2"><span class="ControlName">In Use Suspicious Addresses</span> – IP addresses in use classified as suspicious.</li>
+            <li value="3"><span class="ControlName">In Use Malicious Addresses</span> – IP addresses in use classified as malicious.</li>
+            <li value="4"><span class="ControlName">In Use Unclassified Addresses</span> – IP addresses in use not yet classified.</li>
+        </ul>
+        <p>This information is carried in IP Address Classifications Type syslog messages.</p>
+        <h2>Top&#160;Recent Service Ports</h2>
+        <p>This lists the service ports most used recently by incoming traffic. They are listed by protocol and their percentage of overall use.</p>
+        <h2>Top Recent Clients</h2>
+        <p>This lists the <a href="client_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the client glossary definition" data-mc-width="auto" data-mc-height="auto">clients</a> to have sent the most traffic to your network recently. They are listed by IP address and their percentage of the overall traffic.</p>
+        <h2>Top Recent Servers</h2>
+        <p>This lists the <a href="server_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the server glossary definition" data-mc-width="auto" data-mc-height="auto">servers</a> in your network to have received the most traffic recently. They are listed by IP address and their percentage of the overall traffic they've received.</p>
+        <h2>Top Recent Security Events</h2>
+        <p>This lists the <a href="Rule_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the rule glossary definition" data-mc-width="auto" data-mc-height="auto">rules</a> most triggered recently by incoming traffic. They are listed by rule and their percentage of the overall traffic.</p>
+        <h2>Active Flows by Protocol (counts)</h2>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Total Flows</span>
+            </li>
+            <li value="2"><span class="ControlName">Total TCP Flows</span>
+            </li>
+            <li value="3"><span class="ControlName">Total UDP Flows</span>
+            </li>
+            <li value="4"><span class="ControlName">Total ICMP Flows</span>
+            </li>
+            <li value="5"><span class="ControlName">Total Other Flows</span>
+            </li>
+        </ul>
+        <h2>Mission Port Rates (Mbps)</h2>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">External Port Bit Receive Rate</span> – External mission port(s) aggregrate rate.</li>
+            <li value="2"><span class="ControlName">External Port Bit Transmit Rate</span> – External mission port(s) aggregrate rate.</li>
+            <li value="3"><span class="ControlName">Internal Port Bit Receive Rate</span> – Internal mission port(s) aggregrate rate.</li>
+            <li value="4"><span class="ControlName">Internal Port Bit Transmit Rate</span> – Internal mission port(s) aggregrate rate.</li>
+        </ul>
+        <h2>Summary Packet Rates (per second)</h2>
+        <p>This tool graphs these statistics:</p>
+        <ul>
+            <li value="1"><span class="ControlName">External Port Packet Receive Rate</span> – External mission port(s) aggregrate rate.</li>
+            <li value="2"><span class="ControlName">All Rules Block&#160;Rate</span> – The total rate of packet blocking for all rules in the system.</li>
+            <li value="3"><span class="ControlName">Internal Port Packet Transmit Rate</span> – Internal mission port(s) aggregrate rate.</li>
+        </ul>
+    </body>
+</html>

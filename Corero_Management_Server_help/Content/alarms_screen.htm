@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="CMS">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Alarms screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Alarms screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#alarms_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor54"></a>
+            <MadCap:concept term="Screens &amp; commands" />Alarm Center screen</h1>
+        <p>Click the alarm clock icon in the web UI status bar to display the Alarm Center screen. Alternatively, use the CLI command <span class="CLIcommand">show alarms summary</span> or <span class="CLIcommand">show alarms alarm-list</span> to see current alarm information.</p>
+        <p>Alarms indicate noteworthy occurrences related to the <span class="VariablesApplicationNameShort">CMS</span> itself or the <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span>s that it manages. Alarms are characterized with severities ranging from Warning, indicating notifications of which you should be aware, up to Critical, indicating serious problems with the function of your server defense infrastructure. Specifically, the Alarm Center screen shows <span class="Italics">uncleared</span> alarms; these are notifications which have not yet been addressed, whether by an action executed by a human operator, or, in some cases, by self-clearing, if the circumstance that triggered the alarm has corrected itself.</p>
+        <p>Alarm severities are assigned explicitly to the definitions of specific known types of occurrences, and are not assigned dynamically based on numerical values or the crossing of predefined thresholds. The supported alarm severities are:</p>
+        <ul>
+            <li value="1">Critical – Critical alarms are not self-cleared.</li>
+            <li value="2">Major</li>
+            <li value="3">Minor</li>
+            <li value="4">Warning</li>
+            <li value="5">Indeterminate</li>
+        </ul>
+        <p>Alarms can be exported from the <span class="VariablesApplicationNameShort">CMS</span> via SNMP and syslog. The relevant configuration parameters are available in the <a href="advanced_site_controls.htm" target="_self" title="Show the description of the Advanced Site Controls screen." alt="Show the description of the Advanced Site Controls screen.">Advanced Site Controls screen</a>.</p>
+        <p>You can perform these actions on selected alarms (click the checkbox to the left of the alarm entry):</p>
+        <ul>
+            <li value="1"><span class="ControlName">Compress</span> – Show only the latest state change associated with the alarm.</li>
+            <li value="2"><span class="ControlName">Purge</span> – Delete entries associated with the alarm.</li>
+            <li value="3"><span class="ControlName">Handle</span> – Choose a handling method from the pulldown menu: <span class="ControlName">Acknowledged</span>, <span class="ControlName">Investigation</span>, <span class="ControlName">Observation</span>, <span class="ControlName">Closed</span>.</li>
+        </ul>
+        <p>Clicking an alarm entry opens a panel that shows information about the alarm in greater detail:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Alarm Handling</span> – Choose a handling method from the pulldown menu: <span class="ControlName">Acknowledged</span>, <span class="ControlName">Investigation</span>, <span class="ControlName">Observation</span>, <span class="ControlName">Closed</span>.</li>
+            <li value="2"><span class="ControlName">Status Change</span> – This section lists the individual changes in status for the alarm.</li>
+        </ul>
+        <p>If the storage device associated with a Forensics appliance lacks sufficient space to collect a new query, the query fails and an alarm is generated. If this happens, delete some old queries to free space for the new query.</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Security Rule Set screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Security Rule Set screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#security_rule_set_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor84"></a>
+            <MadCap:concept term="Screens &amp; commands" />Security Rule Set screen</h1>
+        <p>The Security Rule Set screen enables you to manage security <a href="Rule_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the rule set glossary definition">rule sets</a> for the <a href="site_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the site glossary definition">site</a>. Security rule sets describe behaviors for identifying and addressing traffic based on the nature of the traffic itself, such as its packet formation or its content.</p>
+        <p>Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Security Rule Sets</span> in the web UI tool bar to display the Security Rule Set screen, or use the CLI command <span class="CLIcommand">set defense profiles rule-groups security-rule-set</span> to access the same functionality.</p>
+        <p>Refer to <a href="configuring_protection.htm" target="_self" title="Learn how to configure a server protection instance" alt="Learn how to configure a server protection instance">Configuring Server Protection</a> to learn how rule sets are associated with server protection instances.</p>
+        <p>The Security Rule Set screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Add</span>/<span class="ControlName">Delete</span> buttons – Define a new Security rule set to add it to the collection of rule sets that are available to the site, or remove an existing rule set.</li>
+            <li value="2"><span class="ControlName">Name</span> – A descriptive name for the rule set. The names of built-in rule sets provide some indication of each rule set's purpose.</li>
+            <li value="3"><span class="ControlName">Description</span> – An optional, more verbose explanation of the rule set's purpose.</li>
+            <li value="4"><span class="ControlName">Block Active</span> – <span class="ControlName">True</span> or <span class="ControlName">False</span>. Traffic that triggered the rule is stopped with no indication given to the originating client.</li>
+            <li value="5"><span class="ControlName">Default Log</span> – This indicates whether a log entry should be made when a rule in the rule set is triggered.</li>
+            <li value="6"><span class="ControlName">Copy Of</span> – If this rule set was created initially by copying another, this tells which rule set was used as the seed for this one.</li>
+        </ul>
+        <p>If you decide to change the configuration of a rule set, you should do that using a copy, preserving the original rule set for reference.</p>
+    </body>
+</html>

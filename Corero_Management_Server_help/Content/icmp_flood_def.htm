@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>ICMP Flood Attack</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#icmp_flood_def.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor188"></a>
+            <MadCap:concept term="Explanations" />ICMP Flood Attack</h1>
+        <h2>Definition</h2>
+        <p>An ICMP flood attack is a <a href="volumetric_attack_def.htm" target="_self" title="Show this definition" alt="Show this definition">volumetric attack</a>, a flood of ICMP requests intended to overwhelm the target's ability to respond. The ICMP flood is simply a barrage of ICMP messages (frequently, echo requests, or ping) sent at such volume and speed that the server is unable to keep up with the requests. In addition, since the ICMP messages expect a response, bandwidth is consumed on the way out, as well, as the server responds to each of the huge number of requests with a response of its own. The end result is that the server's bandwidth is fully consumed, leaving no room for legitimate traffic.</p>
+        <p>A <a href="smurf_attack_def.htm" target="_self" title="Show this definition" alt="Show this definition">Smurf attack</a> is a variant of ICMP attack that uses the technique of <a href="amplification_attack_def.htm" target="_self" title="Show this definition" alt="Show this definition">amplification</a>.</p>
+        <h2>Observable characteristics</h2>
+        <p>ICMP packets sent at a high rate.</p>
+        <h2>Method of response</h2>
+        <p>Drop all ICMP messages over a specified rate.</p>
+        <h2><span class="VariablesApplicationNameShort">CMS</span> configuration steps</h2>
+        <p>None. ICMP packet rate limiting is enabled by default.</p>
+        <h2>Relevant SmartWall rules</h2>
+        <p>These rules pertain to this attack type:</p>
+        <ul>
+            <li value="1">cns-001022: Excessive non-TCP connection rate detected</li>
+            <li value="2">cns-002007: ICMP packet rate exceeded threshold</li>
+            <li value="3">cns-002008: ICMPv6 packet rate exceeded threshold</li>
+            <li value="4">cns-003018: ICMP unsolicited echo response</li>
+        </ul>
+    </body>
+</html>

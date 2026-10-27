@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Introduction to the CMS Protection Model</title>
+        <meta name="description" content="A description of the CMS protection model. This is the set of configuration elements that enable you to define the characteristics of traffic that is acceptable for your servers to receive, as well as the characteristics of traffic that is unacceptable." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#protection_model_intro.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor202"></a>
+            <MadCap:concept term="Explanations" />Introduction to the <span class="VariablesApplicationNameShort">CMS</span> Protection Model</h1>
+        <p>The server protection provided by the <span class="VariablesPlatformNameShort">appliance</span> and <span class="VariablesApplicationNameShort">CMS</span> comprises four basic sets of features, each of which <a href="protection_key_steps.htm" target="_self" title="Basic steps to protecting server infrastructure" alt="Basic steps to protecting server infrastructure">supports essential server protection practices</a>:</p>
+        <ul>
+            <li value="1"><span class="Italics">IP Packet Header Blocking</span> – Refuse entry to traffic based on its IP header type. This can be IPv4, IPv6, or IP tunnels. By default, each of these header types is allowed; you can change one or more to be blocked. This method is immediate and complete, refusing entry to all such traffic without additional examination.</li>
+            <li value="2"><span class="Italics">IP Address Shunning</span> – Refuse entry to traffic based on its IP address. Shunning is an immediate and temporary action that enables you to deny access to a problematic IP address for a finite period while you decide what to do about traffic from that address over the long term.</li>
+            <li value="3"><span class="Italics">Security Profiles</span> – Profiles are sets of conditions and limits for characterizing traffic behavior. Profiles can be configured for clients and for servers, and include collections of characteristics such as rule sets and service protocols that help to associate traffic with particular applications and assess its nature. Profiles are used with server protection, which comprises the set of responses that the <span class="VariablesPlatformNameShort">appliance</span> has available for handling server-bound traffic. When server-bound traffic matches a profile, server protection responds to that traffic and handles it in some specified way.</li>
+            <li value="4"><span class="Italics">Server Protection</span> – Server protection comprises the set of responses that the <span class="VariablesPlatformNameShort">appliance</span> has available to handle server-bound traffic that matches a profile.</li>
+        </ul>
+        <p>Configure server protection using these feature sets.</p>
+        <p>&#160;</p>
+    </body>
+</html>

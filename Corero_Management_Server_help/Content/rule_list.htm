@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Rule Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Rule List</title>
+        <meta name="description" content="This is a complete list of all SmartWall rules." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#rule_list.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor152"></a>
+            <MadCap:concept term="Explanations" />Rule List</h1>
+        <h2>cns-000006</h2>
+        <p><span class="b">Description:</span> PVNET: IPv4 packet contains an invalid checksum</p>
+        <p><span class="b">Long Description:</span> This rule detects an IPv4 packet in which the calculated checksum does not match the value in the header checksum field. This could indicate the possibility of intentional or unintentional corruption in the IP headers.</p>
+        <h2>cns-000020</h2>
+        <p><span class="b">Description:</span> PVNET: IP packet contains an invalid version number</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP packet with a version number that is not consistent with the type of traffic expected. Either IPv4 or IPv6 traffic was expected but the version number indicates that the traffic belongs to a different protocol.</p>
+        <h2>cns-000050</h2>
+        <p><span class="b">Description:</span> PVNET: Invalid IP header length detected</p>
+        <p><span class="b">Long Description:</span> This rule triggers when the IP version 4 header length in the packet is determined to be less than 20 bytes as this could indicate an intentional or unintentional corruption of the headers.</p>
+        <h2>cns-000056</h2>
+        <p><span class="b">Description:</span> SYSTM: Protocol decoder issued unknown rule id</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the protocol decoder has received an unknown rule ID. Prolonged numerous triggers of this rule must be reported to the Corero customer support team for further investigation as it could indicate a problem with the configuration.</p>
+        <h2>cns-000060</h2>
+        <p><span class="b">Description:</span> IANET: UDP packet shorter than specified minimum length</p>
+        <p><span class="b">Long Description:</span> This rule detects a UDP packet that is shorter than a user-configured minimum length. Small UDP packets are used in several attacks and triggers of this rule might need to be investigated to determine possibility of attacks and appropriate action taken to perform re-configuration of the rule if required.</p>
+        <h2>cns-000061</h2>
+        <p><span class="b">Description:</span> SYSTM: System resource issue</p>
+        <p><span class="b">Long Description:</span> This rule indicates that there is an internal appliance resource issue with memory management. Prolonged numerous triggers of this rule must be reported to the Corero customer support team for further investigation as it could indicate a problem with the configuration.</p>
+        <h2>cns-000062</h2>
+        <p><span class="b">Description:</span> "SYSTM: TCP Proxy resource issue"</p>
+        <p><span class="b">Long Description:</span> This rule triggers when TCP proxy is unable to establish a connection due to a lack of sufficient resources. Prolonged numerous triggers of this rule must be reported to the Corero customer support team for further investigation as it could indicate a problem with the configuration.`</p>
+        <h2>cns-000064</h2>
+        <p><span class="b">Description:</span> IANET: IPv4 too few hops for non-ICMP packet</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with an IPv4 Hop Limit that is less than the configured limit for a non-ICMP packet. Attackers manipulate this field to evade attacks from network security appliances. Triggers of this rule should be investigated and appropriate action taken to re-configure the rule if required.</p>
+        <h2>cns-000067</h2>
+        <p><span class="b">Description:</span> ARNET: Header Blocking - Traffic blocked as per configuration</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet that matches traffic that is configured to be blocked in the Header Blocking table.  The Header Blocking table can be used to block traffic based on protocol types, or tunneling.  For example, IPv4 or IPv6 tunneled over any protocol can be configured to be blocked using this rule.</p>
+        <h2>cns-000068</h2>
+        <p><span class="b">Description:</span> ARNET: Block by next header for protocol traffic that is not allowed</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet that matches traffic selected in the Next Header Table (Protocol Configuration). This rule is useful in blocking traffic that is not allowed in the environment and functions based on the values specified in the protocol field of the IP version 4 protocol header or the next header field in the IP version 6 protocol header. Typical values of these fields are available at the reference link: http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml. Example: This rule blocks ICMPv4 when tunneled over IPv6, IPv6 hop by hop over IPv4, etc.</p>
+        <h2>cns-000071</h2>
+        <p><span class="b">Description:</span> ARNET: Block packets with MPLS labels</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that contain MPLS labels. Enabling this rule will block all MPLS traffic.</p>
+        <h2>cns-000072</h2>
+        <p><span class="b">Description:</span> PVNET: Misclassified MPLS traffic detected</p>
+        <p><span class="b">Long Description:</span> This rule detects packets with MPLS labels whose payloads could not be properly inspected as the traffic carried by MPLS could not be identified by our advanced algorithms.</p>
+        <h2>cns-000073</h2>
+        <p><span class="b">Description:</span> IANET: Traffic is nested in more than one tunnel</p>
+        <p><span class="b">Long Description:</span> The Defense appliance blocks all traffic with more than one nested tunnel. Protocol traffic that is encapsulated more than once is blocked if this rule is enabled. Several kinds of malware utilize this technique to be evasive. However triggers must be investigated and re-configuration of the rule done as required.</p>
+        <h2>cns-000075</h2>
+        <p><span class="b">Description:</span> PVNET: Bad Ethernet CRC</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with an incorrect Ethernet CRC. This could indicate the possibility of some corruption in the ethernet frame.</p>
+        <h2>cns-000076</h2>
+        <p><span class="b">Description:</span> PVNET: Wrong length in 802.3 frame</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with an incorrect 802.3 frame length. The calculated size of the frame received is different from what is stated in the frame thereby indicating some corruption of data, either intentional or unintentional.</p>
+        <h2>cns-000080</h2>
+        <p><span class="b">Description:</span> PVNET: IPv4 source/destination IP is loopback address</p>
+        <p><span class="b">Long Description:</span> This rule detects for which the IPv4 source/destination address is a loopback address (example in the range: 127.0.0.0/8). These addresses are not expected outside of a host and triggers of the rule should be investigated.</p>
+        <h2>cns-000081</h2>
+        <p><span class="b">Description:</span> PVNET: IPv4 source IP is a multicast address</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv4 source address is a multicast address (typically between 224.0.0.0 and 239.255.255.255 for IP version 4). This is not expected and triggers of the rule should be investigated.</p>
+        <h2>cns-000083</h2>
+        <p><span class="b">Description:</span> PVNET: IPv4 source IP is a broadcast address</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv4 source address is a broadcast address. This could indicate an attack and hence triggers need to be investigated.</p>
+        <h2>cns-000085</h2>
+        <p><span class="b">Description:</span> PVNET: IPv4 length is less than header length</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv4 length is less than its header length. This is an anomaly as the header length is supposed to be included in the total length thereby indicating an intentional or unintentional corruption.</p>
+        <h2>cns-000089</h2>
+        <p><span class="b">Description:</span> IANET: IPv6 too few hops for non-ICMP Packets</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv6 Hop Limit is less than the configured limit for a non-ICMP packet. Attackers manipulate this field to evade attacks from network security appliances. Triggers of this rule should be investigated and appropriate action taken to re-configure the rule if required.</p>
+        <h2>cns-000090</h2>
+        <p><span class="b">Description:</span> PVNET: IPv6 source IP is a multicast address</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv6 source address is a multicast address. This is typically not expected and triggers of the rule should be investigated.</p>
+        <h2>cns-000091</h2>
+        <p><span class="b">Description:</span> PVNET: IPv6 invalid source/destination</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv6 source/destination addresses are equal, or one is a loopback, or one is null. Each of these is an anomaly and could indicate an attack.</p>
+        <h2>cns-000092</h2>
+        <p><span class="b">Description:</span> PVNET: IPv6 destination IP is a multicast local scope or reserved address</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the IPv6 destination address is a multicast local scope (ffx1::/16) or a reserved address. Each of these is an anomaly and could indicate an attack.</p>
+        <h2>cns-000093</h2>
+        <p><span class="b">Description:</span> PVNET: IPv6 routing header, routing type != 2</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the Routing Type of the IPv6 header is not Type 2. Use of deprecated routing types should not be allowed as there are known attacks using those values.</p>
+        <h2>cns-000095</h2>
+        <p><span class="b">Description:</span> PVNET: Packet too short</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for which the packet length is too short; its length is compared with the sum of the Ethernet header length and the IP packet length. This could indicate an intentional or unintentional corruption of the packet.</p>
+        <h2>cns-000096</h2>
+        <p><span class="b">Description:</span> PVNET: IP packet with excessive Ethernet padding</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with 256 bytes or more of ethernet padding. This can add excessive overhead in processing in some situations.</p>
+        <h2>cns-000097</h2>
+        <p><span class="b">Description:</span> PVNET: IP packet with unnecessary Ethernet padding</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP packet that contains unnecessary ethernet padding. This can add excessive overhead in processing in some situations.</p>
+        <h2>cns-000098</h2>
+        <p><span class="b">Description:</span> PVNET: Cannot validate L4 checksum</p>
+        <p>long-desc   `This rule detects a packet whose TCP or UDP checksum could not be validated. The checksums may or may not be valid.</p>
+        <h2>cns-000099</h2>
+        <p><span class="b">Description:</span> PVNET: Bad extension header length</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet that has an incorrect extension header length. An extension header length of 0 indicates an anomaly and triggers should be further investigated.</p>
+        <h2>cns-000100</h2>
+        <p><span class="b">Description:</span> IANET: Packet could not be classified within 256 bytes</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet that could not be classified within 256 bytes. Typically our advanced algorithms are able to determine the type of the packet within the first 256 bytes. Please report triggers along with the sample of the traffic causing the triggers of this rule to the Corero customer support team for further investigation.</p>
+        <h2>cns-001001</h2>
+        <p><span class="b">Description:</span> ARNET: Connection from spoofed IP address</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that have an IP source address that is not allowed on the specified input circuit (input port). Spoofed source addresses are used in several attacks including DDoS.</p>
+        <h2>cns-001003</h2>
+        <p><span class="b">Description:</span> IANET: Connection containing reserved IPv4 address</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that have an IP version 4 address that is in the Class E range of 240.0.0.0 through 255.255.255.254; these addresses are reserved. This is an anomaly and such connections must be investigated further.</p>
+        <h2>cns-001005</h2>
+        <p><span class="b">Description:</span> PVNET: Connection containing UDP port zero</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that have a value of 0 for either the 16-bit source or the 16-bit destination port number in the UDP header. Several attacks use port 0 and hence this traffic is suspicious.</p>
+        <h2>cns-001006</h2>
+        <p><span class="b">Description:</span> PVNET: Connection containing TCP port zero</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that have a 0 value for either the 16-bit source or the 16-bit destination port number in the TCP header. Several attacks and reconnaissance scans use port 0 and hence this traffic should be considered suspicious.</p>
+        <h2>cns-001007</h2>
+        <p><span class="b">Description:</span> RLNET: Connection from malicious source IP address</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that arrive from a client IP address to which the Defense appliance has currently assigned a threat level of malicious. A "malicious" client is one that has initiated, but not completed a configured number of TCP connections.</p>
+        <h2>cns-001016</h2>
+        <p><span class="b">Description:</span> ARNET: Fragmented packet received against policy that disallows fragmentation</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet that is an IP fragment from an application that matches a policy prohibiting fragmentation. Fragmentation is not expected for a packet conforming to this protocol as per the specified policy.</p>
+        <h2>cns-001017</h2>
+        <p><span class="b">Description:</span> ARNET: TCP connection with missed setup</p>
+        <p><span class="b">Long Description:</span> This rule detects TCP packets for which the Defense appliance did not see the connection setup handshake packets for the service. The Defense appliance views this data stream as a midflow. Attack traffic can flood a network segment by directing packets that have TCP port numbers that are typically allowed through firewall or other intervening security devices.</p>
+        <h2>cns-001018</h2>
+        <p><span class="b">Description:</span> RLNET: Connection from client that failed handshake in proxy mode</p>
+        <p><span class="b">Long Description:</span> This rule detects TCP connection packets from a client that failed to complete a proxied handshake properly. If a client repeatedly fails to respond to its own requests for a connection, the appliance marks that client as suspicious and stops sending the client's connection requests directly to the server. Instead, it proxies requests for the server. If the client behaves properly and completes the three-way handshake, the unit forwards the connection request to the server. TCP connection initiations that fail the client side proxy handshake typically indicate a spoofed client address and a SYN flood attack.</p>
+        <h2>cns-001019</h2>
+        <p><span class="b">Description:</span> ARNET: Connection to server that fails proxied handshake - Possible SYN flood</p>
+        <p><span class="b">Long Description:</span> This rule detects packets from a TCP connection initiation that is not successfully completed by the target (server) destination IP address. With SYN flood protection enabled, the Defense appliance monitors connection requests that the server does not complete and takes steps to confuse and stop the attacker.</p>
+        <h2>cns-001020</h2>
+        <p><span class="b">Description:</span> RLNET: SynFlood - Connection From New Client During DDoS Attack</p>
+        <p><span class="b">Long Description:</span> The rule indicates that a connection from a previously untracked IP address was detected during a DDoS attack. During a DDoS attack, the Defense appliance takes additional steps to protect your resources. One of these steps is to initially deny a TCP connection request by an untracked (potentially spoofed and dangerous) client during the DDoS attack. Once the appliance verifies that the client is a good client, it processes the client's connection requests normally. When a UDP DDoS occurs, the unit uses a proprietary threshold mechanism to identify the attack packets and discard them.</p>
+        <h2>cns-001021</h2>
+        <p><span class="b">Description:</span> ARNET: Matched by firewall</p>
+        <p><span class="b">Long Description:</span> This rule triggers when the Firewall logs a new flow.</p>
+        <h2>cns-001022</h2>
+        <p><span class="b">Description:</span> RLNET: Non-TCPRateLimit - Excessive non-TCP connection rate.</p>
+        <p><span class="b">Long Description:</span> This rule detects an excessive rate of non-TCP (typically UDP or ICMP) connection attempts. Additional packets with the same source and destination IP address (and UDP ports, if applicable) are not counted in this rate.</p>
+        <h2>cns-001024</h2>
+        <p><span class="b">Description:</span> RLNET: Bandwidth Limiting - IP frame exceeded specified rate bucket limit</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet for a rate-limited policy for which traffic had exceeded its allowed bandwidth.</p>
+        <h2>cns-001025</h2>
+        <p><span class="b">Description:</span> ARNET: TCP connection with missed setup - RST or FIN packet</p>
+        <p><span class="b">Long Description:</span> This rule detects a TCP RST or FIN packet for which there is no current flow. Such packets are occasionally seen after a TCP connection has been closed. Such packets are not expected and should be dropped.</p>
+        <h2>cns-001026</h2>
+        <p><span class="b">Description:</span> RLNET: IpFragRateLimit - IP fragments exceeded fragment rate threshold</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the number of IP fragments have exceeded the Fragment Rate Threshold. Excessive fragmentation is an indicator of evasiveness and can be used in attacks.</p>
+        <h2>cns-001027</h2>
+        <p><span class="b">Description:</span> ARNET: IP address blocked via the Fast Path</p>
+        <p><span class="b">Long Description:</span> The external IP address is in a range configured for blocking. Packets received on an EXTERNAL interface have the source address checked; packets received on an INTERNAL interface have the destination address checked and they are dropped via the Fast Path if they are in the configured blacklist. Note: This rule does not generate events in the security event viewer or the dashboard. However, the Blocked and Detected Report does reflect the true count of triggers for this rule.</p>
+        <h2>cns-001028</h2>
+        <p><span class="b">Description:</span> ARNET: NTP MONLIST response blocked</p>
+        <p><span class="b">Long Description:</span> A UDP packet for the NTP protocol (UDP source port 123) contained a MONLIST response and was blocked. This functionality has been deprecated and its usage could indicate a possible NTP amplification attack.</p>
+        <h2>cns-001029</h2>
+        <p><span class="b">Description:</span> ARNET: NTP MONLIST request blocked</p>
+        <p><span class="b">Long Description:</span> A UDP packet for the NTP protocol (UDP destination port 123) contained a MONLIST request and was blocked. This functionality has been deprecated and its usage could indicate a possible NTP amplification attack.</p>
+        <h2>cns-001030</h2>
+        <p><span class="b">Description:</span> RLNET: SynFlood - Connection From New Client During DDoS Attack</p>
+        <p><span class="b">Long Description:</span> During a DDoS attack, the Defense appliance takes additional steps to protect your resources. One of these steps is to initially deny a TCP connection request by a potentially spoofed and dangerous client during the DDoS attack.</p>
+        <h2>cns-001031</h2>
+        <p><span class="b">Description:</span> RLNET: SynFlood - Connection From New Client During DDoS Attack</p>
+        <p><span class="b">Long Description:</span> During a DDoS attack, the Defense appliance takes additional steps to protect your resources. The unit uses a proprietary threshold mechanism to identify the attack packets and discard them.</p>
+        <h2>cns-001032</h2>
+        <p><span class="b">Description:</span> ARNET: uPNP reply blocked</p>
+        <p><span class="b">Long Description:</span> A UDP packet for the uPNP protocol (UDP port 1900) contained a uPNP reply (source port 1900) and was blocked. This functionality has been deprecated and its usage could indicate a possible uPNP amplification attack.</p>
+        <h2>cns-001033</h2>
+        <p><span class="b">Description:</span> ARNET: Specific reply blocked</p>
+        <p><span class="b">Long Description:</span> This rule is used when a combined destination IP address and source port is matched.  It can be used to thwart attacks like DNS reflection.</p>
+        <h2>cns-001034</h2>
+        <p><span class="b">Description:</span> ARNET: Specific fragmented reply blocked</p>
+        <p><span class="b">Long Description:</span> This rule is meant to be used as a complement to the Specific reply blocked rule.  It is used when a combined destination IP address and a non-first fragment are matched.  It can be used to thwart attacks like DNS reflection.</p>
+        <h2>cns-001036</h2>
+        <p><span class="b">Description:</span> IPFragRateLimit – Fragmented to non-fragmented packet ratio exceeded</p>
+        <p><span class="b">Long Description:</span> The ratio of fragmented to non-fragmented packets exceeded configured limit.</p>
+        <h2>cns-001037</h2>
+        <p><span class="b">Description:</span> ARNET: Generic packet filter</p>
+        <p><span class="b">Long Description:</span> A packet matched one of the generic packet filters.</p>
+        <h2>cns-001038</h2>
+        <p><span class="b">Description:</span> ARNET: Inbound SNMP communication blocked</p>
+        <p><span class="b">Long Description:</span> A UDP packet for the SNMP protocol (UDP port 161) contained SNMP reply (source port 161) and was blocked. This could indicate a possible SNMP amplification attack.</p>
+        <h2>cns-001039</h2>
+        <p><span class="b">Description:</span> ARNET: Chargen responses blocked</p>
+        <p><span class="b">Long Description:</span> A UDP packet for the CHARGEN protocol (UDP port 19) contained a CHARGEN reply (source port 19) and was blocked. This could indicate a possible CHARGEN amplification attack.</p>
+        <h2>cns-001040</h2>
+        <p><span class="b">Description:</span> IP address bypassed via the Fast Path</p>
+        <p><span class="b">Long Description:</span> The external IP address is in a range configured for bypass. Packets received on an EXTERNAL interface have the source address checked; packets received on an INTERNAL interface have the destination address checked and they are dropped via the Fast Path if they are in the configured blacklist. Note: This rule does not generate events in the security event viewer or the dashboard. However, the Detected Report does reflect the true count of triggers for this rule.</p>
+        <h2>cns-001100</h2>
+        <p><span class="b">Description:</span> ARNET: IP address has bad reputation, defined in later version</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to be bad. This is a generic bucket and more granular classification will be defined in a subsequent version of the product.</p>
+        <h2>cns-001101</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to participate in denial of service attacks</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to participate in denial of service attacks.</p>
+        <h2>cns-001102</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to be infected with malware </p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to be infected with malware.</p>
+        <h2>cns-001103</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to participate in botnets</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to be a part of a botnet and hence considered malicious.</p>
+        <h2>cns-001104</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to offer Windows exploits</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to transmit Windows exploits, possibly distributing malware, shell code, rootkits, worms, or viruses.</p>
+        <h2>cns-001105</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to scan networks</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to scan networks, possibly including reconnaissance such as probes, host scans, domain scans, brute force password crackers.</p>
+        <h2>cns-001106</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to provide anonymization services</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to provide anonymization services, possibly including TOR anonymizer IP addresses.</p>
+        <h2>cns-001107</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to participate in web attacks </p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to participate in web attacks, possibly including site scripting, iFrame injection, SQL injection, cross domain injection, or brute force domain password cracking.</p>
+        <h2>cns-001108</h2>
+        <p><span class="b">Description:</span> "ARNET: IP address reputed to host phishing sites "</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to host phishing sites.`</p>
+        <h2>cns-001109</h2>
+        <p><span class="b">Description:</span> ARNET: IP address reputed to send spam</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the source IP address is reputed to send spam, possibly including tunneling spam messages through proxy, anomalous SMTP activities, and forum spam activities.</p>
+        <h2>cns-002001</h2>
+        <p><span class="b">Description:</span> RLNET: ConnLimit - TCP active connections from single client exceed specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects connection request packets from a client that has already established the maximum number of connections configured for any single client in that client's group. If you have a specific client that legitimately requires more resources than you generally wish to allow, you can raise the connection limit imposed for members in that group, or you can place that client into a unique group and establish higher limits specific to that group and its clients.</p>
+        <h2>cns-002002</h2>
+        <p><span class="b">Description:</span> RLNET: ConnLimit - TCP active connections from client group exceed specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects connection request packets from clients in a client group for which the total number of established connections exceeds the maximum number of connections configured for that group. As part of server resource protection, you can establish a limit on the number of TCP connections allowed for a client group and for any single member within the group. If you have a client group that legitimately requires more resources than you generally wish to allow, create a new connection limit rule, with higher limits, and apply it to that group.</p>
+        <h2>cns-002003</h2>
+        <p><span class="b">Description:</span> RLNET: ConnLimit - TCP active connections to single server exceed specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects connection requests to a server that has already made the maximum number of connections configured for any single server in that server's group. This mechanism protects servers from attempting to make more connections than they can handle.</p>
+        <h2>cns-002004</h2>
+        <p><span class="b">Description:</span> RLNET: ConnLimit - TCP active connections to server group exceed specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects connection requests to a server group that has already made the maximum number of total connections configured for all the servers in that group. As part of server resource protection, you can establish a limit on the number of TCP connections allowed for all the servers in a server group and for any single member within the group. This mechanism protects the servers from attempting to make more connections than they can handle.</p>
+        <h2>cns-002005</h2>
+        <p><span class="b">Description:</span> RLNET: ClientPacketRateLimit - rate from client to enabled services exceeds specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects TCP/UDP request packets from a client that has exceeded the rate limit for the TCP/UDP services that have been identified and configured to be rate limited. If you have configured TCP/UDP request rate limiting for specified TCP/UDP services, once the client uses up the allowed requests or allowed packets for a given period of time, the Defense appliance drops additional requests/packets. The appliance also tracks the excess requests and uses the total to update the TCP/UDP packets available to the client for the next measured period. Note that traffic belonging to services that are not client rate limited is allowed until the overdraft limit is reached for that client.</p>
+        <h2>cns-002006</h2>
+        <p><span class="b">Description:</span> RLNET: ClientPacketRateLimit - packet rate from client exceeded overdraft threshold</p>
+        <p><span class="b">Long Description:</span> This rule detects incoming TCP/UDP packets from a client that has exceeded an established overdraft limit. In addition to establishing a rate limit for TCP/UDP services, you can establish an "overdraft limit" which the Defense appliance uses to determine when a client has exceeded its request limit by so much that it is likely that the client is malicious. If the client exceeds the client rate limiting overdraft limit, the appliance treats the client as malicious and blocks any packet from that client (for any service, regardless of protocol type). The client automatically returns to "good client" status by reducing its packet rate to a reasonable amount. If you know that a client is now a "good" client and that its IP address is no longer being used for an attack, you can manually zero out the accumulated excessive requests of the client and return it immediately to favorable status.</p>
+        <h2>cns-002007</h2>
+        <p><span class="b">Description:</span> RLNET: ICMP packet rate exceeded threshold</p>
+        <p><span class="b">Long Description:</span> This rule detects ICMP packets that exceed a configured limit.</p>
+        <h2>cns-002008</h2>
+        <p><span class="b">Description:</span> RLNET: ICMPv6 packet rate exceeded threshold</p>
+        <p><span class="b">Long Description:</span> This rule detects ICMPv6 packets that exceed a configured limit.</p>
+        <h2>cns-002009</h2>
+        <p><span class="b">Description:</span> RLNET: UDP packets exceeded rate threshold</p>
+        <p><span class="b">Long Description:</span> This rule indicates that the number of UDP packets have exceeded the UDP Rate Threshold.</p>
+        <h2>cns-002010</h2>
+        <p><span class="b">Description:</span> RLNET: ServerByteRateLimit - byte rate to server limit exceeded</p>
+        <p><span class="b">Long Description:</span> Indicates that the rate of data being sent to a server exceeds the global limit. This limit must be the same for ALL servers and is intended to block high bandwidth attacks that can't be blocked by some more specific rule.</p>
+        <h2>cns-002011</h2>
+        <p><span class="b">Description:</span> RLNET: ServerPktRateLimit - packet rate to server limit exceeded</p>
+        <p><span class="b">Long Description:</span> Indicates that the number of packets being sent to a server exceeds the global limit. This limit must be the same for ALL servers and is intended to block high packet rate attacks that can't be blocked by some more specific rule.</p>
+        <h2>cns-002012</h2>
+        <p><span class="b">Description:</span> RLNET: ReflectionByteRateLimit - byte rate to server limit exceeded</p>
+        <p><span class="b">Long Description:</span> Indicates that the rate of data being sent from a specified source address to a server exceeds the global limit. This is typical of reflection attacks. The limit must be the same for ALL servers and is intended to block high bandwidth attacks that can't be blocked by some more specific rule.</p>
+        <h2>cns-002013</h2>
+        <p><span class="b">Description:</span> RLNET: ReflectionPktRateLimit - packet rate to server limit exceeded</p>
+        <p><span class="b">Long Description:</span> Indicates that the number of packets being sent from a specified source address to a server exceeds the global limit. This is typical of reflection attacks. The limit must be the same for ALL servers and is intended to block high packet rate attacks that can't be blocked by some more specific rule.</p>
+        <h2>cns-003001</h2>
+        <p><span class="b">Description:</span> IANET: TCP flow aged out early</p>
+        <p><span class="b">Long Description:</span> This rule is triggered when a TCP flow is terminated due to inactivity. It is useful for identifying service definitions whose age-out time is not long enough.</p>
+        <h2>cns-003002</h2>
+        <p><span class="b">Description:</span> PVNET: IP frame destination address equals source addr-LanD</p>
+        <p><span class="b">Long Description:</span> This rule detects packets associated with the LanD attack (typically created using an attack program named land.c). The land.c program launches a denial-of-service (DoS) attack by sending a TCP SYN packet (a connection request) giving the target host's address as both the source and destination address, and using the same port on the target host as both the source and destination port. This attack makes it appear that the host computer is sending packets to itself. Servers, that do not properly validate the input socket pair, can experience TCP/IP stack overflows.</p>
+        <h2>cns-003003</h2>
+        <p><span class="b">Description:</span> PVNET: ICMP frame length illegal for type or exceeds specified limit</p>
+        <p><span class="b">Long Description:</span> This rule detects packets associated with ICMP messages that have illegal lengths or lengths that exceed the specified maximum configured limit. Various packet types including but not limited to router solicitation, traceroute, information requests and responses, etc. are checked. Servers that do not validate the length of the ICMP message they receive are vulnerable to ICMP-related attacks. A famous example of an ICMP attack is the "Ping of Death" which is an echo request contained in a packet that is greater than 65536 bytes.</p>
+        <h2>cns-003004</h2>
+        <p><span class="b">Description:</span> PVNET: ICMP frame contains illegal header</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with a header containing a Type field that has a value beyond the types that have been assigned, or has a Code field with a value that is greater than the maximum value allowed for the given Type field associated with that code.</p>
+        <h2>cns-003005</h2>
+        <p><span class="b">Description:</span> PVNET: UDP frame length mismatch with IP length UDP bomb</p>
+        <p><span class="b">Long Description:</span> This rule detects UDP packets that have a UDP length value that does not match the actual length of the data payload and the UDP header. This could indicate unintentional or intentional data corruption.</p>
+        <h2>cns-003006</h2>
+        <p><span class="b">Description:</span> PVNET: TCP frame header contains illegal flag combinations</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that have illegal combinations of TCP flag values. Several combinations of flags are checked and only traffic containing permissible values is allowed.</p>
+        <h2>cns-003007</h2>
+        <p><span class="b">Description:</span> IANET: TCP frame URG bit set to port 139-WinNuke</p>
+        <p><span class="b">Long Description:</span> This rule detects packets that are sent to port 139 with the URG bit set. This could indicate a potential WinNuke DoS attack. These attacks use the "urgent" mechanism to alter and abuse a NetBIOS Session (TCP port 139)</p>
+        <h2>cns-003011</h2>
+        <p><span class="b">Description:</span> PVNET: IP frame source IP address zero</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP packet with a source address of 0.0.0.0 in the IP version 4 header or :: in the IP version 6 header. This rule applies to all protocols except UDP. This is not a typically expected value for the source IP address field.</p>
+        <h2>cns-003012</h2>
+        <p><span class="b">Description:</span> PVNET: IP frame destination address zero</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP packet with a destination address of 0.0.0.0 in the IP version 4 header or :: in the IP version 6 header. This is not a valid destination address.</p>
+        <h2>cns-003015</h2>
+        <p><span class="b">Description:</span> IANET: UDP echo has multicast destination IP - Fraggle</p>
+        <p><span class="b">Long Description:</span> This rule detects a UDP packet directed to port 7 (echo request) that is flooded to all the addresses in the network or subnet. This could indicate a DDoS attack called Fraggle which is a variant of the Smurf attack. By sending out multiple requests, each responded to by multiple hosts, the attacker consumes network bandwidth and creates a denial-of-service condition for the target host.</p>
+        <h2>cns-003016</h2>
+        <p><span class="b">Description:</span> IANET: Slow TCP Client</p>
+        <p><span class="b">Long Description:</span> This rule detects attacks where the client purposely delays sending all of a request so as to tie up server resources. Slow Loris is one example.</p>
+        <h2>cns-003017</h2>
+        <p><span class="b">Description:</span> IANET: Slow TCP Server</p>
+        <p><span class="b">Long Description:</span> This rule detects attacks where TCP traffic from a server is progressing so slowly that there is likely an attack going on.  For example, the slowhtptest attack tool manipulates the client's TCP receive window to slow down server-to-client traffic.</p>
+        <h2>cns-003018</h2>
+        <p><span class="b">Description:</span> IANET: ICMP unsolicited echo response</p>
+        <p><span class="b">Long Description:</span> This rule detects an ICMP Echo response packet sent to a host that did not send an Echo request. This could be an indicator of a reconnaissance scan or a potential DoS attack.</p>
+        <h2>cns-003020</h2>
+        <p><span class="b">Description:</span> IANET: DNS unsolicited response</p>
+        <p><span class="b">Long Description:</span> This rule detects a DNS (port 53) response packet sent to a host that did not issue a corresponding DNS request. A large number of triggers could indicate a DNS Reflection attack.</p>
+        <h2>cns-003021</h2>
+        <p><span class="b">Description:</span> IANET: TCP SYN retry limit exceeded</p>
+        <p><span class="b">Long Description:</span> This rule detects a TCP connection that is retransmitting SYN packets faster than allowed by RFC 6298. This indicates an attempted SYN flood over a single connection.</p>
+        <h2>cns-003022</h2>
+        <p><span class="b">Description:</span> IANET: TCP initial sequence number has changed</p>
+        <p><span class="b">Long Description:</span> This rule detects a second SYN packet with a different initial sequence number that is received for a TCP flow that is already set up. This may indicate an attempt to hijack an existing TCP connection.</p>
+        <h2>cns-003023</h2>
+        <p><span class="b">Description:</span> IANET: TCP frame contains bad sequence number</p>
+        <p><span class="b">Long Description:</span> This rule detects a sequence number that is beyond a reasonable range determined by the sequence and ACK numbers from previous packets and the TCP window size. This may indicate an attempt to hijack an existing TCP connection.</p>
+        <h2>cns-003024</h2>
+        <p><span class="b">Description:</span> IANET: TCP frame contains bad ACK number</p>
+        <p><span class="b">Long Description:</span> This rule detects an ACK number that is beyond a reasonable range determined by the sequence and ACK numbers from previous packets and the TCP window size. This may indicate an attempt to hijack an existing TCP connection.</p>
+        <h2>cns-003025</h2>
+        <p><span class="b">Description:</span> PVNET: ICMPv6 frame contains illegal header</p>
+        <p><span class="b">Long Description:</span> This rule detects a packet with a header containing a Type field that has a value beyond the types that have been assigned, or has a Code field with a value that is greater than the maximum value allowed for the given Type field associated with that code.</p>
+        <h2>cns-003026</h2>
+        <p><span class="b">Description:</span> IANET: ICMPv6 unsolicited echo response</p>
+        <p><span class="b">Long Description:</span> This rule detects an ICMPv6 Echo response packet sent to a host that did not send an Echo request. This could be an indicator of a reconnaissance scan as it is a technique used by attackers to gain more knowledge about the hosts behind the firewall.</p>
+        <h2>cns-003027</h2>
+        <p><span class="b">Description:</span> PVNET: TCP SYN packet fragmented</p>
+        <p><span class="b">Long Description:</span> This rule detects TCP SYN packets that are fragmented. Multiple triggers could indicate the possibility of a SYN Fragment attack.</p>
+        <h2>cns-003028</h2>
+        <p><span class="b">Description:</span> IANET: TCP SYN retry limit exceeded on a proxied connection</p>
+        <p><span class="b">Long Description:</span> This rule detects a proxied connection on which many SYN packets have arrived. This indicates an attempted SYN flood over a single connection.</p>
+        <h2>cns-003029</h2>
+        <p><span class="b">Description:</span> IANET: TCP Proxy client connection reset.</p>
+        <p><span class="b">Long Description:</span> This rule detects a proxied connection for which the client closed the connection instead of completing the opening handshake. In other words, the client sent a TCP RST packet in response to the SYN/ACK sent by the server. This could be an indication of a port scanner or spoofed connection attempt.</p>
+        <h2>cns-003030</h2>
+        <p><span class="b">Description:</span> PVNET: TCP frame header contains illegal flag combinations.</p>
+        <p><span class="b">Long Description:</span>This rule detects packets that have illegal combinations of TCP flag values. Several combinations of flags are checked and only traffic containing permissible values is allowed.</p>
+        <h2>cns-033001</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 001</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 001.</p>
+        <h2>cns-033002</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 002</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 002.</p>
+        <h2>cns-033003</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 003</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 003.</p>
+        <h2>cns-033004</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 004</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 004.</p>
+        <h2>cns-033005</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 005</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 005.</p>
+        <h2>cns-033006</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 006</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 006.</p>
+        <h2>cns-033007</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 007</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 007.</p>
+        <h2>cns-033008</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 008</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 008.</p>
+        <h2>cns-033009</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 009</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 009.</p>
+        <h2>cns-033010</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 010</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 010.</p>
+        <h2>cns-033011</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 011</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 011.</p>
+        <h2>cns-033012</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 012</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 012.</p>
+        <h2>cns-033013</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 013</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 013.</p>
+        <h2>cns-033014</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 014</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 014.</p>
+        <h2>cns-033015</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 015</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 015.</p>
+        <h2>cns-033016</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 016</p>
+        <p><span class="b">Long Description:</span> `This rule indicates that a packet has been shunned by shunning service label 016.</p>
+        <h2>cns-033017</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 017</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 017.</p>
+        <h2>cns-033018</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 018</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 018.</p>
+        <h2>cns-033019</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 019</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 019.</p>
+        <h2>cns-033020</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 020</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 020.</p>
+        <h2>cns-033021</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 021</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 021.</p>
+        <h2>cns-033022</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 022</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 022.</p>
+        <h2>cns-033023</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 023</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 023.</p>
+        <h2>cns-033024</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 024</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 024.</p>
+        <h2>cns-033025</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 025</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 025.</p>
+        <h2>cns-033026</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 026</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 026.</p>
+        <h2>cns-033027</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 027</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 027.</p>
+        <h2>cns-033028</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 028</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 028.</p>
+        <h2>cns-033029</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 029</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 029.</p>
+        <h2>cns-033030</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 030</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 030.</p>
+        <h2>cns-033031</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 031</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 031.</p>
+        <h2>cns-033032</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 032</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 032.</p>
+        <h2>cns-033033</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 033</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 033.</p>
+        <h2>cns-033034</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 034</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 034.</p>
+        <h2>cns-033035</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 035</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 035.</p>
+        <h2>cns-033036</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 036</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 036.</p>
+        <h2>cns-033037</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 037</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 037.</p>
+        <h2>cns-033038</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 038</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 038.</p>
+        <h2>cns-033039</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 039</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 039.</p>
+        <h2>cns-033040</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 040</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 040.</p>
+        <h2>cns-033041</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 041</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 041.</p>
+        <h2>cns-033042</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 042</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 042.</p>
+        <h2>cns-033043</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 043</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 043.</p>
+        <h2>cns-033044</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 044</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 044.</p>
+        <h2>cns-033045</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 045</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 045.</p>
+        <h2>cns-033046</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 046</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 046.</p>
+        <h2>cns-033047</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 047</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 047.</p>
+        <h2>cns-033048</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 048</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 048.</p>
+        <h2>cns-033049</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 049</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 049.</p>
+        <h2>cns-033050</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 050</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 050.</p>
+        <h2>cns-033051</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 051</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 051.</p>
+        <h2>cns-033052</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 052</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 052.</p>
+        <h2>cns-033053</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 053</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 053.</p>
+        <h2>cns-033054</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 054</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 054.</p>
+        <h2>cns-033055</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 055</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 055.</p>
+        <h2>cns-033056</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 056</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 056.</p>
+        <h2>cns-033057</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 057</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 057`</p>
+        <h2>cns-033058</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 058</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 058.</p>
+        <h2>cns-033059</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 059</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 059.</p>
+        <h2>cns-033060</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 060</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 060.</p>
+        <h2>cns-033061</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 061</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 061.</p>
+        <h2>cns-033062</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 062</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 062.</p>
+        <h2>cns-033063</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 063</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 063.</p>
+        <h2>cns-033064</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 064</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 064.</p>
+        <h2>cns-033065</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 065</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 065.</p>
+        <h2>cns-033066</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 066</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 066.</p>
+        <h2>cns-033067</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 067</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 067.</p>
+        <h2>cns-033068</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 068</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 068.</p>
+        <h2>cns-033069</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 069</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 069.</p>
+        <h2>cns-033070</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 070</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 070.</p>
+        <h2>cns-033071</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 071</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 071.</p>
+        <h2>cns-033072</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 072</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 072.</p>
+        <h2>cns-033073</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 073</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 073.</p>
+        <h2>cns-033074</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 074</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 074.</p>
+        <h2>cns-033075</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 07</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 075.</p>
+        <h2>cns-033076</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 076</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 076.</p>
+        <h2>cns-033077</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 077</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 077.</p>
+        <h2>cns-033078</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 078</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 078.</p>
+        <h2>cns-033079</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 079</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 079.</p>
+        <h2>cns-033080</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 080</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 080.</p>
+        <h2>cns-033081</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 081</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 081.</p>
+        <h2>cns-033082</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 082</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 082.</p>
+        <h2>cns-033083</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 083</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 083.</p>
+        <h2>cns-033084</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 084</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 084.</p>
+        <h2>cns-033085</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 085</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 085.</p>
+        <h2>cns-033086</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 086</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 086.</p>
+        <h2>cns-033087</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 087</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 087.</p>
+        <h2>cns-033088</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 088</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 088.</p>
+        <h2>cns-033089</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 089</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 089`</p>
+        <h2>cns-033090</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 090</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 090.</p>
+        <h2>cns-033091</h2>
+        <p><span class="b">Description:</span> "ARNET: IP address shunning service detect on label 091"</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 091.`</p>
+        <h2>cns-033092</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 092</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 092.</p>
+        <h2>cns-033093</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 093</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 093.</p>
+        <h2>cns-033094</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 094</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 094.</p>
+        <h2>cns-033095</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 095</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 095.</p>
+        <h2>cns-033096</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 096</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 096.</p>
+        <h2>cns-033097</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 097</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 097.</p>
+        <h2>cns-033098</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 098</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 098.</p>
+        <h2>cns-033099</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 099</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 099.</p>
+        <h2>cns-033100</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 100</p>
+        <p><span class="b">Long Description:</span> `This rule indicates that a packet has been shunned by shunning service label 100.`</p>
+        <h2>cns-033101</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 101</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 101.</p>
+        <h2>cns-033102</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 102</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 102.</p>
+        <h2>cns-033103</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 103</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 103.</p>
+        <h2>cns-033104</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 104</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 104.</p>
+        <h2>cns-033105</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 105</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 105.</p>
+        <h2>cns-033106</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 106</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 106.</p>
+        <h2>cns-033107</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 107</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 107.</p>
+        <h2>cns-033108</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 108</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 108.</p>
+        <h2>cns-033109</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 109</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 109.</p>
+        <h2>cns-033110</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 110</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 110.</p>
+        <h2>cns-033111</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 111</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 111.</p>
+        <h2>cns-033112</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 112</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 112.</p>
+        <h2>cns-033113</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 113</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 113.</p>
+        <h2>cns-033114</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 114</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 114.</p>
+        <h2>cns-033115</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 115</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 115.</p>
+        <h2>cns-033116</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 116</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 116.</p>
+        <h2>cns-033117</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 117</p>
+        <p><span class="b">Long Description:</span> `This rule indicates that a packet has been shunned by shunning service label 117.</p>
+        <h2>cns-033118</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 118</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 118.</p>
+        <h2>cns-033119</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 119</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 119.</p>
+        <h2>cns-033120</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 120</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 120.</p>
+        <h2>cns-033121</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 121</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 121.</p>
+        <h2>cns-033122</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 122</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 122.</p>
+        <h2>cns-033123</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 123</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 123.</p>
+        <h2>cns-033124</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 124</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 124.</p>
+        <h2>cns-033125</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 125</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 125.</p>
+        <h2>cns-033126</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 126</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 126.</p>
+        <h2>cns-033127</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 127</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 127.</p>
+        <h2>cns-033128</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 128</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 128.</p>
+        <h2>cns-033129</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 129</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 129.</p>
+        <h2>cns-033130</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 130</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 130.</p>
+        <h2>cns-033131</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 131</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 131.</p>
+        <h2>cns-033132</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 132</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 132.</p>
+        <h2>cns-033133</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 133</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 133.</p>
+        <h2>cns-033134</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 134</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 134.</p>
+        <h2>cns-033135</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 135</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 135.</p>
+        <h2>cns-033136</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 136</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 136.</p>
+        <h2>cns-033137</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 137</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 137.</p>
+        <h2>cns-033138</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 138</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 138.</p>
+        <h2>cns-033139</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 139</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 139.</p>
+        <h2>cns-033140</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 140</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 140.</p>
+        <h2>cns-033141</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 141</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 141.</p>
+        <h2>cns-033142</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 142</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 142.</p>
+        <h2>cns-033143</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 143</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 143.</p>
+        <h2>cns-033144</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 144</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 144.</p>
+        <h2>cns-033145</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 145</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 145.</p>
+        <h2>cns-033146</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 146</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 146.</p>
+        <h2>cns-033147</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 147</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 147.</p>
+        <h2>cns-033148</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 148</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 148.</p>
+        <h2>cns-033149</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 149</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 149.</p>
+        <h2>cns-033150</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 150</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 150.</p>
+        <h2>cns-033151</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 151</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 151.</p>
+        <h2>cns-033152</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 152</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 152.</p>
+        <h2>cns-033153</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 153</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 153.</p>
+        <h2>cns-033154</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 154</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 154.</p>
+        <h2>cns-033155</h2>
+        <p><span class="b">Description:</span>"ARNET: IP address shunning service detect on label 155</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 155.</p>
+        <h2>cns-033156</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 156</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 156.</p>
+        <h2>cns-033157</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 157</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 157.</p>
+        <h2>cns-033158</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 158</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 158.</p>
+        <h2>cns-033159</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 159</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 159.</p>
+        <h2>cns-033160</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 160</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 160.</p>
+        <h2>cns-033161</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 161</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 161.</p>
+        <h2>cns-033162</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 162</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 162.</p>
+        <h2>cns-033163</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 163</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 163.</p>
+        <h2>cns-033164</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 164</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 164.</p>
+        <h2>cns-033165</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 165</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 165.</p>
+        <h2>cns-033166</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 166</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 166.</p>
+        <h2>cns-033167</h2>
+        <p><span class="b">Description:</span>"ARNET: IP address shunning service detect on label 167</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 167.</p>
+        <h2>cns-033168</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 168</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 168.</p>
+        <h2>cns-033169</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 169</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 169.</p>
+        <h2>cns-033170</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 170</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 170.</p>
+        <h2>cns-033171</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 171</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 171.</p>
+        <h2>cns-033172</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 172</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 172.</p>
+        <h2>cns-033173</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 173</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 173.</p>
+        <h2>cns-033174</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 174</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 174.</p>
+        <h2>cns-033175</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 175</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 175.</p>
+        <h2>cns-033176</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 176</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 176.</p>
+        <h2>cns-033177</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 177</p>
+        <p>l<span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 177.</p>
+        <h2>cns-033178</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 178</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 178.</p>
+        <h2>cns-033179</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 179</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 179.</p>
+        <h2>cns-033180</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 180</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 180.</p>
+        <h2>cns-033181</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 181</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 181.</p>
+        <h2>cns-033182</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 182</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 182.</p>
+        <h2>cns-033183</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 183</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 183.</p>
+        <h2>cns-033184</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 184</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 184.</p>
+        <h2>cns-033185</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 185</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 185.</p>
+        <h2>cns-033186</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 186</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 186.</p>
+        <h2>cns-033187</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 187</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 187.</p>
+        <h2>cns-033188</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 188</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 188.</p>
+        <h2>cns-033189</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 189</p>
+        <p><span class="b">Long Description:</span> `This rule indicates that a packet has been shunned by shunning service label 189.</p>
+        <h2>cns-033190</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 190</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 190.</p>
+        <h2>cns-033191</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 191</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 191.</p>
+        <h2>cns-033192</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 192</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 192.</p>
+        <h2>cns-033193</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 193</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 193.</p>
+        <h2>cns-033194</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 194</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 194.</p>
+        <h2>cns-033195</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 195</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 195.</p>
+        <h2>cns-033196</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 196</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 196.</p>
+        <h2>cns-033197</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 197</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 197.</p>
+        <h2>cns-033198</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 198</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 198.</p>
+        <h2>cns-033199</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 199</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 199.</p>
+        <h2>cns-033200</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 200</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 200.</p>
+        <h2>cns-033201</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 201</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 201.</p>
+        <h2>cns-033202</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 202</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 202.</p>
+        <h2>cns-033203</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 203</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 203.</p>
+        <h2>cns-033204</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 204</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 204.</p>
+        <h2>cns-033205</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 205</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 205.</p>
+        <h2>cns-033206</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 206</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 206.</p>
+        <h2>cns-033207</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 207</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 207.</p>
+        <h2>cns-033208</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 208</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 208.</p>
+        <h2>cns-033209</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 209</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 209.</p>
+        <h2>cns-033210</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 210</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 210.</p>
+        <h2>cns-033211</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 211</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 211.</p>
+        <h2>cns-033212</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 212</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 212.</p>
+        <h2>cns-033213</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 213</p>
+        <p>l<span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 213.</p>
+        <h2>cns-033214</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 214</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 214.</p>
+        <h2>cns-033215</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 215</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 215.</p>
+        <h2>cns-033216</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 216</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 216.</p>
+        <h2>cns-033217</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 217</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 217.</p>
+        <h2>cns-033218</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 218</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 218.</p>
+        <h2>cns-033219</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 219</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 219.</p>
+        <h2>cns-033220</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 220</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 220.</p>
+        <h2>cns-033221</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 221</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 221.</p>
+        <h2>cns-033222</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 222</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 222.</p>
+        <h2>cns-033223</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 223</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 223.</p>
+        <h2>cns-033224</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 224</p>
+        <p>long-desc    `This rule indicates that a packet has been shunned by shunning service label 224.</p>
+        <h2>cns-033225</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 225</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 225.</p>
+        <h2>cns-033226</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 226</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 226.</p>
+        <h2>cns-033227</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 227</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 227.</p>
+        <h2>cns-033228</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 228</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 228.</p>
+        <h2>cns-033229</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 229</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 229.</p>
+        <h2>cns-033230</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 230</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 230.</p>
+        <h2>cns-033231</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 231</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 231.</p>
+        <h2>cns-033232</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 232</p>
+        <p>l<span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 232.</p>
+        <h2>cns-033233</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 233</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 233.</p>
+        <h2>cns-033234</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 234</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 234.</p>
+        <h2>cns-033235</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 235</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 235.</p>
+        <h2>cns-033236</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 236</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 236.</p>
+        <h2>cns-033237</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 237</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 237.</p>
+        <h2>cns-033238</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 238</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 238.</p>
+        <h2>cns-033239</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 239</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 239.</p>
+        <h2>cns-033240</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 240</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 240.</p>
+        <h2>cns-033241</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 241</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 241.</p>
+        <h2>cns-033242</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 242</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 242.</p>
+        <h2>cns-033243</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 243</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 243.</p>
+        <h2>cns-033244</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 244</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 244.</p>
+        <h2> cns-033245</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 245</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 245.</p>
+        <h2>cns-033246</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 246</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 246.</p>
+        <h2>cns-033247</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 247</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 247.</p>
+        <h2>cns-033248</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 248</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 248.</p>
+        <h2>cns-033249</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 249</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 249.</p>
+        <h2>cns-033250</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 250</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 250.</p>
+        <h2>cns-033251</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 251</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 251.</p>
+        <h2>cns-033252</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 252</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 252.</p>
+        <h2>cns-033253</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 253</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 253.</p>
+        <h2>cns-033254</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 254</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 254.</p>
+        <h2>cns-033255</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 255</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 255.</p>
+        <h2>cns-033256</h2>
+        <p><span class="b">Description:</span> ARNET: IP address shunning service detect on label 256</p>
+        <p><span class="b">Long Description:</span> This rule indicates that a packet has been shunned by shunning service label 256.`</p>
+        <h2>cns-100003</h2>
+        <p><span class="b">Description:</span> PVNET: IP fragment offset is beyond last expected offset</p>
+        <p><span class="b">Long Description:</span> This rule detects a situation in which the Defense appliance has already seen a fragment for a packet and knows what the offset of the last fragment is. It then receives this IP fragment that contains an offset placing it beyond the fragment, which is not a valid condition, and indicates an attack.</p>
+        <h2>cns-100004</h2>
+        <p><span class="b">Description:</span> IANET: IP fragment is duplicate</p>
+        <p><span class="b">Long Description:</span> This rule detects an attempt by an attacker to inject another copy of a fragment into the stream. As the Defense appliance reassembles the fragments into a complete packet, it detects the duplicate fragment. Duplicate fragments can be used in fragmentation attacks.</p>
+        <h2>cns-100005</h2>
+        <p><span class="b">Description:</span> IANET: IP fragment is overlapping</p>
+        <p><span class="b">Long Description:</span> This rule detects an attempt by an attacker to send a fragment that has an offset that causes it to overlap another fragment. As the Defense appliance reassembles the fragments into a complete packet, it detects the overlapping fragment. Overlapping fragments can be used in fragmentation attacks.`</p>
+        <h2>cns-100008</h2>
+        <p><span class="b">Description:</span> "PVNET: IP fragment length mismatch - UDP bomb"</p>
+        <p><span class="b">Long Description:</span> This rule detects an attempt to send a packet fragment where the length specified in the UDP header is not consistent with the total packet length specified in the IP header. This could be used in denial of service attacks.</p>
+        <h2>cns-100009</h2>
+        <p><span class="b">Description:</span> PVNET: IP fragment reassembly exceeds max size</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP fragment that causes the datagram being reassembled to exceed the maximum size allowed. This could indicate a denial of service attack.</p>
+        <h2>cns-100010</h2>
+        <p><span class="b">Description:</span> PVNET: IP fragment reserved bit set</p>
+        <p><span class="b">Long Description:</span> The rule detects IP traffic that has an abnormal fragment flag combination set. An example of an abnormal fragment flag combination is a packet that has the flag set but the &amp;quot;more fragment&amp;quot; flag is also set. An abnormal flag combination could lead to erroneous server processing in servers that do not perform proper verification.</p>
+        <h2>cns-100011</h2>
+        <p><span class="b">Description:</span> PVNET: IP fragment missing byte alignment</p>
+        <p><span class="b">Long Description:</span> This rule detects any IP fragment which has a length that is not a multiple of 8 bytes, and which is also not the last fragment of the IP datagram. This could lead to erroneous server processing in servers that do not perform proper verification.</p>
+        <h2>cns-100018</h2>
+        <p><span class="b">Description:</span> IANET: IP fragment number exceeds maximum allowed</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP fragment that exceeds the maximum number of fragments allowed by the Defense appliance for a single datagram. Excessive fragmentation is typically an indicator of an attempt to evade the Defense appliance.</p>
+        <h2>cns-100019</h2>
+        <p><span class="b">Description:</span> IANET: IP fragment reached maximum age</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP Fragment that has reached the maximum age allowed for fragments. The Defense appliance collects all the fragments of an IP datagram for reassembly. If it has not received all the fragments within the maximum age time (default = 15 seconds), it drops all the fragments.</p>
+        <h2>cns-100024</h2>
+        <p><span class="b">Description:</span> PVNET: TCP frame contains bad checksum</p>
+        <p><span class="b">Long Description:</span> This rule detects a TCP frame that contains a bad checksum. This could indicate the possibility of intentional or unintentional corruption of the headers.</p>
+        <h2>cns-100026</h2>
+        <p><span class="b">Description:</span>  IANET: IP fragment size less than minimum length</p>
+        <p><span class="b">Long Description:</span> This rule detects an IP fragment with a length that is less than the configured minimum; the default minimum fragment length is 256 octets. Excessive fragmentation is typically an indicator of an attempt to evade the Defense appliance.</p>
+        <h2>cns-100027</h2>
+        <p><span class="b">Description:</span> PVNET: UDP frame contains bad checksum</p>
+        <p><span class="b">Long Description:</span> This rule detects a UDP frame that contains a bad checksum. This could indicate the possibility of intentional or unintentional corruption of the headers.</p>
+    </body>
+</html>

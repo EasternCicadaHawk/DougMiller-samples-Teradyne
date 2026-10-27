@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist" data-mc-ignored-words="UID;GID;username;CMS;cmsipaddress;useridvalue;groupidvalue;passwordstring">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configure User Accounts and Authorization</title>
+        <meta name="description" content="Instructions for creating and configuring user accounts." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_aaa.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor18"></a>
+            <MadCap:concept term="How to" />Configure User Accounts and Authentication</h1>
+        <p data-mc-conditions="Default.RestAPI"><a name="kanchor11"></a>Specify user settings for your configuration by clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Users &amp; Authentication</span> in the web UI tool bar to display the AAA screen, or by typing <span class="CLIcommand">set aaa</span> in the CLI. Refer to <a href="AAA_overview.htm" target="_self" title="Learn about user accounts and authentication" alt="Learn about user accounts and authentication">AAA (Authentication, Authorization, and Accounting) Overview</a> for a general description of the <span class="VariablesApplicationNameShort">CMS</span>'s user account management.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Follow these steps to configure a user account on the <span class="VariablesApplicationNameShort">CMS</span>:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0" data-mc-conditions="Default.notRESTAPI">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">
+                        <p rowspan="2">Specify an existing user account to modify or begin defining a new user account.</p>
+                        <p rowspan="2">Define the user's privileges and other information.</p>
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">CMS</span> &gt; <span class="ControlName">Users &amp; Authentication</span> to display the AAA screen. Click <span class="ControlName">Authentication</span> &gt; <span class="ControlName">Users</span> to display the Users screen.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set aaa authentication users user <span class="CLIcommandItalic">username</span></span></p><p><span class="CLIcommand">set aaa authentication users user <span class="CLIcommandItalic">username</span> [gid | homedir | password | ssh_keydir | uid]</span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/aaa/authentication/users -d '{"user": {"name": "<span class="CLIcommandItalic">username</span>", "uid": <span class="CLIcommandItalic">useridvalue</span>, "gid": <span class="CLIcommandItalic">groupidvalue</span>, "password": "<span class="CLIcommandItalic">passwordstring</span>", "ssh_keydir": "/var/corero/homes/<span class="CLIcommandItalic">username</span>/.ssh", "homedir": "/var/corero/homes/<span class="CLIcommandItalic">username</span>"} }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1"><span class="UIname">Web UI:</span> Click an existing user name, or click <span class="ControlName">Add</span> to begin defining a new user.
+                        <p><span class="UIname">CLI:</span> Specify the username to access its properties, whether you are modifying an existing user or creating a new one.</p><p>Specify values for username, UID, GID, Password, SSH Keydir, and Homedir. These parameters are described in the <a href="user_screen.htm" target="_self" title="Show the description of the User screen and its controls" alt="Show the description of the User screen and its controls">User screen</a> topic.</p></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span> <span class="UIname">REST API:</span> <span class="ControlName">Save</span>/<span class="CLIcommand">commit</span> occurs automatically upon execution of the cURL command.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p data-mc-conditions="Default.notRESTAPI">Return to the <a href="basic_configuration_checklist.htm" target="_self" title="Show the basic configuration checklist" alt="Show the basic configuration checklist">Basic Configuration Checklist</a> if you're configuring your site for the first time.</p>
+    </body>
+</html>

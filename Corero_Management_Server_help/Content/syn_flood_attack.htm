@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>SYN Flood Attack</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#syn_flood_attack.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor217"></a>
+            <MadCap:concept term="Explanations" />SYN Flood Attack</h1>
+        <h2>Definition</h2>
+        <p>A SYN flood attack is a <a href="volumetric_attack_def.htm" target="_self" title="Show this definition" alt="Show this definition">volumetric attack</a>, a flood of TCP SYN requests directed at a target with the intent of consuming all of its available TCP connections, leaving none available for legitimate traffic. This common attack abuses the design of TCP's three-way handshake for establishing a valid connection between a client and a server.</p>
+        <p>The ordinary, legitimate behavior of the three-way handshake works like this: a client seeking a connection to a server sends that server a TCP-SYN request. The server responds to the client with a SYN-ACK message, acknowledging that it has received the client's request for a connection, and indicating that it is capable of accepting a connection. The client responds to the server with an ACK of its own, and the connection is established, enabling traffic to flow between the client and the server.</p>
+        <p>In the case of a SYN flood attack, the client never responds with that final ACK message, leaving the server with that connection assigned to the client, but not carrying any actual traffic, because the three-way handshake was never completed. A SYN flood attack does this on a massive scale, seeking thousands of new connections, often sending the initial TCP SYN requests with spoofed IP addresses. The server sends its SYN-ACK messages to potentially thousands of purported clients, none of which respond with an ACK message because none of them actually sent a TCP SYN request in the first place. The result is that all of the server's possible connections are consumed, leaving none available for real users.</p>
+        <p>The TCP SYN fragment attack is a variation on the SYN flood attack that uses incomplete TCP SYN messages.</p>
+        <h2>Observable characteristics</h2>
+        <p>An excessively large number of open SYN requests.</p>
+        <h2>Method of response</h2>
+        <p>Drop the first SYN packet from an unknown host during a DDoS attack.</p>
+        <h2><span class="VariablesApplicationNameShort">CMS</span> configuration steps</h2>
+        <p>None. SYN flood protection is enabled by default.</p>
+        <h2>Relevant SmartWall rules</h2>
+        <p>These rules pertain to this attack type:</p>
+        <ul>
+            <li value="1">cns-001018: Connection from client that failed handshake in proxy mode</li>
+            <li value="2">cns-001019: Connection to server that fails proxied handshake - Possible SYN flood</li>
+            <li value="3">cns-001020: SynFlood - Connection From New Client During DDoS Attack</li>
+            <li value="4">cns-003021: TCP SYN retry limit exceeded</li>
+            <li value="5">cns-003028: TCP SYN retry limit exceeded on a proxied connection</li>
+        </ul>
+    </body>
+</html>

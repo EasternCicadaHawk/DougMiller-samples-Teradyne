@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-conditions="Default.805Feature">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Packet Costs screen</title>
+        <meta name="description" content="Describes the controls provided in the Packet Costs screen for configuring rate limits for specific packet types" />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#advanced_security_controls.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor52"></a>
+            <MadCap:concept term="Screens &amp; commands" />Advanced Security Controls screen</h1>
+        <p>Clicking <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Advanced Security Controls</span> in the web UI tool bar displays the Advanced Security Controls screen. This screen enables you to specify custom costs for individual packet types, as well as rate limits for ICMP traffic. </p>
+        <p>These advanced security controls are available through the CLI using the <span class="CLIcommand">set defense profiles advanced-controls</span> command, except for the Header Blocking controls, which are available through the <span class="CLIcommand">set defense header-blocking</span> command. </p>
+        <p>Header Blocking:</p>
+        <p>Use these controls for  blocking traffic from entering your network based on its IP header type. Each type of traffic is allowed by default, though you should note that MPLS traffic is affected by default by the administrative state of rule CNS-000071 (which is enabled by default).</p>
+        <ul>
+            <li value="1"><span class="ControlName">IPv4 Packets</span> – Choose <span class="ControlName">Allow</span> or <span class="ControlName">Block</span>. <span class="ControlName">Allow</span> is the default.</li>
+            <li value="2"><span class="ControlName">IPv6 Packets</span> – Choose <span class="ControlName">Allow</span> or <span class="ControlName">Block</span>. <span class="ControlName">Allow</span> is the default.</li>
+            <li value="3"><span class="ControlName">MPLS Packets</span> – Choose <span class="ControlName">Inspect</span> or <span class="ControlName">Per Rule CNS-000071</span>; the latter is the default.</li>
+            <li value="4"><span class="ControlName">IP Tunnels</span> – Choose <span class="ControlName">Allow</span> or <span class="ControlName">Block</span>. <span class="ControlName">Allow</span> is the default.</li>
+        </ul>
+        <p>Service Controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Outbound Packet Inspection</span> – This is <span class="ControlName">Disabled</span> by default. Setting it to <span class="ControlName">Enabled</span> activates the inspection of traffic destined for the outside of the network.</li>
+        </ul>
+        <p>ICMP Rate Limits:</p>
+        <ul>
+            <li value="1"><span class="ControlName">ICMP V4 Rate</span>
+            </li>
+            <li value="2"><span class="ControlName">ICMP V6 Rate</span>
+            </li>
+            <li value="3"><span class="ControlName">ICMP V6 Priority Rate</span>
+            </li>
+        </ul>
+        <p>Connection Rate Limits:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Non TCP Setup Rate</span> – The rate at which non-TCP traffic will be allowed to pass through before triggering rule CNS-001022.</li>
+        </ul>
+        <p>Fragmentation:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Max Age</span> – Maximum fragment age in milliseconds before triggering CNS-100019.</li>
+            <li value="2"><span class="ControlName">Max Rate</span> – Total number of fragments allowed per second.</li>
+            <li value="3"><span class="ControlName">UDP Fragmentation Ratio</span> – Approximate number of fragmented packets allowed for every 100 non-fragmented packets.</li>
+        </ul>
+        <p>Slow Client Checks:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Small Packet</span> – A client packet with a TCP payload smaller than this is considered suspicious.</li>
+            <li value="2"><span class="ControlName">Small Packet Threshold</span> – This number of consecutive small packets triggers CNS-003016.</li>
+            <li value="3"><span class="ControlName">Small Window</span> – A client packet advertising a TCP window smaller than this is considered suspicious.</li>
+            <li value="4"><span class="ControlName">Small Window Threshold</span> – This number of consecutive small windows triggers CNS-003017.</li>
+        </ul>
+        <p>Probation Controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">IP Address Timeout</span> – When the Defense appliance recognizes that a DDoS attack is in progress and a new IP address is seen for the first time, that address is put "on probation" for the length of time (in seconds) specified by this parameter. If the IP address is seen again during this interval, it is taken off probation and promoted to being handled normally. Otherwise, if the IP address is not seen again during the interval, the original packet is dropped, and the next packet seen from that address (if any) will start the probation interval again.</li>
+        </ul>
+    </body>
+</html>

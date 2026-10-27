@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations|Bypass Mode and Defense Mode">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Bypass Best Practices</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#bypass_best_practices.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor43"></a>
+            <MadCap:concept term="Explanations" /><span class="VariablesBypassDeviceCapitalized">Bypass Appliance</span> Best Practices</h1>
+        <p>This topic summarizes some best practices to employ and some ideas to consider when using a <span class="VariablesBypassDeviceLong">SmartWall Network Bypass Appliance</span> in your site.</p>
+        <p>Modes of operation:</p>
+        <ul>
+            <li value="1">Bypass mode: Bypass mode provides connectivity protection to your site in the event of a power outage, or the need to perform maintenance or experiments on other SmartWall <span class="VariablesPlatformNameShort">appliance</span>s. Traffic passes through the Bypass appliance directly from one network port to the other, without being passed to attached appliances, or being handled or treated in any other way.</li>
+            <li value="2">Inline mode: Traffic is bridged between the Bypass appliance's inbound network port and its inbound inspection port. The traffic is handed off to the attached <span class="VariablesCompanyNameShort">Corero</span> appliances, and, once their handling of the traffic is complete, the treated traffic re-enters the bypass appliance at its outbound inspection port, where it is bridged to the outbound network port for being passed to the server infrastructure.</li>
+            <li value="3">Monitor mode: Traffic passes straight through the Bypass appliance, but is copied also to the inbound inspection port so that it can be handled by attached <span class="VariablesCompanyNameShort">Corero</span> appliances. The <span class="VariablesBypassDevice">Bypass appliance</span> drops the treated traffic at its outbound network port, preventing the treated traffic from entering the network. This mode is useful for non-intrusive evaluation  and experiments for which you want to have visibility into the behavior of the <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> without allowing the treated traffic into your network.</li>
+        </ul>
+        <p>You can upgrade the software for any <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span> in any of these modes.</p>
+        <p>The optical bypass mode should used solely in the event of a power failure. It is possible to test the optical bypass mode by setting the <span class="ControlName">Optical Bypass</span> option in the Cluster Configuration screen's Bypass Mode menu, but this option should not be used for any purpose other than verifying that the optical bypass mode works as it should.</p>
+        <p>After a power failure has occurred and power has been restored, the <span class="VariablesBypassDevice">Bypass appliance</span> will come back up in Bypass mode (switched bypass, not optical bypass). You will need to change the mode explicitly to Inline or Monitor once you have determined that the rest of your network has recovered properly.</p>
+    </body>
+</html>

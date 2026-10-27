@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Protection Group Status Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Protection Group Status Type.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193616"></a>Protection Group Status Type</h3>
+        <p>Every 60 seconds the CMS creates a report that summarizes the status of each protection group.&#160; The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p>
+            <div style="margin-left: 9pt;margin-top: 10.15pt;width: 477pt;height: 63.1pt;visibility: visible;mso-height-relative: margin;v-text-anchor: middle;">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.corero.com cat=system,type=pg-status, v=1,cl=NYC1,pg=NYC1_1,devices=3,reachable=3,in-sync=3,defense-mode=mitigate,bypass-mode=inline,min-uptime=234343,</p>
+            </div>
+        </p>
+        <p class="TableCaption">Example Protection Group Summary Status Message</p>
+        <p>The specific content for the protection group summary status message is:</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type </p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cat</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>system</p>
+                </td>
+                <td>
+                    <p>System event category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>pg-status</p>
+                </td>
+                <td>
+                    <p>Protection Group summary status</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group of this status</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Number of devices</p>
+                </td>
+                <td>
+                    <p>devices</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The number of devices configured in the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Number of Reachable Devices</p>
+                </td>
+                <td>
+                    <p>reachable</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The number of devices that are reachable in the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Number of In-Sync Devices</p>
+                </td>
+                <td>
+                    <p>in-sync</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The number of devices with in-sync deployment state in the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Defense Mode Summary Status</p>
+                </td>
+                <td>
+                    <p>defense-mode</p>
+                </td>
+                <td>
+                    <p>Text [mitigate,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; monitor,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; bypass,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; not-applicable,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; not-in-sync]</p>
+                </td>
+                <td>
+                    <p>The defense mode of the protection group if there is at least one Defense appliance, otherwise not applicable.&#160; If an appliance is not in sync, the summary status is not-in-sync</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Bypass Mode Summary Status</p>
+                </td>
+                <td>
+                    <p>bypass-mode</p>
+                </td>
+                <td>
+                    <p>Text [inline,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; monitor,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; bypass,</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; not-applicable]</p>
+                </td>
+                <td>
+                    <p>The bypass mode of the protection group if there is a Bypass appliance in the configuration, otherwise not-applicable</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Minimum Uptime </p>
+                </td>
+                <td>
+                    <p>min-uptime</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The minimum uptime in seconds of all of the devices in the protection group.&#160; </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>System State Change Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/System State Change Type.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193617"></a>System State Change Type</h3>
+        <p>When certain significant system or network events occur, the CMS will issue a message indicating this change of state.&#160; The following is an example how this report is sent to configured syslog receivers and a description of the contents.</p>
+        <p>
+            <div style="margin-left: 9pt;margin-top: 10.15pt;width: 477pt;height: 63.1pt;visibility: visible;mso-height-relative: margin;v-text-anchor: middle;">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.corero.com cat=system,type=state-change, v=1,cl=NYC1,pg=NYC1_1, aname=Defense_12_12_12_1,state-name=bypass-mode,old- state=inline, new-state=bypass</p>
+            </div>
+        </p>
+        <p class="TableCaption">Example State Change Message</p>
+        <p>The specific content for the system state change message is:</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type </p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cat</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>system</p>
+                </td>
+                <td>
+                    <p>System event category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>state-change</p>
+                </td>
+                <td>
+                    <p>System state change indication</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group this state change</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Device/Appliance Name</p>
+                </td>
+                <td>
+                    <p>aname</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The name provisioned for this device (appliance)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>State Name</p>
+                </td>
+                <td>
+                    <p>state-name</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The name of the state that has changed</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Previous/Old State</p>
+                </td>
+                <td>
+                    <p>old-state</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The value of the state before it changed</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>New/Current State</p>
+                </td>
+                <td>
+                    <p>new-state</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The value of the state after it changed</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

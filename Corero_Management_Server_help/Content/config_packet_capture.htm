@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Configure Packet Capture</title>
+        <meta name="description" content="Instructions for defining packet capture behavior on a Corero Forensics appliance." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_packet_capture.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor20"></a>
+            <MadCap:concept term="How to" />Configure Packet Capture</h1>
+        <p><a name="kanchor13"></a>Using packet capture as part of your <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> involves the addition of a <span class="VariablesPcapDevice">Forensics appliance</span> and configuration of network storage for collecting the capture data, as well as configuration of one or more queries for searching that data. This topic summarizes the overall process of configuring packet capture support for your site.</p>
+        <h2>Add a <span class="VariablesPcapDeviceCapitalized">Forensics Appliance</span> To The Site</h2>
+        <p>Follow the procedure for <a href="Adding_appliance.htm" target="_self" title="Learn how to add a Corero appliance to the site configuration" alt="Learn how to add a Corero appliance to the site configuration">Adding a <span class="VariablesCompanyNameShort">Corero</span> Appliance to Manage</a>, making sure that it is a <span class="VariablesPcapDevice">Forensics appliance</span>. This is done in the web UI by clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Cluster Configuration</span>. When you add the <span class="VariablesPcapDevice">Forensics appliance</span>, there are some additional things you need to do to configure the <span class="VariablesPlatformNameShort">appliance</span>. As you add the <span class="VariablesPlatformNameShort">appliance</span>, click <span class="ControlName">Forensics Settings</span> above the image of the <span class="VariablesPcapDevice">Forensics appliance</span> to display a set of pop-up fields for specifying the IP address and subnet mask for port 3 and port 4 on the <span class="VariablesPcapDevice">Forensics appliance</span>. One of these ports will connect to the storage infrastructure used for collecting data, and the other will connect to a <span class="VariablesProtectionDevice">Defense appliance</span>.</p>
+        <h2>Configure Network Storage</h2>
+        <p><a name="kanchor14"></a>Follow the procedure for <a href="configure_network_storage.htm" target="_self" title="Learn how to configure network storage for packet capture data" alt="Learn how to configure network storage for packet capture data">configuring the network storage</a> that will collect the packet capture data. This is done in the web UI by clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Network Storage</span> to display the <a href="network_storage_screen.htm" target="_self" title="Show the description of the Network Storage screen and its controls" alt="Show the description of the Network Storage screen and its controls">Network Storage screen</a>.</p>
+        <p>Add the portal. Click <span class="ControlName">Add</span> to display the Portal screen. Type a user-defined name for the storage entity and click <span class="ControlName">Create</span>. In the Host field, type the IP address or DNS hostname for the device. Type a port as well, or accept the default of 3260. Click <span class="ControlName">Packet Capture</span> in the tool bar path to return to the Packet Capture screen [same as the Network Storage screen].</p>
+        <p>Add the storage volume. Click <span class="ControlName">Add</span> in the Storage section to display the Storage screen. Type the volume name; this needs to be the formal volume name, as obtained via a system command. Then click <span class="ControlName">Create</span> to add the volume and begin configuring it. Specify the Device name; this is the <span class="VariablesPcapDevice">Forensics appliance</span> from which the network storage device receives data. Choose the Type of the storage device; this is Iscsi or RAM. Type the size of the device, expressed in GB. For Target, type the name of the PCAP file to which the data will be written. Specify an Admin state for the device, either <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span>.</p>
+        <h2>Configure Queries</h2>
+        <p>Follow the procedure for <a href="configure_packet_capture_queries.htm" target="_self" title="Learn how to configure packet capture queries" alt="Learn how to configure packet capture queries">configuring one or more queries for searching the data</a>. This is done in the web UI by clicking <span class="ControlName">Defense Monitoring</span> &gt; <span class="ControlName">Capture Admin &amp; Queries</span> to display the <a href="capture_query_screen.htm" target="_self" title="See the description of the Capture Admin &amp; Queries screen and its controls" alt="See the description of the Capture Admin &amp; Queries screen and its controls">Capture Admin &amp; Queries screen</a>. Choose <span class="ControlName">Bypass</span> or <span class="ControlName">Capture</span> to set the Capture mode; <span class="ControlName">Bypass</span> is the default. Click <span class="ControlName">Add</span> to display the New Packet Capture Query dialog box.</p>
+        <p>Return to the <a href="basic_configuration_checklist.htm" target="_self" title="Show the basic configuration checklist" alt="Show the basic configuration checklist">Basic Configuration Checklist</a> if you're configuring your site for the first time.</p>
+    </body>
+</html>

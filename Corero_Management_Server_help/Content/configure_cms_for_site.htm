@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Welcome to the CMS">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Configuring Custom Server Protection</title>
+        <meta name="description" content="This covers the set of things you should configure explicitly to protect your server infrastructure. " />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#configure_cms_for_site.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor5"></a>
+            <MadCap:concept term="Explanations" />Configuring Custom Server Protection</h1>
+        <p><a name="kanchor4"></a>The <span class="VariablesApplicationNameShort">CMS</span> and <span class="VariablesPlatformNameShort">appliance</span> provide a lot of protection for your servers automatically with rules, rule sets, service protocols, profiles, and server protection that is built in to the product, supporting the <a href="protection_key_steps.htm" target="_self" title="Learn about the essential aspects of server protection" alt="Learn about the essential aspects of server protection">essential server protection practices</a> that are critical to keeping your network safe. To achieve the maximum possible protection for your servers, however, you will want to customize the configuration so that it is optimized for the particular traffic that your organization's network encounters. Clicking <span class="ControlName">Defense Configuration</span> in the web UI tool bar provides access to the following commands for configuring server protection explicitly:</p>
+        <ul>
+            <li value="1"><span class="b">Server Protection</span> – <a href="configuring_protection.htm" target="_self" title="Learn how to configure server protection" alt="Learn how to configure server protection">Configure</a> how the <span class="VariablesPlatformNameShort">appliance</span> responds to traffic bound for your servers.</li>
+            <li value="2"><span class="b">Server Profiles</span> – Specify traffic characteristics to associate .with servers in your network.</li>
+            <li value="3"><span class="ControlName">Client Groups</span> – <a href="config_client_groups.htm" target="_self" title="Learn how to configure a client group" alt="Learn how to configure a client group">Specify sets of clients</a> that should have their traffic handled the same by your <span class="VariablesPlatformNameShort">appliance</span>s.</li>
+            <li value="4"><span class="ControlName">Client Profiles</span> – <a href="config_client_profile.htm" target="_self" title="Learn how to configure a client profile" alt="Learn how to configure a client profile">Specify traffic characteristics</a> to associate with clients outside your network.</li>
+            <li value="5"><span class="ControlName">Service Protocols</span> – A <a href="config_service_protocol.htm" target="_self" title="Learn how to configure a service protocol" alt="Learn how to configure a service protocol">service protocol</a> specifies how traffic corresponding to a particular application is handled by the <span class="VariablesPlatformNameShort">appliance</span>. </li>
+            <li value="6"><span class="ControlName">Rule Sets</span> – A <a href="Rule_Set_Overview.htm" target="_self" title="Learn about rule sets" alt="Learn about rule sets">rule set</a> is a named collection of rules that is configured to identify and address traffic for a particular purpose.</li>
+            <li value="7"><span class="b">IP Packet Header Blocking</span> – <a href="blocking_ip_headers.htm" target="_self" title="Learn how to block traffic based on its IP header type" alt="Learn how to block traffic based on its IP header type">Block access</a> to your network for types of traffic that you never expect to encounter from legitimate users.</li>
+            <li value="8"><span class="b">IP Address Shunning</span> – Shunning is a temporary measure that refuses entry to all traffic from a specific IP address for a finite amount of time. Shunning is useful when you encounter problematic traffic from a particular IP address; you can shun the traffic from that address for a period of time until you decide on a policy for handling that traffic over the long term.</li>
+            <li value="9"><span class="ControlName">IP Address Blocking</span> – <a href="blacklist_ip_address.htm" target="_self" title="Learn how to block an IP address completely" alt="Learn how to block an IP address completely">Blocking an IP address</a> completely adds that IP address to a list of addresses that is consulted before any other part of the corresponding packet is examined. A packet from a blocked address is discarded immediately, and no additional processing is performed on any portion of its contents.</li>
+            <li value="10"><span class="ControlName">Flex Rule based Blocking</span> – The <a href="flex_rule_based_blocking_screen.htm" target="_self" title="Show the description of the Flex-Rule based Blocking screen and its controls" alt="Show the description of the Flex-Rule based Blocking screen and its controls">Flex-Rule utility</a> provides a means of defining custom packet blocking filters. These custom filters enable you to respond quickly to new threats you encounter that are not yet addressed by formal rules in Corero’s SmartWall software, or, otherwise, to threats for which you want a very specific or nuanced response that is not provided to your liking by the built-in software.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="zzz;ipaddressrange">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Configuration Actions screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Config screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_actions_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor61"></a>
+            <MadCap:concept term="Screens &amp; commands" />Configuration Actions screen</h1>
+        <p>Click <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Configuration Actions</span> in the web UI tool bar to display the Configuration Actions screen. This screen provides controls for coordinating the transfer of the site configuration between the <span class="VariablesApplicationNameShort">CMS</span> and the managed devices.</p>
+        <p>The Configuration Actions screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Sync All Devices</span> – For all devices in the site, default the configuration on each <span class="VariablesPlatformNameShort">appliance</span> and push the new configuration from the <span class="VariablesApplicationNameShort">CMS</span>.</li>
+            <li value="2"><span class="ControlName">Deploy</span> – Push recent configuration changes to the site's devices. This is the same as using the CLI command <span class="CLIcommand">request config deploy</span>.</li>
+            <li value="3"><span class="ControlName">Force Sync</span> –  For an individual device, default its configuration and push the new configuration from the <span class="VariablesApplicationNameShort">CMS</span>.</li>
+            <li value="4"><span class="ControlName">Reset Configuration</span> – For a selected appliance, choose. <span class="ControlName">Reset Policy Configuration</span> or <span class="ControlName">Reset All Configuration</span>.</li>
+            <li value="5"><span class="ControlName">Restart Device</span> – For a selected appliance, choose <span class="ControlName">Application Only</span>, <span class="ControlName">Operating System</span>, or <span class="ControlName">Hardware</span> to indicate the level at which you want to restart the <span class="VariablesPlatformNameShort">appliance</span>.</li>
+        </ul>
+        <p>The <span class="ControlName">Deploy</span> and <span class="ControlName">Force Sync</span> commands may be necessary when <span class="VariablesPlatformNameShort">appliance</span>s are down at the time the configuration is saved, or when new <span class="VariablesPlatformNameShort">appliance</span>s are added to a running site. If there is a need to perform one of these actions, the <span class="ControlName">Sync Status</span> icon below the <span class="VariablesApplicationNameShort">CMS</span> menu bar will be lit. Unless the <span class="ControlName">Sync Status</span> icon is lit and indicates that a <span class="ControlName">Deploy</span> or <span class="ControlName">Force Sync</span> action is necessary, you should use the <span class="ControlName">Save</span> command as the primary mechanism for pushing a configuration to <span class="VariablesPlatformNameShort">appliance</span>s.</p>
+    </body>
+</html>

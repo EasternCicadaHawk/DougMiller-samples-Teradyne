@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="UDP;TCP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Syslog and Splunk Configuration screen</title>
+        <meta name="description" content="Descriptions of the controls provided for forwarding events and logs via syslog, and for specifying Splunk recipients." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#syslog_remote_servers.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor92"></a>
+            <MadCap:concept term="Screens &amp; commands" />Syslog and Splunk Configuration screen</h1>
+        <p>Clicking <span class="ControlName">CMS</span> &gt; <span class="ControlName">Syslog &amp; Splunk Configuration</span> in the web UI tool bar displays the Syslog and Splunk Configuration screen. This screen provides controls for specifying recipients of the <span class="VariablesApplicationNameShort">CMS</span>'s event and log data, such as a Splunk indexer that will be used with Corero's SecureWatch Analytics application. The same functionality is available through the CLI commands <span class="CLIcommand">set syslog remote-server</span> and <span class="CLIcommand">set syslog splunk-forwarder</span>.</p>
+        <p>The Syslog and Splunk Configuration screen provides these controls:</p>
+        <p><span class="ControlName">Syslog Servers</span> – Click the <span class="ControlName">Add</span> button to specify a new syslog server, and provide the following information to define it.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Name</span> – A descriptive name for the syslog server.</li>
+            <li value="2"><span class="ControlName">Host</span> – The IP address or domain name of the syslog server.</li>
+            <li value="3"><span class="ControlName">Port </span> – The port on which the syslog server will listen for events. By default, this is <span class="ControlName">514</span>, the commonly used syslog port.</li>
+            <li value="4"><span class="ControlName">Protocol</span> – The Transport layer protocol used to carry the syslog messages to the server; choose <span class="ControlName">UDP</span> (the default) or <span class="ControlName">TCP</span>.</li>
+        </ul>
+        <p><span class="ControlName">Splunk Forwarder</span> - This controls the forwarding of event and log data from the <span class="VariablesApplicationNameShort">CMS</span> to listening Splunk indexers. The sending of events and logs is disabled by default; choose <span class="ControlName">Enabled</span> for each, as you require.</p>
+        <p><span class="ControlName">Splunk Indexers</span> - Specify the <span class="ControlName">Name</span>, <span class="ControlName">Host</span> [IP address or domain name] and <span class="ControlName">Port</span> of one or more Splunk instances that will receive event and log data from the <span class="VariablesApplicationNameShort">CMS</span> and index it. The port defaults to <span class="ControlName">9997</span>, the commonly used Splunk indexing port.</p>
+        <p><span class="ControlName">Syslog Message Controls</span> – These controls enable you to configure the behavior of some of the message types sent from the <span class="VariablesApplicationNameShort">CMS</span> via Syslog.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Type Event Message Limit</span> – Maximum number of security event syslog messages sent per second per rule.</li>
+            <li value="2"><span class="ControlName">Type Event Send Detected</span> – Enable sending of syslog messages for detected events. (This is <span class="ControlName">Enabled</span> by default.)</li>
+            <li value="3"><span class="ControlName">Type Sflow Message Limit</span> – Maximum number of Sflow syslog messages sent per second per direction.</li>
+        </ul>
+    </body>
+</html>

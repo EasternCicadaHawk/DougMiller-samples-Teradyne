@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist" data-mc-ignored-words="portalname;targetname;volumename;devicename;formaltargetname;cmsipaddress;ipaddress;portnumber;hostipaddress;forensicsappliancename">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configure Network Storage</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#configure_network_storage.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor27"></a>
+            <MadCap:concept term="How to" />Configure Network Storage</h1>
+        <p>If you are using a <span class="VariablesPcapDevice">Forensics appliance</span> to support packet capture activities, you must configure the network storage resource that will collect the packet capture data. This is done in the web UI by clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Network Storage</span> in the web UI tool bar to display the <a href="network_storage_screen.htm" target="_self" title="Show the description of the Network Storage screen and its controls." alt="Show the description of the Network Storage screen and its controls.">Network Storage screen</a>. Alternatively, type <span class="CLIcommand">set site packet-capture storage</span> in the CLI.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Configure the storage resource:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Add the portal.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Network Storage</span> to display the Network Storage screen. Click <span class="ControlName">Add</span> to display the Portal screen.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set site packet-capture portal <span class="CLIcommandItalic">portalname</span> host <span class="CLIcommandItalic">ipaddress</span> port <span class="CLIcommandItalic">portnumber</span></span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/site/packet-capture -d '{"portal": {"name": "<span class="CLIcommandItalic">portalname</span>", "host": "<span class="CLIcommandItalic">hostipaddress</span>", "port": "<span class="CLIcommandItalic">portnumber</span>" } }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Type a user-defined name for the storage entity and click <span class="ControlName">Create</span>. In the Host field, type the IP address or DNS hostname for the device. Type a port on which to communicate with it, or accept the default of 3260.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Add the storage volume.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click <span class="ControlName">Add</span> in the Storage section of the Network Storage screen to display the Storage screen.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set site packet-capture storage <span class="CLIcommandItalic">volumename</span> type iscsi size <span class="CLIcommandItalic">value</span> device <span class="CLIcommandItalic">devicename</span> target <span class="CLIcommandItalic">formaltargetname</span> admin-state enabled</span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/site/packet-capture/ -d '{"storage": ["volume-name": "<span class="CLIcommandItalic">volumename</span>", "type": "iscsi", "size": <span class="CLIcommandItalic">value</span>, "device": "<span class="CLIcommandItalic">forensicsappliancename</span>", "target": "<span class="CLIcommandItalic">formaltargetname</span>", "admin-state": "enabled" ] }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Type the volume name; this needs to be the formal volume name, as obtained via a system command. Then click <span class="ControlName">Create</span> to add the volume and begin configuring it. Specify the Device name; this is the <span class="VariablesPcapDevice">Forensics appliance</span> from which the network storage device receives data. Choose the Type of the storage device; this is <span class="ControlName">Iscsi</span> or <span class="ControlName">RAM</span>. Type the size of the device, expressed in GB. For Target, type the name of the PCAP file to which the data will be written. Specify an Admin state for the device, either <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span>.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span> <span class="UIname">REST API:</span> Save/commit occurs automatically upon execution of the cURL command.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

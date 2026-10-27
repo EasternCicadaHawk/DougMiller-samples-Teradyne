@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Optional and Advanced Configuration" data-mc-ignored-words="ipaddressrange;limitvalue;cmsipaddress;profilename">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configuring Packet Rate Limiting</title>
+        <meta name="description" content="Instructions for restricting the number of packets that servers can accept from one or more clients in a time interval." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_packet_rate_limiting.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor30"></a>
+            <MadCap:concept term="How to" />Configure Packet Rate Limiting</h1>
+        <p data-mc-conditions="Default.RestAPI">Packet rate limiting restricts the number of packets that servers can accept from one or more clients in a time interval. It is based on an upper limit on the number of packets that can be accepted from clients in a particular <a href="client_group_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the client group glossary definition" data-mc-width="auto" data-mc-height="auto">client group</a> with a particular <a href="client_profile_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the client profile glossary definition" data-mc-width="auto" data-mc-height="auto">client profile</a>. This is a credit-based mechanism in which the credits are replenished over time, so a client is not restricted perpetually if its traffic diminishes and falls within the configured limit.</p>
+        <p data-mc-conditions="Default.RestAPI">In previous releases of <span class="VariablesCompanyNameShort">Corero</span> software, packet rate limiting was known as <span class="Italics">client request rate limiting</span>, or CRRL.</p>
+        <p data-mc-conditions="Default.RestAPI">Configuring packet rate limiting combines elements of client group configuration and service protocol configuration.</p>
+        <p data-mc-conditions="Default.notRESTAPI">To configure packet rate limiting:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0" data-mc-conditions="Default.notRESTAPI">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="3">Assign client IP addresses to a client group.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Client Groups</span> to display the Client Group screen, then click the <span class="ControlName">Address Ranges</span> tab.                       </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1" rowspan="3">Select an existing client group or create a new one. Specify one or more singleton addresses or specify an address range to associate with the group.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles client-groups client-group <span class="CLIcommandItalic">clientgroupname</span> client-addresses <span class="CLIcommandItalic">ipaddressrange</span></span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles/client-groups/client-group/<span class="CLIcommandItalic">clientgroupname</span> -d '{"client-addresses": {"ip-address": "<span class="CLIcommandItalic">ipaddressrange</span>"} }' --header "Content-Type:application/vnd.yang.data+json"</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="3">Configure the packet rate limit profile.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Client Profile</span> to display the Client Group screen, then click the <span class="ControlName">Thresholds &amp; Limits</span> tab.                       </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">The important parameter is <span class="ControlName">Maximum packet rate for any client in this group</span>. You can choose an existing shared profile from the pulldown menu and use the value that is configured there, or click <span class="ControlName">Use a custom profile</span> to set a new explicit value for the parameter.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles client-profiles packet-rate-limit-profile <span class="CLIcommandItalic">clientprofilename</span> limit <span class="CLIcommandItalic">limitvalue</span></span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1" rowspan="2">
+                        Specify an existing packet rate limit profile and use the limit value that is configured there, or define a new packet rate limit profile with a custom limit value.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X PATCH https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/profiles:profiles/client-profiles/packet-rate-limit-profile -d '{"packet-rate-limit-profile": {"name": "<span class="CLIcommandItalic">profilename</span>", "limit": <span class="CLIcommandItalic">value</span> } }' --header "Content-Type:application/vnd.yang.data+json"</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1"><span class="Italics">Optional, for a custom client profile:</span> Export the custom client profile for re-use later.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click the link at the bottom of the <span class="ControlName">Thresholds &amp; Limits</span> tab to display the Add New Shared Profile dialog.</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Type the name of the file to which you want to export the profile settings.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="2">Enable request limiting.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Service Protocols</span>, and select an existing service protocol to edit it, or create a new one.
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1" rowspan="2">Enable <span class="ControlName">Request Limiting</span>. In the web UI, click the option in the Service Protocol screen; in the CLI, set the value of <span class="CLIcommand">request-limiting</span> to true.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles service-protocol <span class="CLIcommandItalic">serviceprotocolname</span> request-limiting true</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="2">
+                        <p rowspan="2"><span class="Italics">Optional:</span> Modify the costs for packet types.</p>
+                        <p><span class="b">NOTE:</span> Use caution when increasing the per-packet cost of any packet type. Increasing the cost of a specific packet type can increase the packet cost of a session significantly, and when you multiply that by many sessions, the total cost can accumulate quickly. This may result in legitimate traffic being blocked unintentionally.</p>
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Advanced Security Controls</span> to display the Advanced Controls screen.</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1" rowspan="2">Type costs for individual packet types.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles advanced-controls packet-costs</span></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span><span class="UIname">CLI:</span> <span class="CLIcommand">commit</span> <span class="UIname">REST API:</span> <span class="ControlName">Save</span>/<span class="CLIcommand">commit</span> occurs automatically upon execution of the cURL command.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

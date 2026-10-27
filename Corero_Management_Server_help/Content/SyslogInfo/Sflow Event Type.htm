@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Syslog Reference">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Sflow Event Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Sflow Event Type.htm">Show search and navigation tools</a>
+        </p>
+        <p>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193601"></a>Sflow Event Type</h3>
+        <p>Each Network Threat Defense appliance samples the data stream and sends the samples to the CMS for threat and operational analysis.&#160;&#160; A subset of these events are sampled as well and sent as syslog messages for further integration in the SIEM analysis stream. Five messages per second are forwarded as syslog events.</p>
+        <p>
+            <div style="margin-left: 9pt;margin-top: 23.55pt;width: 486pt;height: 62.7pt;visibility: visible;mso-width-relative: margin;mso-height-relative: margin;v-text-anchor: middle;">
+                <p>Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.corero.com cat=network,type=sflow, v=1, cl=NYC_East,pg=NYC_East_1,aip=10.20.27.111,dir=inbound,dip=10.222.1.5,dprt=53,iplen=46,prot=17, svc=0,sip=10.121.106.165,sprt=7319,ttl=64,flags=0,time=1413469709753000,plen=60, pdu=00000000010200000000010108004500002e000000004011cc540a7498140ade01058a1e0035001a7eaa000102030405060708090a0b0c0d0e0f1011,</p>
+            </div>
+        </p>
+        <p class="TableCaption">Example SFlow Sample Message</p>
+        <p>The specific content for the sflow message is:</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type</p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Category</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>network</p>
+                </td>
+                <td>
+                    <p>Network category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>sflow</p>
+                </td>
+                <td>
+                    <p>Sflow sample event</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group from which the original sample was taken</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Device/Appliance IP Address</p>
+                </td>
+                <td>
+                    <p>aip</p>
+                </td>
+                <td>
+                    <p>IP Address</p>
+                </td>
+                <td>
+                    <p>The defense appliance that originated this event</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Direction</p>
+                </td>
+                <td>
+                    <p>dir</p>
+                </td>
+                <td>
+                    <p>Text[inbound |</p>
+                    <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; outbound</p>
+                </td>
+                <td>
+                    <p>The direction of the packet</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Destination IP</p>
+                </td>
+                <td>
+                    <p>dip</p>
+                </td>
+                <td>
+                    <p>IP Address</p>
+                </td>
+                <td>
+                    <p>The destination IP address in the sampled packet </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Destination Port</p>
+                </td>
+                <td>
+                    <p>dprt</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The destination port in the sampled packet </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>IP Packet Length</p>
+                </td>
+                <td>
+                    <p>iplen</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The length of the IP packet including the header</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protocol</p>
+                </td>
+                <td>
+                    <p>prot</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The IP protocol in the sampled packet. Refer to the full list at <a href="http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml"><span class="Hyperlink">http://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml</span></a> <![CDATA[ ]]></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type of Service</p>
+                </td>
+                <td>
+                    <p>tos </p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The type of service in sampled packet</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Source IP</p>
+                </td>
+                <td>
+                    <p>sip</p>
+                </td>
+                <td>
+                    <p>IP Address</p>
+                </td>
+                <td>
+                    <p>The source IP address in the sampled packet</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Source Port</p>
+                </td>
+                <td>
+                    <p>sprt</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The source port in the sampled packet</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Time to Live</p>
+                </td>
+                <td>
+                    <p>ttl</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The time to live in the sampled packet</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>TCP Flags</p>
+                </td>
+                <td>
+                    <p>flags</p>
+                </td>
+                <td>
+                    <p>Hex Value</p>
+                </td>
+                <td>
+                    <p>The encoded TCP flags when applicable</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Time</p>
+                </td>
+                <td>
+                    <p>time</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The timestamp at the time of generation</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Packet Length</p>
+                </td>
+                <td>
+                    <p>plen</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The length of the sampled packet including the Ethernet header but not including the 4-byte CRC</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>PDU</p>
+                </td>
+                <td>
+                    <p>pdu</p>
+                </td>
+                <td>
+                    <p>Hex values</p>
+                </td>
+                <td>
+                    <p>Up to the first 200 bytes of the pdu starting from the mac addresses</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

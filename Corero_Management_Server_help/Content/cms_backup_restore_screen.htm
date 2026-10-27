@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="filename">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>CMS Backup/Restore screen</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#cms_backup_restore_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor60"></a>
+            <MadCap:concept term="Screens &amp; commands" />CMS Backup/Restore screen</h1>
+        <p>Clicking <span class="ControlName">CMS</span> &gt; <span class="ControlName">CMS Backup/Restore</span> in the web UI tool bar displays the CMS Backup/Restore screen, providing controls for saving and reloading the <span class="VariablesApplicationNameShort">CMS</span> configuration. Configuration backups (<a href="backup_bundle.htm" target="_self" title="Learn about the contents of a backup bundle" alt="Learn about the contents of a backup bundle">backup bundles</a>) are created for a specific <span class="VariablesApplicationNameShort">CMS</span> version.</p>
+        <p><span class="b">Note:</span> No more than one backup is retained on the <span class="VariablesApplicationNameShort">CMS</span> file system(s) at any one time.</p>
+        <p>The CMS Backup/Restore screen provides these controls:</p>
+        <ul>
+            <li value="1">Time the most recent backup was performed.</li>
+            <li value="2"><span class="ControlName">Create Backup</span> – Save the current <span class="VariablesApplicationNameShort">CMS</span> configuration to a file.</li>
+            <li value="3"><span class="ControlName">Browse</span> – Navigate the filesystem to locate a <span class="VariablesApplicationNameShort">CMS</span> backup bundle from which to restore the configuration.</li>
+            <li value="4"><span class="ControlName">Restore Backup</span> – Reload the selected <span class="VariablesApplicationNameShort">CMS</span> configuration file. Note that the <span class="VariablesApplicationNameShort">CMS</span> will restart as soon as the restoration is complete.<br /></li>
+        </ul>
+        <p>The same functionality is available through the CLI by using the command <span class="CLIcommand">request backup [create | restore] file <span class="CLIcommandItalic">filename</span></span>.</p>
+    </body>
+</html>

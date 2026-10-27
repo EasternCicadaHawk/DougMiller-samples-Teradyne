@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Service Protocol screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Service Protocol screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#service_protocol_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor87"></a>
+            <MadCap:concept term="Screens &amp; commands" />Service Protocol screen</h1>
+        <p>Service protocols  specify how traffic corresponding to a particular application is handled by the <span class="VariablesPlatformNameShort">appliance</span>, and are an essential component of <a href="server_protection_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the server protection glossary definition" data-mc-width="auto" data-mc-height="auto">server protection</a>. Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Service Protocols</span> to display the Service Protocol screen. Alternatively, type the CLI command <span class="CLIcommand">set defense profiles service-protocol</span> to access the same functionality.</p>
+        <p>A large number of service protocols are built-in to the <span class="VariablesApplicationNameShort">CMS</span> and provided by default. You can modify these built-in service protocols or define your own custom ones, as necessary. Some of these built-in service protocols correspond to legitimate applications, or to applications that otherwise are not originally intended to be attack vectors, while others correspond to specific well-known attack vectors.</p>
+        <p>Refer to <a href="configuring_protection.htm" target="_self" title="Learn how to configure a server protection instance" alt="Learn how to configure a server protection instance">Configuring Server Protection</a> to see how service protocols are associated with server protection instances.</p>
+        <p>Each service protocol is defined by the following parameters:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Name</span> – A descriptive name for the service. Built-in service protocols include the transport protocol and port in their names.</li>
+            <li value="2"><span class="ControlName">Description</span> – A description that further identifies the service. This field is examined by the Search function, so it is important to add a description that will help you pick out the new service from the list of services.</li>
+            <li value="3"><span class="ControlName">Connection Timeout</span> – The number of seconds without traffic for this service that the <span class="VariablesPlatformNameShort">appliance</span> should wait before timing out the connection.</li>
+            <li value="4"><span class="ControlName">Transport Protocol</span> – The protocol (IP, ICMP, TCP, or UDP) used by the service.</li>
+            <li value="5"><span class="ControlName">Transport Port</span> – The port number associated with the service.</li>
+            <li value="6"><span class="ControlName">Kind</span> – This can be <span class="ControlName">Any</span>, <span class="ControlName">Address Specification</span>, or <span class="ControlName">Host Group</span>.</li>
+            <li value="7"><span class="ControlName">Address Specification</span> – Define the server or group of servers to associate with this service. Enter a single IP address, range of IP addresses (e.g., 2.2.2.1-2.2.2.100, or 2.2.2.1/24), IP address range and port range (e.g., 221-225, 230), or combinations of these. Separate entries with commas.<ul><li value="1"><span class="ControlName">Discard Priority</span> – This value indicates how likely it is that the <span class="VariablesPlatformNameShort">appliance</span> will discard packets for this service during periods of extremely heavy traffic. Selecting a higher priority specifies that you want the traffic associated with this service to be more likely to be discarded. Choose <span class="ControlName">High</span>, <span class="ControlName">Medium</span> (the default), or <span class="ControlName">Low</span>.</li><li value="2"><span class="ControlName">Flow Setup Threshold</span> – <span class="Italics">Modifying this setting can adversely affect system operation. Contact </span><span style="mc-tag-and-class: span;" class="VariablesCompanyName">Corero Network Security</span><span class="Italics"> before changing this setting.</span> Choose <span class="ControlName">Always Create</span> (the default), <span class="ControlName">Never Create</span>, <span class="ControlName">Less Than 25 Percent</span>, <span class="ControlName">Less Than 50 Percent</span>, <span class="ControlName">Less Than 75 Percent</span>.<br />This parameter indicates how critical it is to record connection information for this service. The <span class="VariablesPlatformNameShort">appliance</span> uses a flow table to record certain state information about each traffic connection. Under extreme traffic conditions, the flow table could become full.<br />This parameter enables you to specify how critical it is to record connection information for a specific service. By not creating an entry in the flow table, you preserve the table for more critical services during periods of heavy traffic. For each service, you can choose whether you never want to create an entry in the flow table, or whether you always do. Alternatively, you can specify that the <span class="VariablesPlatformNameShort">appliance</span> create an entry in the table only if the table is less than a specific percentage full. This way, as the table fills, fewer flows are set up for lower priority traffic.<br /></li><li value="3"><span class="ControlName">Request Limiting</span> – Click to enable this and restrict the number of requests that can be made by this service protocol.</li></ul></li>
+        </ul>
+    </body>
+</html>

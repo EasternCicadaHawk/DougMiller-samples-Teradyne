@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Server Profiles screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Server Profiles screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#server_profiles_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor86"></a>
+            <MadCap:concept term="Screens &amp; commands" />Server Profiles screen</h1>
+        <p>Clicking <span class="ControlName">Manage Profiles</span> in the Thresholds &amp; Limits tab of the <a href="server_group_screen.htm" target="_self" title="Show the description of the Server Groups and Protection screen and its controls" alt="Show the description of the Server Groups and Protection screen and its controls">Server Groups and Protection screen</a> displays the Server Profiles screen for defining sets of traffic characteristics that the <span class="VariablesPlatformNameShort">appliance</span> uses to identify traffic that is unacceptable to one or more servers. There are two separate profile types, each of which can be assigned to server groups independently. Each profile type is configured in its own screen, which is nested in this Server Profiles screen.</p>
+        <p>For each profile type, click <span class="ControlName">Add</span> to display the corresponding screen and begin creating a new one, or click the name of an existing profile to modify it.</p>
+        <p>All of these controls are available also through the corresponding CLI commands, as noted in each section below.</p>
+        <p>The Server Profiles screen provides these controls:</p>
+        <h2>SYN Flood Profile</h2>
+        <p>Specify a threshold value for the maximum number of connections. Three profiles are built-in: <span class="ControlName">megaproxy-server-load</span>, <span class="ControlName">normal-server-load</span>, and <span class="ControlName">virtual-server-load</span>.</p>
+        <p>You can access these controls also through the CLI command <span class="CLIcommand">set defense profiles server-profiles syn-flood-profile</span>.</p>
+        <h2>Connection Limit Profile</h2>
+        <p>Specify a maximum number of group connections (the default is 1048575) and a maximum number of member connections (the default is 32767). Four profiles are built-in: <span class="ControlName">low-limits</span>, <span class="ControlName">normal-limits</span>, <span class="ControlName">very-high-limits</span>, and <span class="ControlName">virtual-server-limits</span>.</p>
+        <p>You can access these controls also through the CLI command <span class="CLIcommand">set defense profiles server-profiles connection-limit-profile</span>.</p>
+    </body>
+</html>

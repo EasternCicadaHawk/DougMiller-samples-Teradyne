@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Change History</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Corero Syslog SIEM Interface1.htm">Show search and navigation tools</a>
+        </p>
+        <p>
+        </p>
+        <h2 class="Heading2"><a name="_Toc280193580"></a>Change History</h2>
+        <table>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>Software Version</p>
+                </td>
+                <td>
+                    <p>Content Changes</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>1.4</p>
+                </td>
+                <td>
+                    <p>8.01</p>
+                </td>
+                <td>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">Initial Revision</li>
+                    </ul>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>1.6</p>
+                </td>
+                <td>
+                    <p>8.02</p>
+                </td>
+                <td>
+                    <p>Reports added:</p>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">cat=network type=top-srvgrp</li>
+                        <li style="list-style-type: disc;" value="2">cat=network type=overload</li>
+                    </ul>
+                    <p>Reports changed:</p>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">cat=network type=sflow added outbound sampling to included content</li>
+                        <li style="list-style-type: disc;" value="2">cat=security type=event added cust= and srvgrp= to indicate customer and server group, respectively</li>
+                        <li style="list-style-type: disc;" value="3">cat=security type=event “rules” is changed to “rule” and only one rule will be indicated in single event message</li>
+                    </ul>
+                    <p>&#160;</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>2.0</p>
+                </td>
+                <td>
+                    <p>8.04</p>
+                </td>
+                <td>
+                    <p>Reports added:</p>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">cat=system type=pg-status</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>3.0</p>
+                </td>
+                <td>
+                    <p>8.07</p>
+                </td>
+                <td>
+                    <p>Reports added:</p>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">cat=network type=top-serv-rate</li>
+                        <li style="list-style-type: disc;" value="2">cat=network type=top-refl-rate</li>
+                        <li style="list-style-type: disc;" value="3">cat=network type=top-sip-subnet</li>
+                        <li style="list-style-type: disc;" value="4">cat=system type=device-status</li>
+                        <li style="list-style-type: disc;" value="5">cat=system type=state-change</li>
+                    </ul>
+                    <p>Reports changed</p>
+                    <ul style="list-style-type: disc;margin-left: 36pt;">
+                        <li style="list-style-type: disc;" value="1">cat=system type=pg-status changed the reachability and in-sync status for easier parsing</li>
+                        <li style="list-style-type: disc;" value="2">cat=network type=sflow added iplen as the IP packet length</li>
+                        <li style="list-style-type: disc;" value="3">cat=security type=event added defense-mode </li>
+                        <li style="list-style-type: disc;" value="4">cat=network type=overload added drop count and rate</li>
+                        <li style="list-style-type: disc;" value="5">cat=security type=rule-stats added rule to refer to the rule name as transition from name as the rule name</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

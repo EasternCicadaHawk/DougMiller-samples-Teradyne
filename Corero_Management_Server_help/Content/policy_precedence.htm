@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>How Traffic is Evaluated Against a Server Protection Instance</title>
+        <meta name="description" content="This topic describes the order in which server-bound traffic is evaluated against the components of a server protection instance: server groups, service protocols, and client groups." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#policy_precedence.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor46"></a>
+            <MadCap:concept term="Explanations" />How Traffic is Evaluated Against a Server Protection Instance</h1>
+        <p>Server protection instances specify the criteria by which traffic coming in to your servers from clients outside your firewall is evaluated for being treated by the Defense <span class="VariablesPlatformNameShort">appliance</span>. A server protection instance comprises a server group (a set of server IP addresses collected together for common traffic treatment), one or more service protocols, and one or more client groups. As traffic is encountered, it is evaluated against the definition of the server protection instance in this order:</p>
+        <ol>
+            <li value="1">server IP address</li>
+            <li value="2">service protocol</li>
+            <li value="3">client group</li>
+        </ol>
+        <p>A server IP address can belong to a single server group only, and this guarantees that inbound traffic will match some permutation of the server protection instance conclusively. The matching traffic will be allowed, dropped, or blocked, as specified by the server protection instance.</p>
+        <p>The table below describes the order in which incoming traffic is evaluated against the server protection instance to identify a match with a treatment. The order of evaluation goes left-to-right, then top-to-bottom.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 100px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 100px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 100px;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 100px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Order</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Server IP</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column3-Header1">Service Prot</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column1-Header1">Client Group</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">1</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Specific</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">2</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Any</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">3</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Specific</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">4</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Any</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">5</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Specific</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">6</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Specific</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Any</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">7</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Specific</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyB-Column1-Body1">8</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column2-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Any</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>"Any" functions as a catch-all or wildcard. For any component of the server protection instance (server IP address, service protocol, or client group) it is evaluated for a match <span class="Italics">last</span>, after every explicit definition has been tried.For server groups, it corresponds to "Default network-wide server protection", and for client groups, it corresponds to "IP addresses not in a specific group". In the table above, incoming traffic that matches a specific server IP address, a specific service protocol, and a specific client group is matched with a traffic treatment immediately. Incoming traffic that does not match any specific server IP&#160;address, service protocol, or client group receives the default, last-resort treatment that is specified for traffic that matches no specific component of the server protection instance. Other incoming traffic will match criteria somewhere between those two extremes, and will be treated accordingly.</p>
+        <p>Some examples follow, with the corresponding traffic treatments shown.</p>
+        <p>This example shows a simple case of a single server group. a single service protocol group, and three client groups, each with a different treatment. DNS traffic to DNS servers from Trusted Clients is allowed through, DNS traffic to DNS servers traffic from Known Bad Clients is blocked outright, and all other DNS&#160;traffic to DNS servers is detected, meaning that it is logged.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Server Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Service Protocol Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column3-Header1">Client Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column1-Header1">Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">All DNS Servers</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">DNS</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Trusted DNS Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Allow</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Known Bad Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Block</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Detect</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The next example expands on the previous one, with the addition of the "Any" server group (Default network-wide server protection) and an ICMP service protocol group. The example is largely the same as the previous one, except that ICMP traffic [e.g., ping] is blocked, regardless of its destination server or its originating client.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Server Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Service Protocol Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column3-Header1">Client Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column1-Header1">Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">All DNS Servers</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">DNS</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Trusted DNS Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Allow</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Known Bad Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Block</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Detect</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyB-Column1-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column2-Body1">ICMP</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Block</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The next example is a little more elaborate, adding a server group for HTTP servers, with a few "Any" entries for service protocol group and client group. Stepping through the three server groups from top to bottom:</p>
+        <ul>
+            <li value="1">For All HTTP Servers: <ul><li value="1">HTTP traffic from clients in undesired countries of origin is blocked completely.</li><li value="2">ICMP traffic from any client is allowed.</li><li value="3">Any other traffic bound for the HTTP servers is blocked.</li></ul></li>
+            <li value="2">For ALL DNS Servers: see the first example.</li>
+            <li value="3">For Any server not included in All HTTP Servers or All DNS Servers:ICMP traffic from any client is blocked completely.</li>
+        </ul>
+        <p>Remember that an IP address, whether for a server or a client, can be included in a single server group or client group only. In this example, if a server IP address is not included explicitly in All HTTP Servers or All DNS&#160;Servers, it defaults to being in the Any server group.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column3" />
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Server Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Service Protocol Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column3-Header1">Client Group</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column1-Header1">Treatment</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">All HTTP Servers</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">HTTP</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Geo Bad Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Block</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">ICMP</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Allow</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Block</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">All DNS&#160;Servers</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">DNS</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Trusted DNS Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Allow</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Known Bad Clients</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Block</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1">&#160;</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column1-Body1">Detect</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyB-Column1-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column2-Body1">ICMP</td>
+                    <td class="TableStyle-ProcedureTable-BodyB-Column3-Body1">Any</td>
+                    <td class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Block</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Catch-All</p>
+        <p>There is a catch-all server group for all server addresses not included in any other group. This server group cannot be disabled, and all rules associated with it are disabled. Packets arriving on the external port for which the destination address is not part of any server group are silently allowed to transit through the <span class="VariablesPlatformNameShort">appliance</span>. This catch-all server group is not shown in the <span class="VariablesApplicationNameShort">CMS</span>.</p>
+    </body>
+</html>

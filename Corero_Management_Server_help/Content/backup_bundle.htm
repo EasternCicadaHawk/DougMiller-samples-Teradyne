@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Backup Bundle</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#backup_bundle.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor49"></a>
+            <MadCap:concept term="Explanations" />Backup Bundle</h1>
+        <p>Backed-up <span class="VariablesApplicationNameShort">CMS</span> configurations are stored in "backup bundles", each of which is a gzipped tar file. When the backup action is invoked, a backup bundle is created and written to "/var/www/html/backup", using a user-specified file name. If a backup bundle already exists when the backup action is invoked, the existing file will be removed before the new bundle is created. The latest backup bundle will always remain until the next backup is made. After the backup has been created, the backup bundle is available for retrieval using HTTP GET.</p>
+        <p>A backup bundle comprises the following files, all stored at the top-level of the tar container:</p>
+        <ul>
+            <li value="1">/opt/corero/cms/app/ncs-cdb/A.cdb</li>
+            <li value="2">/opt/corero/cms/app/ncs-cdb/C.cdb</li>
+            <li value="3">/opt/corero/cms/app/ncs-cdb/O.cdb</li>
+            <li value="4">/opt/corero/cms/app/ncs.conf</li>
+            <li value="5">/opt/corero/cms/app/log4j.xml</li>
+            <li value="6">backup-info, a file containing information about the backup itself</li>
+        </ul>
+        <p>The "backup-info" file is in JSON format. For example:</p>
+        <p class="FileExample">{</p>
+        <p class="FileExample">"backup-date": "2014-09-24T14:25:01-0400",</p>
+        <p class="FileExample">"ncs-version": "ncs-3.2",</p>
+        <p class="FileExample">"cms-base-rpm": "cms-base-V8.10.084-0.x86_64.rpm",</p>
+        <p class="FileExample">"cms-pkg-rpm": "cms-pkg-V8.10.084-0.noarch.rpm"</p>
+        <p class="FileExample">}</p>
+    </body>
+</html>

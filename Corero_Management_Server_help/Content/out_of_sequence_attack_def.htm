@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Out of Sequence Attack</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#out_of_sequence_attack_def.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor196"></a>
+            <MadCap:concept term="Explanations" />Out of Sequence Attack</h1>
+        <h2>Definition</h2>
+        <p>The TCP out of sequence attack exploits TCP's connection-oriented behavior to deny service to legitimate users. One of TCP's features is that it handles data in the order that it is sent, which, under ordinary, legitimate circumstances, means that the data reaches the user in a sequential, understandable manner (think of simple examples such as a web page, an Email message, or a video segment). When TCP receives packets that are not in the correct order, it holds onto them until it has received them all and can arrange them in the correct sequence before providing them to the user. In addition, TCP does not limit the number of packets that can be buffered until they can be assembled sequentially; rather, this is a function of the target's memory. An attacker can abuse this feature by intentionally sending a very large number of TCP packets out of sequence, filling the target's memory, and therefore denying access to legitimate users.</p>
+        <h2>Observable characteristics</h2>
+        <p>&#160;</p>
+        <h2>Method of response</h2>
+        <p>&#160;</p>
+        <h2><span class="VariablesApplicationNameShort">CMS</span> configuration steps</h2>
+        <p>Are the rules enabled by default?</p>
+        <h2>Relevant SmartWall rules</h2>
+        <p>These rules pertain to this attack type:</p>
+        <ul>
+            <li value="1">cns-003022: TCP initial sequence number has changed</li>
+            <li value="2">cns-003023: TCP frame contains bad sequence number</li>
+        </ul>
+    </body>
+</html>

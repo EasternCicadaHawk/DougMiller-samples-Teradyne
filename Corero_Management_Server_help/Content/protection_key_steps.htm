@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Welcome to the CMS">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Key Steps of Protection</title>
+        <meta name="description" content="A description of the types of malicious traffic that can be encountered, and the practices that the SmartWall Threat Defense System supports for mitigating them." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#protection_key_steps.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor4"></a>
+            <MadCap:concept term="Explanations" />Essential Server Protection Practices</h1>
+        <p>Your servers may encounter unwanted and malicious network traffic that includes:</p>
+        <ul>
+            <li value="1"><span class="Italics">Undesired services</span> – Traffic from protocols or ports that you know ahead of time have no legitimate reason to access your servers.</li>
+            <li value="2"><span class="Italics">DDoS attacks and competitive abuse</span> – Attempts to make your servers unavailable to desired or legitimate traffic by overwhelming them with spurious requests. These can take a variety of forms.</li>
+            <li value="3"><span class="Italics">Protocol violations and advanced evasion techniques (AETs)</span> – These may include traffic types that are expected or otherwise legitimate, but that include packets that do not comply with the standard defined by the appropriate RFC. Such packets often indicate an attack, as they have been malformed intentionally to circumvent and exploit the protocol's correct behavior.</li>
+            <li value="4"><span class="Italics">Targeted server attacks</span> – Intrusions that are crafted specifically to exploit some characteristics of your servers in order to gain access and cause harm to your infrastructure.</li>
+        </ul>
+        <p>Protecting your servers from such threats relies on these essential practices:</p>
+        <ul>
+            <li value="1"><span class="Italics">Allow only expected traffic</span> – Block known malicious IP addresses and geographic locations; allow desired ports and services. The <span class="VariablesApplicationNameShort">CMS</span> supports this by enabling you to restrict access to specific clients and groups of clients. This is supported by features such as the real time reputation engine, <a href="config_geo_block.htm" target="_self" title="Learn how to block IP addresses based on their country of origin" alt="Learn how to block IP addresses based on their country of origin">geographic IP address blocking</a>, on-demand shunning, <a href="blacklist_ip_address.htm" target="_self" title="Learn how to block an IP address completely" alt="Learn how to block an IP address completely">IP address blocking</a>, and <a href="blocking_ip_headers.htm" target="_self" title="Learn how to block traffic by its IP header type" alt="Learn how to block traffic by its IP header type">IP header blocking</a>.</li>
+            <li value="2"><span class="Italics">Evaluate the amount of traffic</span> – Limit excessive requests and connections. The <span class="VariablesApplicationNameShort">CMS</span> supports this by enabling you to <a href="config_client_profile.htm" target="_self" title="Learn how to configure client profiles" alt="Learn how to configure client profiles">configure rate limits</a>, such as <a href="config_packet_rate_limiting.htm" target="_self" title="Learn how to configure packet rate limiting" alt="Learn how to configure packet rate limiting">packet rate limiting</a>.</li>
+            <li value="3"><span class="Italics">Enforce the correctness of traffic</span> – Stop protocol abuse and RFC violations, and prevent AETs. The <span class="VariablesApplicationNameShort">CMS</span> supports this with its stateful protocol validation capability.</li>
+            <li value="4"><span class="Italics">Analyze the integrity of traffic</span> – Inspect traffic and block intrusion, buffer overflows, code injections, and exploits. The <span class="VariablesApplicationNameShort">CMS</span> supports this by preventing intrusions; <a href="Rule_Overview.htm" target="_self" title="Learn about the rules used by the CMS" alt="Learn about the rules used by the CMS">it identifies known attack signatures</a>, vulnerability signatures, overflows, injections .and brute force attacks.</li>
+        </ul>
+        <p>In addition, the <span class="VariablesApplicationNameShort">CMS</span> provides rich visibility into threats as they are <a href="Security_Event_Viewer.htm" target="_self" title="See the description of the Security Event Viewer" alt="See the description of the Security Event Viewer">recognized</a>, assessed, and <a href="blocked_detected_events.htm" target="_self" title="See the description of the Blocked &amp; Detected Events screen" alt="See the description of the Blocked &amp; Detected Events screen">mitigated</a>, and furnishes a variety of tools for displaying the relevant data.</p>
+    </body>
+</html>

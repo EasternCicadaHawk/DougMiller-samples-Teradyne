@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Shunning screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Shunning screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#shunning_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor91"></a>
+            <MadCap:concept term="Screens &amp; commands" />Shunning screen</h1>
+        <p>Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">IP Address Shunning</span> in the web UI tool bar to display the Shunning screen for defining and managing actions that block traffic from IP addresses immediately. Alternatively, type the CLI command <span class="CLIcommand">set defense shunning shun-label</span> to access the same functionality. The Shunning screen is a container for the Shun Label screen, which contains most of the controls for defining shunning actions.</p>
+        <p>Display the Shun Label screen by clicking on an existing <a href="Shun_Label_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the shun label glossary definition" data-mc-width="auto" data-mc-height="auto">shun label</a> in the Shunning screen, or by clicking <span class="ControlName">Add</span> to create a new shun label. When you display this screen for an existing shun label, the screen is titled with the shun label name.</p>
+        <p>The <span class="VariablesPlatformNameShort">appliance</span> supports up to 256 shun labels.</p>
+        <p>Refer to <a href="shunning_problematic_addresses.htm" target="_self" title="Learn how to shun undesirable IP addresses" alt="Learn how to shun undesirable IP addresses">Shunning Problematic IP Addresses</a> for instructions for configuring a shunning action.</p>
+        <p>The Shun Label screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Address</span> – Type one or more IP addresses to block. This is useful when you want to block only a small number of IP addresses, and it's reasonable to type them individually. You can type a range as a spread of IP addresses (200.1.1.1 - 200.1.1.255), with a subnet mask (200.1.1.0 255.255.255.0) or as an offset (200.1.1.0/24).</li>
+            <li value="2"><span class="ControlName">File</span> – Specify a file listing IP addresses to block. This is useful when you want to block a large number of IP addresses.</li>
+            <li value="3"><span class="ControlName">Duration</span> – Choose a time interval to specify the amount of time for the affected addresses to be blocked. This is 4 hours by default, but you can choose intervals ranging from 5 minutes to 24 hours, as well as Unlimited, if you want to block the associated addresses permanently. </li>
+            <li value="4"><span class="ControlName">Ignore If Configured Address</span> – Indicate whether this shunning action will supersede the default behavior for an associated <a href="client_group_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="See the client group glossary definition">client group</a> or <a href="server_group_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="See the server group glossary definition">server group</a>. This is selected by default.</li>
+            <li value="5"><span class="ControlName">Oper State</span> – The effective status of the shun label. This is Pending by default.</li>
+        </ul>
+    </body>
+</html>

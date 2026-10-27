@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="Iscsi">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Network Storage screen/Packet Capture screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Network Storage screen, also displayed as the Packet Capture screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#network_storage_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor72"></a>
+            <MadCap:concept term="Screens &amp; commands" />Network Storage screen</h1>
+        <p>Clicking <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Network Storage</span> in the web UI tool bar displays the Network Storage screen for specifying storage resources used by <span class="VariablesPcapDevice">Forensics appliance</span>s. Alternatively, type the CLI command <span class="CLIcommand">set site packet-capture storage</span> to access the same functionality.</p>
+        <p>The Network Storage screen provides these controls:</p>
+        <p>Storage section – Obtain the name of the target from your SAN.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Add</span> – Click this to display the Storage screen for specifying the target of the packet capture data.</li>
+            <li value="2"><span class="ControlName">Delete</span> – Select an existing target in the list and click this to remove it from the site.</li>
+            <li value="3"><span class="ControlName">Volume Name</span> – The user-defined name of the target.</li>
+            <li value="4"><span class="ControlName">Device</span> – Choose the <span class="VariablesPcapDevice">Forensics appliance</span> from which the target will receive packet capture data.</li>
+            <li value="5"><span class="ControlName">Type</span> – Choose <span class="ControlName">Iscsi</span> or <span class="ControlName">RAM</span>.</li>
+            <li value="6"><span class="ControlName">Size</span> – Specify the target size, expressed in GB.</li>
+            <li value="7"><span class="ControlName">Target</span> – The formal name of the target, as obtained from your SAN.</li>
+            <li value="8"><span class="ControlName">Status</span> – The current state of the target.</li>
+            <li value="9"><span class="ControlName">Admin State</span> – Choose <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span> to activate or de-activate the target.</li>
+        </ul>
+        <p>Portal section – This is the IP address of the storage resource.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Add</span> – Click this to display the Portal screen for specifying the name, IP address, and port of the storage resource.</li>
+            <li value="2"><span class="ControlName">Delete</span> – Select an existing storage resource in the list and click this to remove it from the site.</li>
+            <li value="3"><span class="ControlName">Name</span> – The user-defined name of the storage resource.</li>
+            <li value="4"><span class="ControlName">Host</span> – The IP address or DNS name that identifies the storage resource.</li>
+            <li value="5"><span class="ControlName">Port</span> – The port on which the <span class="VariablesPcapDevice">Forensics appliance</span> communicates with the storage resource. The default is 3260.</li>
+        </ul>
+    </body>
+</html>

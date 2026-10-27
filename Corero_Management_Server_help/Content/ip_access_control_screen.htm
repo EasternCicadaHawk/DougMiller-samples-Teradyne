@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="ipaddress;cmsipaddress;listname">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>IP Access Control screen</title>
+        <meta name="description" content="This topic describes the controls used to define blacklists (always block) and whitelists (always allow) of IP addresses." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#ip_access_control_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor70"></a>
+            <MadCap:concept term="Screens &amp; commands" />IP Access Control screen</h1>
+        <p>Clicking <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">IP Access Control</span> in the web UI tool bar displays the IP Access Control screen. This screen enables you to define access control instances to always block (blacklist) or always allow (whitelist) traffic from a specified IP address or range of IP addresses. Blocking/always allowing an IP address adds that IP address to a list of addresses that is checked before any other part of the corresponding packet is examined. A packet from a blocked IP address is discarded immediately, and no additional processing is performed on any portion of its contents. Similarly, a packet from an IP address that is to be allowed always is forwarded immediately, with no additional processing.</p>
+        <p>The IP Access Control screen provides these controls:</p>
+        <p><span class="ControlName">Add</span>/<span class="ControlName">Delete</span> – Create or remove an entry. Click <span class="ControlName">Add</span> to display the Add New IP Access Control screen.</p>
+        <ul>
+            <li value="1"><span class="ControlName">Name</span> – Type a descriptive name for the blacklist or whitelist.</li>
+            <li value="2"><span class="ControlName">Source IP</span> – Type the source IP address or range to include in the access control instance. You can type a range as a spread of IP addresses (200.1.1.1 - 200.1.1.255), with a subnet mask (200.1.1.0 255.255.255.0) or as an offset (200.1.1.0/24). Refer to <a href="blacklist_ip_address.htm">Creating a Blacklist or Whitelist of IP Addresses</a> for instructions about nesting address ranges, if you need to do that.</li>
+            <li value="3"><span class="ControlName">Admin State</span> – Choose <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span>. <br /><span class="ControlName">Note:</span> For a whitelist, this enables/disables the <span class="Italics">rule</span> associated with the list, and any corresponding notification. Once an address is added to a whitelist, traffic from that address is <span class="Italics">always</span> allowed, even if the whitelist itself is administratively disabled.</li>
+            <li value="4"><span class="ControlName">Access</span> – Choose <span class="ControlName">Block</span> for a blacklist or <span class="ControlName">Always Allow</span> for a whitelist.</li>
+        </ul>
+        <p>The equivalent CLI command is:</p>
+        <p><span class="CLIcommand">set defense ip-access-control access-control-entry <span class="CLIcommandItalic">name</span> access [always-allow | block] admin-state [enabled | disabled] source-ip <span class="CLIcommandItalic">ipaddress</span></span>
+        </p>
+        <p>The equivalent REST&#160;API command is:</p>
+        <p><span class="CLIcommand">curl -k -v -u admin:smartwall -X PATCH https://<span class="CLIcommandItalic">cmsipaddress</span>:443/api/running/defense/ip-access-control/access-control-entry/ -d '{"access-control-entry": {"name": "<span class="CLIcommandItalic">listname</span>", "access": "block", "admin-state": "enabled", "source-ip": "<span class="CLIcommandItalic">ipaddress</span>" } }' --header "Content-Type:application/vnd.yang.data+json"</span>
+        </p>
+    </body>
+</html>

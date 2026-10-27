@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Cluster Configuration screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Cluster Configuration screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#device_configuration_new.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor59"></a>
+            <MadCap:concept term="Screens &amp; commands" />Cluster Configuration screen</h1>
+        <p>Click <span class="ControlName">Site Configuration</span> &gt; <span class="ControlName">Cluster Configuration</span> in the web UI tool bar to display the Cluster Configuration screen. This screen enables you to add <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span>s to the site and define the <a href="cluster_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the cluster glossary definition" data-mc-width="auto" data-mc-height="auto">clusters</a> and <a href="Protection_Group_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the protection group glossary definition" data-mc-width="auto" data-mc-height="auto">protection groups</a> that are essential components of server defense.</p>
+        <p>The Cluster Configuration screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Add</span>/<span class="ControlName">Delete</span> – Clicking <span class="ControlName">Add</span> displays the Add a New Cluster dialog, described in the lines that follow. Clicking <span class="ControlName">Delete</span> removes a selected protection group from the site. The Add a New Cluster dialog provides these controls:<ul><li value="1"><span class="ControlName">The Cluster Name Is</span> – Type a unique descriptive name for a set of <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span>s that work together to handle inbound traffic on one network interface at a site.</li><li value="2"><span class="ControlName">The Cluster Has A</span> – Indicate whether your <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span>s operate individually or have redundant counterparts.<ul><li value="1"><span class="ControlName">Single Protection Group</span>– Each <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span> in the cluster operates individually, and does not have a redundant counterpart. This can include two load-balanced Defense <span class="VariablesPlatformNameShort">appliance</span>s.</li><li value="2"><span class="ControlName">High Availability Pair of Protection Groups</span> – Each <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span> has a redundant counterpart in a different protection group. Both protection groups belong to the same cluster.</li></ul></li><li value="3"><span class="ControlName">Each Protection Group Looks Like</span> – Choose a representation of the <span class="VariablesCompanyNameShort">Corero</span><span class="VariablesPlatformNameShort">appliance</span>s in your cluster. If you selected HA Pair, the <span class="VariablesApplicationNameShort">CMS</span> doubles the representation for you, with the redundant counterparts as members of a separate protection group.</li><li value="4"><span class="ControlName">Traffic Scale Parameter</span> – <a href="traffic_scaling_intro.htm" target="_self" title="Show a detailed description of traffic scaling" alt="Show a detailed description of traffic scaling">Traffic Scale</a> enables you to apply a multiple to global traffic parameters for the associated protection group. This is useful when the <span class="VariablesPlatformNameGeneric">SmartWall appliance</span>s protecting your network use interface speeds other than 10 Gbps, for which the global defaults are intended. Traffic Scale is set to 1.0 by default; you can specify a value in <span class="Italics">x.y</span> format, with one digit on each side of the decimal point.</li><li value="5"><span class="ControlName">The Device Settings Are</span> – Type the IP address and a descriptive name for the <span class="VariablesPlatformNameShort">appliance</span> you are adding. The <span class="VariablesApplicationNameShort">CMS</span> will provide a default name based on the IP address that you provide and the appliance type.</li><li value="6"><span class="ControlName">Forensics Settings</span> – Specify IP addresses and network masks for a <span class="VariablesPcapDevice">Forensics appliance</span>'s interfaces.</li><li value="7"><span class="ControlName">Add</span> – Click this button to execute the creation of the cluster.</li></ul></li>
+            <li value="2"><span class="ControlName">Protection Group</span> – The protection group name is derived automatically from the cluster name you specify.</li>
+            <li value="3"><span class="ControlName">Cluster Name</span> – The cluster name you specified when you added the <span class="VariablesPlatformNameShort">appliance</span>s to the site.</li>
+            <li value="4"><span class="ControlName">Config Preview</span> – A graphical representation of the cluster you've defined.</li>
+        </ul>
+    </body>
+</html>

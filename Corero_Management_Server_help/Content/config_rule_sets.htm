@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Optional and Advanced Configuration" data-mc-ignored-words="rulesetname">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" /><title>Configure Rule Sets</title>
+        <meta name="description" content="Instructions for defining and customizing rule sets." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#config_rule_sets.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor37"></a>
+            <MadCap:concept term="How to" />Configure Rule Sets</h1>
+        <p>A rule set is a named collection of <a href="Rule_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a  a Popup" title="Show the Rule glossary definition" data-mc-width="auto" data-mc-height="auto">rules</a> that is configured to identify and address traffic for a particular purpose. Rule sets provide basic responses to traffic that matches certain characteristics. User-defined rule sets can be created from built-in rule sets, and existing rule sets can be modified. The <span class="VariablesApplicationNameShort">CMS</span> divides rule sets broadly into two categories: security rule sets and reputation rule sets.</p>
+        <p>You can configure the treatment for a particular rule to be different for different rule sets, and you can modify the treatment applied to individual rules within a set. A treatment modification applies only to the instance of the rule associated with that named rule set.</p>
+        <p>Follow this procedure to configure security rule sets or reputation rule sets. Note that instructions for creating new rule sets are included, also.</p>
+        <p><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Access the type of rule set you want to work with: Security or Reputation.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Security Rule Sets</span> <br />OR <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Reputation Rule Sets</span> to display the corresponding Rule Set screen.
+                        <span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles rule-groups [security-rule-set | ip-reputation-rule-set] <span class="CLIcommandItalic">rulesetname</span></span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1"><span class="UIname">Web UI:</span> Click the rule set name to display its parameters in their own screen.
+                        <p><span class="UIname">CLI:</span> Specify the rule set name to access its parameters.</p></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Modify the rule set parameters as necessary.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Use the  appropriate Rule Set screen as described above.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles rule-groups [security-rule-set | ip-reputation-rule-set] <span class="CLIcommandItalic">rulesetname</span></span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Modify parameters as necessary. A subset of rule set parameters is available for modification:
+                        <ul><li value="1">Block Active</li><li value="2">Default Log</li><li value="3">Description</li><li value="4">Rules</li></ul></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1"><span class="Italics">Optional:</span> Create a new rule set. You can create the new rule set as a copy of an existing one.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click <span class="ControlName">Add</span> in the Rule Set screen to display controls for creating a new rule set.
+                        <p><span class="UIname">CLI:</span> Type the name of a new rule set to create it.</p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Configure the various rule set parameters. See the <a href="security_rule_set_screen.htm" target="_self" title="Show the description of the IPS Rule Set screen and its controls" alt="Show the description of the IPS Rule Set screen and its controls">Security Rule Set screen</a> or the <a href="ip_reputation_rule_set_screen.htm" target="_self" title="Show the description of the IP Reputation Rule Set screen and its controls" alt="Show the description of the IP Reputation Rule Set screen and its controls">IP Reputation Rule Set screen</a> for the complete list.
+                    </td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1"><span class="Italics">Optional:</span> Specify which rules should be enabled or disabled in the rule set.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Click <span class="ControlName">Rules</span> in the screen for a particular rule set to display the <a href="rules_screen.htm" target="_self" title="Show the description of the Rule screen and its controls" alt="Show the description of the Rule screen and its controls">Rule screen</a>.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles rule-groups security-rule-set <span class="CLIcommandItalic">rulesetname</span> rules rule <span class="CLIcommandItalic">rulenumber</span> admin-state [enabled | disabled]</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Specify a rule in the rule set and change its admin state to <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span> as necessary.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

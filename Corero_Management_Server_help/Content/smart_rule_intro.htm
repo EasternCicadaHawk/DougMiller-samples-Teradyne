@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Smart Rule</title>
+        <meta name="description" content="The Smart Rule feature enables you to configure threshold values and rate limits for protecting servers from various types of flood traffic." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#smart_rule_intro.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor51"></a>
+            <MadCap:concept term="Explanations" />Smart Rule</h1>
+        <p>The Smart Rule feature enables you to configure threshold values and rate limits for protecting servers from various types of flood traffic. For a relevant traffic type, if the average rate exceeds the configured threshold, a rate limit is enabled that restricts the amount of that type of traffic until the average rate falls below the threshold. The Smart Rule functionality is able to distinguish one or more servers at risk of being flooded, and executes the rate limiting action on the traffic destined for that server, not indiscriminately on all traffic of that type that is entering the network. Smart Rule functionality acts on traffic that is not blocked by other broader, less discriminating rules. The average rate is determined over a moderate interval length that has been chosen to provide a reasonable amount of protection against not only sudden surges in traffic, but also slower, more gradual escalations.</p>
+        <p>The relevant traffic categories are:</p>
+        <ul>
+            <li value="1"><i>Service</i>: A service at risk of being flooded by targeted traffic, where a service is defined as a protocol and a destination port. Smart Rule takes into account a number of factors, including the destination IP address, destination port, and protocol, among others, to determine whether the service is under attack.</li>
+            <li value="2"><i>Reflection</i>: Incoming traffic bearing the characteristics of a reflection attack.</li>
+            <li value="3"><i>UDP</i>: An excess of UDP traffic destined for a protected server.</li>
+        </ul>
+        <p>Smart Rule examines both the bit rate and the packet rate of the relevant traffic types, and, for each traffic category, there are four parameters used to identify and reduce problematic traffic:</p>
+        <ul>
+            <li value="1">bit threshold</li>
+            <li value="2">bit rate limit</li>
+            <li value="3">packet threshold</li>
+            <li value="4">packet rate limit</li>
+        </ul>
+        <p>Use the bit threshold and bit rate limit parameters to control traffic to the destination based on the rate of data, after the threshold has been crossed. Use the packet threshold and packet rate limit parameters to control traffic to the destination based on the packet rate, after the threshold has been crossed.</p>
+        <p>These parameters are provided in the <a href="early_access_capabilities_screen.htm" target="_self">Early Access Capabilities screen</a>.</p>
+    </body>
+</html>

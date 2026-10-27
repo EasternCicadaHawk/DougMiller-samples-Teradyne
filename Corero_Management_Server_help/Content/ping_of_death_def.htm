@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Ping of Death Attack</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#ping_of_death_def.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor199"></a>
+            <MadCap:concept term="Explanations" />Ping of Death Attack</h1>
+        <h2>Definition</h2>
+        <p>The ping of death is a type of ICMP attack that causes the target to assemble excessively large (and therefore invalid) IP packets from multiple fragments.</p>
+        <p>The maximum allowable size of an IP packet is 65,535 bytes, and any packet that exceeds that size is characterized as "malformed" and invalid. Restrictions in data link protocols such as Ethernet, however, require large IP packets to be fragmented across multiple smaller frames. Ethernet, for example, has a maximum frame size of 1500 bytes, so a maximum sized IP packet would be fragmented across 44 Ethernet frames. Upon reaching the destination, the fragmented IP packet is re-assembled to its original size. The ping of death exploits this mechanism by sending fragments containing more than 65,535 bytes, resulting in a malformed packet upon re-assembly at the target. The malformed packet can overflow its assigned memory buffer; multiplied by a very large number of such packets, this can result in denial of service to legitimate users.</p>
+        <h2>Observable characteristics</h2>
+        <p>Incoming ICMP frames  that, in combination, will constitute an excessively large IP packet.</p>
+        <h2>Method of response</h2>
+        <p>Block ICMP frames that, in combination, will constitute an excessively large IP packet.</p>
+        <h2><span class="VariablesApplicationNameShort">CMS</span> configuration steps</h2>
+        <p>None? Enabled by default?</p>
+        <h2>Relevant SmartWall rules</h2>
+        <p>This rule pertains to this attack type:</p>
+        <ul>
+            <li value="1">cns-003003: ICMP frame length illegal for type or exceeds specified limit</li>
+        </ul>
+    </body>
+</html>

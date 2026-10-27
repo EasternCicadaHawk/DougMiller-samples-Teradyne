@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Top Reflection Flood Signature Type</title>
+        <link href="../Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../Default.htm#SyslogInfo/Top Reflection Flood Signature.htm">Show search and navigation tools</a>
+        </p>
+        <h3 class="Heading3"><a name="_Toc280193605"></a>Top Reflection Flood Signature Type</h3>
+        <p>Every 60 seconds the CMS creates a message that contains the most frequently signatures for potential reflection attacks over the time period as determined by each Network Threat Defense appliance inbound from the Internet into the site.&#160;&#160; There will be up to 10 entries in each message and each one contains the signature and its rates. The following is an example how this message is sent to configured syslog receivers and a description of the contents.</p>
+        <p>
+            <div style="margin-left: 0;margin-top: 5.75pt;width: 477pt;height: 62.75pt;visibility: visible;mso-height-relative: margin;v-text-anchor: middle;">
+                <p class="SyslogExample">Mar 16 11:00:58 10.20.29.52 Mar 16 11:04:46 corpit-cms.corero.com cat=network, type=top-refl-rate,v=1,cl=Eur1,Eur1_1,aname=Defense_12_12_12_1, sig1="dip=72.16.1.104,sprt=53,plen=63", br1=34483948,pr1=393494, sig2="dip=72.16.1.103,sprt=0,plen=63",br2=2460055,pr2=40806</p>
+            </div>Mar =6,port1=41520,pcent2=64009,pcent2=17,port3=0,pcent3=17,</p>
+        <p class="TableCaption">Example Top Reflection Rate Message</p>
+        <p>The specific content for the top-refl-rate message is shown below:</p>
+        <p>&#160;</p>
+        <table>
+            <tr>
+                <td>
+                    <p>Field Name</p>
+                </td>
+                <td>
+                    <p>Short Name</p>
+                </td>
+                <td>
+                    <p>Specific Value / Type</p>
+                </td>
+                <td>
+                    <p>Description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Category</p>
+                </td>
+                <td>
+                    <p>cat</p>
+                </td>
+                <td>
+                    <p>network</p>
+                </td>
+                <td>
+                    <p>Network event category</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Type</p>
+                </td>
+                <td>
+                    <p>type</p>
+                </td>
+                <td>
+                    <p>top-refl-rate</p>
+                </td>
+                <td>
+                    <p>Top Reflection Rate rates </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Version</p>
+                </td>
+                <td>
+                    <p>v</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The Corero message format version</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cluster</p>
+                </td>
+                <td>
+                    <p>cl</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The cluster of the protection group</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Protection Group</p>
+                </td>
+                <td>
+                    <p>pg</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The protection group of these statistics</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Device Name</p>
+                </td>
+                <td>
+                    <p>aname</p>
+                </td>
+                <td>
+                    <p>Text</p>
+                </td>
+                <td>
+                    <p>The name provisioned for the device (appliance) that is observing these signatures</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Signature &lt;rank&gt;</p>
+                </td>
+                <td>
+                    <p>sigx</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The signature for the observed traffic pattern of &lt;rank&gt; for this time period</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Bit Rate &lt;rank&gt;</p>
+                </td>
+                <td>
+                    <p>brx</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The bit rate for the observed traffic pattern of &lt;rank&gt; for this time period</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Packet Rate &lt;rank&gt;</p>
+                </td>
+                <td>
+                    <p>prx</p>
+                </td>
+                <td>
+                    <p>Number</p>
+                </td>
+                <td>
+                    <p>The packet rate for the observed traffic pattern of &lt;rank&gt; for this time period</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

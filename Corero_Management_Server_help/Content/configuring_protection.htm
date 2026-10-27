@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us" data_mc_search_type="Stem" data_mc_help_system_file_name="Default.xml" data_mc_path_to_help_system="../" data_mc_target_type="WebHelp2" data_mc_runtime_file_type="Topic" data_mc_preload_images="false" data_mc_in_preview_mode="false" data_mc_toc_path="Configure the CMS|Basic Configuration Checklist" data_mc_ignored_words="servergroupname;ipaddress;zz;ipaddressrange;clientgroupname;cmsipaddress" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Basic Configuration Checklist" data-mc-ignored-words="customername;servergroupname;cmsipaddress">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" />
+        <link href="Resources/TableStyles/ProcedureTable.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <meta charset="utf-8" /><title>Configuring Server Protection</title>
+        <meta name="description" content="This is an overview of the tasks you must execute to protect your servers." />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">/*<![CDATA[*/
+
+ 
+/*]]>*/</script> <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">/*<![CDATA[*/
+
+ 
+/*]]>*/</script> <script src="../Resources/Scripts/require.min.js" type="text/javascript">/*<![CDATA[*/
+
+ 
+/*]]>*/</script> <script src="../Resources/Scripts/require.config.js" type="text/javascript">/*<![CDATA[*/
+
+ 
+/*]]>*/</script> <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">/*<![CDATA[*/
+
+ 
+/*]]>*/</script><link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" /></head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#configuring_protection.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor14"></a>
+            <MadCap:concept term="How to" />Configuring Server Protection</h1>
+        <p data-mc-conditions="Default.RestAPI"><a name="kanchor8"></a>Server protection comprises the set of responses that occur when incoming traffic matches one or more <a href="profile_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a" title="Show the profile glossary definition">profiles</a>.</p>
+        <p data-mc-conditions="Default.RestAPI">Server protection is configured per server group; a server protection instance combines a server group (and the service protocol and profiles that it comprises) with default responses, called treatments, for traffic coming inbound to the servers and going back outbound to the clients. Due to the nature of their components, server protection instances incorporate all aspects of <span class="VariablesApplicationNameShort">CMS</span> protection configuration, including <a href="client_group_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a" title="Show the client group glossary definition">client groups</a>, <a href="client_group_glossary_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a" title="Show the client profile glossary definition">client profiles</a>, and <a href="Rule_Set_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a" title="Show the rule set glossary definition">rule sets</a>, each of which is a component of a server protection instance at some level.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Server Groups and Protection</span> in the web UI tool bar to display the Server Groups and Protection screen. Alternatively, type the CLI command <span class="CLIcommand">set defense server-protection</span> to access the same functionality.</p>
+        <p data-mc-conditions="Default.RestAPI">The <span class="VariablesApplicationNameShort">CMS</span> provides a single built-in server group named, "Default network-wide server protection". This is a default, catch-all server group that implicitly contains all server IP addresses that are not explicitly included in another server group. To be clear: a server IP address that is not explicitly included in a user-defined server group is implicitly included in the built-in server group named, "Default network-wide server protection". You cannot specify explicit IP addresses for this server group, and it has treatments associated with it only, not server profiles. It is necessary to define a server group explicitly to be able to use a server profile.</p>
+        <p data-mc-conditions="Default.notRESTAPI">Modify these settings to configure server protection:</p>
+        <p data-mc-conditions="Default.notRESTAPI"><span class="b">NOTE:</span> If you use the CLI, remember to enter <a href="cli_configure_mode.htm" target="_self" title="Learn about the CLI's configuration mode" alt="Learn about the CLI's configuration mode">configuration mode</a> prior to attempting any other configuration tasks. Do this by typing <span class="CLIcommand">configure</span> at the CLI command prompt.</p>
+        <table style="width: 100%;mc-table-style: url('Resources/TableStyles/ProcedureTable.css');margin-left: 0;margin-right: auto;" class="TableStyle-ProcedureTable" cellspacing="0" data-mc-conditions="Default.notRESTAPI">
+            <col style="width: 200px;" class="TableStyle-ProcedureTable-Column-Column1" />
+            <col style="width: 198px;" class="TableStyle-ProcedureTable-Column-Column2" />
+            <col class="TableStyle-ProcedureTable-Column-Column3" />
+            <thead>
+                <tr class="TableStyle-ProcedureTable-Head-Header1">
+                    <th class="TableStyle-ProcedureTable-HeadE-Column1-Header1">Action</th>
+                    <th class="TableStyle-ProcedureTable-HeadE-Column2-Header1">Where to perform it</th>
+                    <th class="TableStyle-ProcedureTable-HeadD-Column3-Header1">What to do</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Create a <a href="server_group_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a" title="Show the server group glossary definition">server group</a>.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Server Groups and Protection</span> in the web UI tool bar to display the Server Groups and Protection screen. Click <span class="ControlName">Add</span> to display the Add New Group dialog. <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense server-protection server-group <span class="CLIcommandItalic">customername</span> <span class="CLIcommandItalic">servergroupname</span></span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/server-protection:server-protection -d '{  "server-group": {"customer": "<span class="CLIcommandItalic">customername</span>", "server-group-name": "<span class="CLIcommandItalic">servergroupname</span>" } }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Create the new server group by specifying an <a href="cms_customers_screen.htm" target="_self" title="Show the description of the CMS Customers screen and its controls" alt="Show the description of the CMS Customers screen and its controls">existing customer</a> to associate with it (choose <span class="Boldface">DEFAULT</span> if you do not have other customers associate with your site) and typing a descriptive name. In the web UI, make sure to click <span class="ControlName">Add</span> in the Add New Group dialog to finish creating the server group.</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Specify the addresses of the servers that belong to the server group,  or members of any <a href="address_range_subsets.htm" target="_self" title="Show the explanation of IP address range subsets" alt="Show the explanation of IP address range subsets">IP address range subsets</a> that you want to define.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Select the name of an existing server group in the Server Groups and Protection screen, then click <span class="ControlName">Add</span> in the <span class="ControlName">Address Ranges</span> tab to display the Add IP Address Range dialog.
+                        <p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense server-protection server-group DEFAULT <span class="CLIcommandItalic">servergroupname</span> server-addresses <span class="CLIcommandItalic">ipaddressrange</span></span></p><p><span class="UIname">REST&#160;API:</span> <span class="CLIcommand">curl -k -v -u admin:smartwall -X POST https://<span class="CLIcommandItalic">cmsipaddress</span>/api/running/defense/server-protection:server-protection -d '{  "server-group": {"customer": "<span class="CLIcommandItalic">customername</span>", "server-group-name": "<span class="CLIcommandItalic">servergroupname</span>" {"server-addresses": "<span class="CLIcommandItalic">ipaddressrange</span>" } } }' --header "Content-Type:application/vnd.yang.data+json"</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">Specify one or more server IP addresses to include in the server group. You can type individual addresses or a range of addresses (e.g., 2.2.2.1-2.2.2.100, or 2.2.2.1/24).</td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1">Configure the SYN flood threshold and connection limits for the server group. This is the server profile.</td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span>  Select the name of an existing server group in the Server Groups and Protection screen, then click the <span class="ControlName">Thresholds &amp; Limits</span> tab.<p><span class="UIname">CLI:</span> <span class="CLIcommand">set defense profiles server-profiles [connection-limit-profile | syn-flood-profile]</span></p></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Choose an existing profile or specify custom values as necessary. The values are explained in the Server Group and Protection screen.
+                        <p>Specify an existing profile by name or specify custom values as necessary. <span class="Italics">Note that the CLI exposes that the threshold and limit values are actually divided between different types of profiles.</span></p><p>When using the REST&#160;API, note that both profile types must be created using the same profile name in order for the server profile to be associated with a server protection instance.</p></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column1-Body1" rowspan="2">
+                        <p rowspan="2">Specify the client group and protocol group from which the server group is being protected, and specify the treatment to be used for traffic from those clients.</p>
+                        <p rowspan="2">This involves client groups and service protocols that are configured separately.</p>
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">Web UI:</span> Select the name of an existing server group in the Server Groups and Protection screen, then click the <span class="ControlName">Server Protection</span> tab. Click <span class="ControlName">Add</span> to display the Add Traffic Treatment dialog.
+                    </td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        Add Traffic Treatment dialog box:
+                        <ul><li value="1">Choose an existing protocol group</li><li value="2">Choose an existing client group</li><li value="3">Click <span class="ControlName">Next</span> to display the Protocol Group/Client Group dialog box</li></ul><p>Protocol Group/Client Group dialog box:</p><ul><li value="1">Choose an action for the server protection instance (<span class="ControlName">Allow</span> or <span class="ControlName">Block</span>).</li><li value="2">Select an existing security rule set</li><li value="3">Select an existing reputation rule set</li><li value="4">Click <span class="ControlName">Issue Security Event</span> if you want to generate an event</li><li value="5">Choose an event severity if you are generating an event</li><li value="6">Click <span class="ControlName">OK</span> to finish defining the server protection instance</li></ul></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td class="TableStyle-ProcedureTable-BodyE-Column2-Body1"><span class="UIname">CLI:</span> <span class="CLIcommand"> set defense server-protection server-group DEFAULT <span class="CLIcommandItalic">servergroupname</span> service-protocol-group <span class="CLIcommandItalic">serviceprotocolname</span> client-group <span class="CLIcommandItalic">clientgroupname</span> treatment [action | admin-state | comments | event-severity | security-ruleset | issue-security-event | reputation-ruleset | traffic-pattern]</span></td>
+                    <td class="TableStyle-ProcedureTable-BodyD-Column3-Body1">
+                        It's possible to define the server protection instance in a single command line, though it's not necessary to do so. You can break up the configuration over multiple command lines if you find that easier.
+                        <p>Specify the server group, then specify the service protocol and client group of interest, along with the treatment to be applied for traffic of that type originating from those clients.</p></td>
+                </tr>
+                <tr class="TableStyle-ProcedureTable-Body-Body1">
+                    <td colspan="3" class="TableStyle-ProcedureTable-BodyA-Column1-Body1">Save your changes when you're finished. <span class="UIname">Web UI:</span> <span class="ControlName">Save</span> <span class="UIname">CLI:</span> <span class="CLIcommand">commit</span> <span class="UIname">REST API:</span> <span class="ControlName">Save</span>/<span class="CLIcommand">commit</span> occurs automatically upon execution of the cURL command.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p data-mc-conditions="Default.notRESTAPI">Return to the <a href="basic_configuration_checklist.htm" target="_self" title="Show the basic configuration checklist" alt="Show the basic configuration checklist">Basic Configuration Checklist</a> if you're configuring your site for the first time.</p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Amplification Attack</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#amplification_attack_def.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor155"></a>
+            <MadCap:concept term="Explanations" />Amplification Attack</h1>
+        <p>An amplification attack is one in which an attacker abuses a protocol's designed behavior so that the attacker can use a comparatively small amount of initiating traffic to direct a massive amount of attack traffic at the target. Two common examples of amplification attack are DNS amplification attacks and NTP amplification attacks. These attacks exploit the behavior of DNS and NTP to multiply the volume of initiating attack traffic possibly many, many times, depending on exactly how the initiating traffic is crafted. In addition, these attacks often employ botnets to make the volume of attack traffic even larger.</p>
+        <p>DNS amplification attack – A DNS amplification attack sends DNS requests (which are UDP packets) with spoofed IP addresses to one or more DNS servers. Typically, the spoofed address is the intended target, though the DNS server(s) can be a target, also. DNS amplification attacks typically yield attack traffic that is 8X greater than the initiating traffic.</p>
+        <p>The Smurf attack is an older and less potent variant of amplification attack.</p>
+    </body>
+</html>

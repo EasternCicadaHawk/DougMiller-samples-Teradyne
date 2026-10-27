@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions" data-mc-ignored-words="filtername">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Flex-Rule Based Blocking screen</title>
+        <meta name="description" content="The Flex-Rule utility enables you to define custom packet-blocking filters." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#filter_based_blocking_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor69"></a>
+            <MadCap:concept term="Screens &amp; commands" />Flex-Rule Based Blocking screen</h1>
+        <p>The <span class="VariablesApplicationNameShort">CMS</span> provides the Flex-Rule utility for defining custom packet-blocking filters. These custom filters enable you to respond quickly to new threats you encounter that are not yet addressed by formal rules in <span class="VariablesCompanyNameShort">Corero</span>'s SmartWall software, or, otherwise, to threats for which you want a very specific or nuanced response that is not provided to your liking by the built-in software. All custom packet filters defined using the Flex-Rule utility are associated with a single SmartWall rule (CNS-001037) that indicates that traffic matching one of the filter definitions was recognized.</p>
+        <p>Clicking <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Flex-Rule based Blocking</span> in the web UI tool bar displays the Flex-Rule-based Blocking screen for defining these custom filters. The equivalent CLI command is <span class="CLIcommand">set defense flex-rule-blocking filter <span class="CLIcommandItalic">filtername</span></span>.</p>
+        <p>The Filter-based Blocking screen provides the following controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Filter Description</span> – Type a brief explanation for one or more filters.</li>
+            <li value="2"><span class="ControlName">Match Rate Limit</span> – Rule CNS-002010 is triggered when the filtered traffic exceeds this limit. (<span class="b">Note:</span> CNS-002010 will trigger <i>only</i> if rule CNS-001037, the rule associated with matches to the custom filters, is <i>not</i> set to Block, which it is by default.)</li>
+            <li value="3"><span class="ControlName">Add</span> – Click to display the Filter screen to name the filter and define it using tcpdump pcap-filter syntax.</li>
+            <li value="4"><span class="ControlName">Delete</span> – Remove a selected filter from the configuration.</li>
+            <li value="5"><span class="ControlName">Name</span> – The filter's user-defined name.</li>
+            <li value="6"><span class="ControlName">Definition</span> – The pcap-filter expression that defines the custom filter.</li>
+        </ul>
+        <p>These filters block only inbound IP packets which either are not fragmented or are the first fragment of the IP datagram. Non-IP packets are never blocked. Individual filters are combined into a single filter expression  by surrounding each expression with parentheses and inserting “or” between them, and rule CNS-001037 is triggered any time one of the filter conditions is met. CNS-001037 is designed to detect and block attacks with extremely high packet rates, and security events are logged only for packets which are also already selected for Sflow sampling. The corresponding blocked and detected counts are accurate, but many fewer events will be shown for CNS-001037 than for comparable packet-based rules.</p>
+        <p>The filter syntax and behavior is that of the publicly available tcpdump pcap-filter. Refer to <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html" target="_blank" title="Open this URL" alt="Open this URL">http://www.tcpdump.org/manpages/pcap-filter.7.html</a> for additional information. The version supported by the <span class="VariablesApplicationNameShort">CMS</span> is not necessarily the latest version available from tcpdump.org.</p>
+        <p>Note these differences between this filter utility and the tcpdump pcap-filter:</p>
+        <ul>
+            <li value="1">Hosts must be specified by number rather than by name.</li>
+            <li value="2">The IP broadcast condition is not supported. (There is no means of specifying the subnet mask of an interface.)</li>
+        </ul>
+        <h2>Examples</h2>
+        <p>As stated previously, this filter behaves in a way that is very similar to tcpdump pcap-filter, and the keyword syntax and examples provided at <a href="http://www.tcpdump.org/manpages/pcap-filter.7.html" target="_blank" title="Open this URL" alt="Open this URL">http://www.tcpdump.org/manpages/pcap-filter.7.html</a> are very informative if you are unfamiliar with its use.</p>
+        <p>A few different examples follow here:</p>
+        <ul>
+            <li value="1">Filter all packets being sent to port 1024: <span class="CLIcommand">dst port 1024</span></li>
+            <li value="2">Filter all UDP packets that are 71 bytes in length and that have a TTL field of 237, 238, or 239 (note the byte offset value [8] specified for the TTL field): <span class="CLIcommand">udp and len == 71 and (ip[8] &gt;= 237 and ip[8] &lt;= 239)</span></li>
+            <li value="3">Block traffic from 123.123.123.12 if the source port is 8080 or the source port &lt; 1024,and the destination is 221.211.111.0: <span class="CLIcommand">src host 123.123.123.12 &amp;&amp; (src port 8080 || src port &lt;1024) &amp;&amp; dst host 221.211.111.0</span></li>
+            <li value="4">Block single-tag packets: <span class="CLIcommand">vlan &amp;&amp; dst port 1024</span></li>
+            <li value="5">Block stacked vlan tagged packets (8100/8100): <span class="CLIcommand">(vlan &amp;&amp; vlan &amp;&amp; dst port 1024)</span></li>
+            <li value="6">Block untagged, single tagged and double tagged traffic (8100/8100 or 9100/8100): <span class="CLIcommand">(dst port 1024) || (vlan &amp;&amp; dst port 1024) || (vlan &amp;&amp; dst port 1024)</span></li>
+        </ul>
+    </body>
+</html>

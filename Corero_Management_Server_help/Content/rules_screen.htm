@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Rules screen</title>
+        <meta name="description" content="Descriptions of the controls provided in the CMS web UI's Rule screen." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#rules_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor82"></a>
+            <MadCap:concept term="Screens &amp; commands" />Rule screen</h1>
+        <p>This screen lists packet <a href="Rule_def.htm" class="MCTopicPopup MCTopicPopupHotSpot a " title="Show the rule glossary definition">rules</a> or rate limit rules, depending on which you specified.</p>
+        <p>Click <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">Security Rule Sets</span> or <span class="ControlName">Defense Configuration</span> &gt; <span class="ControlName">IP Reputation Rule Sets</span> to display this screen with a list of the corresponding rules. The CLI equivalents are <span class="CLIcommand">set defense profiles rule-groups packet-rules rule</span> and <span class="CLIcommand">set defense profiles rule-groups rate-limit-rules rule</span>.</p>
+        <p>The Rule screen provides these controls:</p>
+        <ul>
+            <li value="1"><span class="ControlName">Rule Name</span> – The rule identifier.</li>
+            <li value="2"><span class="ControlName">Admin State</span> – Choose <span class="ControlName">Enabled</span> or <span class="ControlName">Disabled</span> for the rule. Mostly, rules are enabled by default, with a few exceptions.</li>
+            <li value="3"><span class="ControlName">Action</span> – Choose what to do with traffic that triggers the rule:<ul><li value="1"><span class="ControlName">Allow</span> – Traffic that triggered the rule passes to its destination without restriction.</li><li value="2"><span class="ControlName">Detect</span> – Traffic that triggered the rule is identified and logged, but is otherwise passed to its destination without restriction.</li><li value="3"><span class="ControlName">Block Active</span> – Traffic that triggered the rule is stopped with no indication given to the originating client.</li><li value="4"><span class="ControlName">Block Passive</span> – Traffic that triggered the rule is stopped and a specific response is executed, such as resetting the connection.</li></ul></li>
+            <li value="4"><span class="ControlName">Log</span> – Choose <span class="ControlName">True</span> or <span class="ControlName">False</span>, indicating whether to log the event or not when the rule is triggered.</li>
+            <li value="5"><span class="ControlName">Log Severity</span> – The importance of the log message for the rule. Choose <span class="ControlName">Minimal</span>, <span class="ControlName">Moderate</span>, or <span class="ControlName">Critical</span>.</li>
+            <li value="6"><span class="ControlName">Description</span> – The rule's short description.</li>
+            <li value="7"><span class="ControlName">Long Description</span> – The rule's long description.</li>
+        </ul>
+    </body>
+</html>

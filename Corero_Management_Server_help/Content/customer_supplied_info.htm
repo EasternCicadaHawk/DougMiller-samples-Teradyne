@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="" data-mc-ignored-words="cmsipaddress">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Customer-Supplied Information</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#customer_supplied_info.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor171"></a>
+            <MadCap:concept term="Explanations" />Getting Started With <span class="VariablesHardwareFamilyUnitCaps">SmartWall Threat Defense System</span></h1>
+        <p>Your <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> is shipped to you with the following components, with variations for your particular configuration:</p>
+        <ul>
+            <li value="1"><span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesFalcon">Managed Service Appliance</span> (two, if you are using an HA configuration). This platform is loaded and preconfigured with <span class="VariablesApplicationName">Corero Management Server</span> (<span class="VariablesApplicationNameShort">CMS</span>) software, as well as <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesSecurityService">SecureWatch</span> <span class="VariablesAnlalysisTool">Analytics</span> software.</li>
+            <li value="2">Network cables</li>
+            <li value="3">SFP connectors</li>
+            <li value="4"><span class="VariablesProtectionDevice">Defense appliance</span>, if your configuration uses one.</li>
+            <li value="5"><span class="VariablesPcapDevice">Forensics appliance</span>, if your configuration uses one.</li>
+            <li value="6"><span class="VariablesBypassDevice">Bypass appliance</span>, if your configuration uses one.</li>
+        </ul>
+        <h2>Customer-Supplied Information</h2>
+        <p>Your <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesFalcon">Managed Service Appliance</span> is shipped to you with its IP addresses preconfigured by <span class="VariablesCompanyNameShort">Corero</span>. To facilitate this, you need to supply <span class="VariablesCompanyNameShort">Corero</span> with the following information in order for your <span class="VariablesFalcon">Managed Service Appliance</span>  to be preconfigured correctly for your network:</p>
+        <ul>
+            <li value="1"><span class="Italics">IP address and subnet mask</span> – The management IP address you will use to access the configuration from your core network. If you are using an HA configuration, you'll need one for each <span class="VariablesFalcon">Managed Service Appliance</span>, plus a third to provide a virtual management interface that will float between the two servers, depending on which is active.</li>
+            <li value="2"><span class="VariablesBypassDevice">Bypass appliance</span> IP address and subnet mask – The management IP address you will use to access the <span class="VariablesBypassDevice">Bypass appliance</span></li>
+            <li value="3"><span class="Italics">DNS IP&#160;address</span> – The address of the DNS server you will use for the site. You may have more than one of these.</li>
+            <li value="4"><span class="Italics">Default gateway IP address</span> – The address of the default gateway for your site.</li>
+            <li value="5"><span class="Italics">NTP IP address</span> – The address of the NTP server you wish to use for the site. You may have more than one of these. <span class="VariablesCompanyNameShort">Corero</span> can provide you with an NTP server address if you do not have one of your own.</li>
+            <li value="6"><span class="Italics">SFP+ adapter type</span> – For <span class="VariablesProtectionDevice">Defense appliance</span>s and <span class="VariablesBypassDevice">Bypass appliance</span>s. Multi-mode or single mode, or direct attached cable for a copper interface.</li>
+            <li value="7"><span class="Italics">Bypass model requirements</span> – Indicate whether your <span class="VariablesBypassDevice">Bypass appliance</span> will connect to multi-mode or single mode cables.</li>
+        </ul>
+        <p>Additional prerequisites:</p>
+        <ul>
+            <li value="1">You need to have the ability to support reverse tunnels over TCP port 22. This enables monitoring by <span class="VariablesCompanyNameShort">Corero</span>'s Security Operations Center.</li>
+            <li value="2">You need to provide a LAN switch for use with the configuration. You'll need a switch port for the <span class="VariablesFalcon">Managed Service Appliance</span>, plus one port for each <span class="VariablesPlatformNameShort">appliance</span> managed by the <span class="VariablesApplicationNameShort">CMS</span>. Note that the switch ports all must be in single private management VLAN.</li>
+        </ul>
+        <p>Optional addresses you may want to be prepared with:</p>
+        <ul>
+            <li value="1">IP addresses for SNMP monitoring systems, if used.</li>
+            <li value="2">IP addresses for syslog clients, if used.</li>
+        </ul>
+        <h2><a name="aanchor172"></a>
+            <MadCap:concept term="Pictures" /><span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> Network Wiring</h2>
+        <p>The illustration below shows an example of a <span class="VariablesPlatformFamily">SmartWall Threat Defense System</span> installation. The <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesFalcon">Managed Service Appliance</span>, which hosts the <span class="VariablesApplicationNameShort">CMS</span> software and the <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesSecurityService">SecureWatch</span> <span class="VariablesAnlalysisTool">Analytics</span>, is connected to the user's core network via a user-assigned IP address that is appropriate for that network. The <span class="VariablesFalcon">Managed Service Appliance</span> is connected also to a user-supplied LAN switch, which segregates the management traffic on a private VLAN. The <span class="VariablesApplicationNameShort">CMS</span> is on this VLAN, as is the <span class="VariablesSecurityService">SecureWatch</span> <span class="VariablesAnlalysisTool">Analytics</span> (also hosted on the <span class="VariablesFalcon">Managed Service Appliance</span>, though it is not shown in this illustration). One <span class="VariablesBypassDeviceLong">SmartWall Network Bypass Appliance</span> and two <span class="VariablesPlatformNameLong">SmartWall Network Threat Defense Appliance</span>s are connected on the VLAN via their management ports. The connections between the <span class="VariablesBypassDevice">Bypass appliance</span> and the <span class="VariablesProtectionDevice">Defense appliance</span>s are described in detail in the illustration.</p>
+        <p>
+            <img src="Graphics/gs_wiring_bypass_555x843.png" style="width: 555;height: 843;" />
+        </p>
+        <h2><a name="aanchor173"></a>
+            <MadCap:concept term="Pictures" /><span class="VariablesApplicationNameShort">CMS</span> High Availability Configuration</h2>
+        <p>The illustration below shows an example of a high availability configuration of the <span class="VariablesApplicationNameShort">CMS</span>. The installation is essentially the same as for the non-redundant configuration, but there is a virtual IP address shared by the two <span class="VariablesFalcon">Managed Service Appliance</span>s.</p>
+        <p>
+            <img src="Graphics/gs_wiring_ha_bypass_611x607.png" style="width: 611;height: 607;" />
+        </p>
+        <h2>Connect Power To The <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameCapitalized">Appliance</span>s</h2>
+        <p>To connect power to the <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span>s:</p>
+        <ol>
+            <li value="1">Plug the power cord into the power inlet of the AC-input power supply and connect the other end of the AC-input power supply cord to an AC outlet.</li>
+            <li value="2">If the <span class="VariablesPlatformNameShort">appliance</span> is functioning properly, the LEDs on its front panel will turn green.</li>
+        </ol>
+        <h2>Log In To The <span class="VariablesApplicationNameShort">CMS</span></h2>
+        <p>To log in to the <span class="VariablesApplicationNameShort">CMS</span>:</p>
+        <ol>
+            <li value="1">Launch a web browser (Internet Explorer, Firefox, Chrome, and Safari are supported for use with the <span class="VariablesApplicationNameShort">CMS</span>). </li>
+            <li value="2">Type <span class="CLIcommand">https://<span class="CLIcommandItalic">cmsipaddress</span></span> in the browser's address field (where <span class="Italics">cmsipaddress</span> is the preconfigured IP address of the <span class="VariablesApplicationNameShort">CMS</span>) to display the <span class="VariablesApplicationNameShort">CMS</span> login screen.</li>
+            <li value="3">Type the username and password for the account you wish to use. For example, to log in using the built-in administrator account, type <span class="CLIcommand">admin</span> for the default username and <span class="CLIcommand">admin</span> for the default password.</li>
+        </ol>
+    </body>
+</html>

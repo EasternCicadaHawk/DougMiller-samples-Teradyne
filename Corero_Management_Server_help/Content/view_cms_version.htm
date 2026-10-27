@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configure the CMS|Optional and Advanced Configuration" data-mc-ignored-words="cmsipaddress">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>View CMS Version Information</title>
+        <meta name="description" content="Display the CMS software version number by clicking CMS &gt; System Info in the web UI or by typing &quot;show system&quot; in the CLI." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#view_cms_version.htm">Show search and navigation tools</a>
+        </p>
+        <h1 data-mc-conditions="Default.RestAPI"><a name="aanchor39"></a>
+            <MadCap:concept term="How to" />View <span class="VariablesApplicationNameShort">CMS</span> Version Information</h1>
+        <p data-mc-conditions="Default.RestAPI">To display software version information for the <span class="VariablesApplicationNameShort">CMS</span>:</p>
+        <ul>
+            <li value="1" data-mc-conditions="Default.notRESTAPI"><span class="UIname">Web UI:</span> Click <span class="ControlName">CMS</span> &gt; <span class="ControlName">System Info</span> in the web UI tool bar.</li>
+            <li value="2" data-mc-conditions="Default.notRESTAPI"><span class="UIname">CLI:</span> Type the CLI command <span class="CLIcommand">show system</span></li>
+            <li value="3">
+                <MadCap:conditionalText data-mc-conditions="Default.notRESTAPI"><span class="UIname">REST&#160;API:</span> <![CDATA[ ]]></MadCap:conditionalText>
+                <MadCap:conditionalText data-mc-conditions="Default.RestAPI">Type <span class="CLIcommand">curl -k -v -u admin:smartwall -X GET https://<span class="CLIcommandItalic">cmsipaddress</span>/api/operational/system --header "Accept: application/vnd.yang.data+json"</span></MadCap:conditionalText>
+            </li>
+        </ul>
+    </body>
+</html>

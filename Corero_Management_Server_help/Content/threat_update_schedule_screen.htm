@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Screen and Command Descriptions">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Threat Update Schedule screen</title>
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#threat_update_schedule_screen.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor96"></a>
+            <MadCap:concept term="Screens &amp; commands" />Threat Update Schedule screen</h1>
+        <p>Clicking the <span class="ControlName">Threat UpdateSchedule</span> link in the <a href="threat_update_service.htm" target="_self" title="Show the description of the Threat Update Service screen and its controls" alt="Show the description of the Threat Update Service screen and its controls">Threat Update Service screen</a> displays the Threat Update Schedule screen for specifying the frequency with which the <span class="VariablesApplicationNameShort">CMS</span> will seek <span class="VariablesThreatUpdater">Threat Update Service</span> updates from the server and push them to managed <span class="VariablesProtectionDevice">Defense appliance</span>s. The CLI equivalent for this is <span class="CLIcommand">set threat-update threat-update-schedule</span>.</p>
+        <p>The Threat Update Schedule screen shows the update method that is in effect, currently. Click the <span class="ControlName">Choices</span> dropdown menu to change the update method:</p>
+        <ul>
+            <li value="1"><span class="Boldface">Set Interval</span> – Specify a custom interval, expressed in minutes, at which the <span class="VariablesApplicationNameShort">CMS</span> will seek and then push updates.</li>
+            <li value="2"><span class="Boldface">Every Day At</span> – Specify a single time at which the <span class="VariablesApplicationNameShort">CMS</span> will seek and push updates every day.</li>
+            <li value="3"><span class="Boldface">Every Hour</span> – This is the default method. Seek and push updates every hour. You must select this option to activate it.</li>
+        </ul>
+    </body>
+</html>

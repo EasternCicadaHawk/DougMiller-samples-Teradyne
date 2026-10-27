@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Concepts and Explanations">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>AAA Overview</title>
+        <meta name="description" content="An overview of authentication, authorization, and accounting for the SmartWall Threat Defense System." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#AAA_overview.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor40"></a>
+            <MadCap:concept term="Explanations" />AAA (Authentication, Authorization, and Accounting) Overview</h1>
+        <p>The closely related functions authentication, authorization, and accounting are referred to collectively as "AAA." AAA configuration is described in <a href="config_aaa.htm" target="_self" title="Learn how to configure user accounts" alt="Learn how to configure user accounts">Configuring User Accounts and Authentication</a>; the controls used to perform AAA administration are described in the <a href="users_groups_screen.htm" target="_self" title="See the description of the Users screen and its controls" alt="See the description of the Users screen and its controls">Users &amp; Authentication screen</a>.</p>
+        <p>AAA configuration defines how individual users and groups of users are enabled to access the <span class="VariablesApplicationNameShort">CMS</span> and managed devices, as well as which actions they are allowed to execute once they gain access.</p>
+        <p>The authentication described here is local authentication; that is, authentication based on credentials specified in the <span class="VariablesApplicationNameShort">CMS</span> configuration itself, rather than credentials specified in an <a href="config_ext_auth.htm" target="_self" title="Learn how to configure an external authentication regime" alt="Learn how to configure an external authentication regime">external authentication regime</a> such as Active Directory or RADIUS. By default, the <span class="VariablesApplicationNameShort">CMS</span> looks for authentication credentials locally, first, before looking for credentials at an external server.</p>
+        <p>In any case, whether the authentication regime in use is local or external, once a user authenticates successfully, that user is matched to a group. The user's access privileges are determined from the authorizations defined for the group.</p>
+        <p>The <span class="VariablesApplicationNameShort">CMS</span> supports a set of groups that correspond to essential roles:</p>
+        <ul>
+            <li value="1">admin – Access all aspects of the data models required to manage users, devices, data, etc. This group is intended for administrators who require privileges to define and change all aspects of the configuration. Note that admin users can change passwords for all accounts, including support users.</li>
+            <li value="2">defense – Configure server defense policies and view configurations, statistics, and reports.</li>
+            <li value="3">monitor – View configurations, statistics, and reports. No configuration actions are allowed.</li>
+            <li value="4">support – This group is reserved for use by <span class="VariablesCompanyNameShort">Corero</span> customer support. Similarly, screens and commands that are available to support users are reserved for use by <span class="VariablesCompanyNameShort">Corero</span> customer support, and are not described in this help set. Note that admin users can change passwords for support users.</li>
+        </ul>
+        <p>The <span class="VariablesApplicationNameShort">CMS</span> comes with two predefined users; admin and support, each corresponding to the role of the same name.</p>
+        <p>The privileges of the various user roles are summarized here:</p>
+        <table style="margin-left: 0;margin-right: auto;">
+            <col style="width: 150px;" />
+            <col style="width: 150px;" />
+            <col style="width: 150px;" />
+            <col style="width: 150px;" />
+            <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Admin</th>
+                    <th>Defense</th>
+                    <th>Monitor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Manage user accounts and roles: create, delete, and disable user accounts.
+                    </td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Perform software upgrades</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Device and topology configuration: network level setup, load balancing, HA</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>Defense configuration: server protection instances, PCAP filters, bypass mode changes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>View configuration: statistics/dashboards, generate reports, create support packages. Change own password.</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Linux shell access</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

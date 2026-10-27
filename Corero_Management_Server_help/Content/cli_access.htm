@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Reference Information|Command Line Interface (CLI)" data-mc-ignored-words="CLI">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" /><title>Accessing the CLI</title>
+        <meta name="description" content="Instructions for using the CMS command line interface." />
+        <link href="Resources/Stylesheets/OnlineStyles.css" rel="stylesheet" type="text/css" />
+        <script src="../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../Default.htm#cli_access.htm">Show search and navigation tools</a>
+        </p>
+        <h1><a name="aanchor145"></a>
+            <MadCap:concept term="How to" />Accessing the <span class="VariablesApplicationNameShort">CMS</span> CLI</h1>
+        <p>Access the <span class="VariablesApplicationNameShort">CMS</span> CLI from the <span class="VariablesApplicationNameShort">CMS</span> web UI by clicking <span class="ControlName">CLI</span> in the web UI tool bar, or access it directly using a terminal emulator (such as PuTTY) by initiating an SSH session to the <span class="VariablesApplicationNameShort">CMS</span>'s management interface on port 2024.</p>
+        <p>The <span class="VariablesApplicationNameShort">CMS</span> provides a command line interface (CLI) that can be used for all configuration tasks, including:</p>
+        <ul>
+            <li value="1">Configuring all aspects of the <span class="VariablesApplicationNameShort">CMS</span>. Type <span class="CLIcommand">configure</span> at the CLI prompt to enter configuration mode.</li>
+            <li value="2">Inspecting the configuration and state of <span class="VariablesCompanyNameShort">Corero</span> <span class="VariablesPlatformNameShort">appliance</span>s.</li>
+            <li value="3">Monitoring and inspecting log files.</li>
+        </ul>
+        <p>The CLI is derived directly from the <a href="Data_Models.htm" target="_self" title="Data model description" alt="Data model description">data models</a> that describe the configuration of the objects managed by the <span class="VariablesApplicationNameShort">CMS</span>, and provides you with full access to those models for configuration and monitoring. The CLI supports these functions through two command modes: <a href="cli_operational_mode.htm" target="_self" title="CLI operational mode" alt="CLI operational mode">operational mode</a> and <a href="cli_configure_mode.htm" target="_self" title="CLI configure mode" alt="CLI configure mode">configure mode</a>.</p>
+        <p>The CLI provides a number of amenities for ease-of-use, including tab-completion of partial commands and full command line history.</p>
+        <p>Type <span class="CLIcommand">?</span> at any time to display a list of commands available in the current mode, or type <span class="CLIcommand">?</span> after a command name to display a brief help description for that command.</p>
+        <p><span class="b">NOTE:</span> The CLI requires use of the ASCII 0x34 double quotation mark (") symbol for both left and right quoting of strings when spaces or special characters are used in the input of a single field. Use of the left and right double quotation marks from the ISO and extended sets (8220 and 8221) is not supported, and will result in an error.</p>
+    </body>
+</html>

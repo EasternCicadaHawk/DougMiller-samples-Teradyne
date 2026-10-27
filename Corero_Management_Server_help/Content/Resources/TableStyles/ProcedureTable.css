@@ -1,0 +1,3079 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+@media print
+{
+	mcTableStyle
+	{
+		
+	}
+
+	mcTableColumnStyle
+	{
+		font-size: 10pt;
+		font-family: 'Times New Roman';
+	}
+
+	mcTableColumnStyle
+	{
+		font-size: 10pt;
+		font-family: 'Times New Roman';
+		separator-style: solid;
+		separator-width: 1pt;
+		separator-color: #000000;
+	}
+
+	mcTableColumnStyle
+	{
+		font-size: 10pt;
+		font-family: 'Times New Roman';
+		separator-style: solid;
+		separator-width: 1pt;
+		separator-color: #000000;
+	}
+
+	mcTableHeadStyle
+	{
+		font-size: 10pt;
+		font-family: Arial;
+		color: #000000;
+		font-weight: bold;
+		font-style: normal;
+		separator-style: solid;
+		separator-width: 1pt;
+		separator-color: #000000;
+	}
+
+	mcTableBodyStyle
+	{
+		
+	}
+}
+
+mcTableStyle
+{
+	name: ProcedureTable;
+	border-collapse: separate;
+	border-left-style: solid;
+	border-left-width: 2pt;
+	border-left-color: #000000;
+	border-right-style: solid;
+	border-right-width: 2pt;
+	border-right-color: #000000;
+	border-top-style: solid;
+	border-top-width: 2pt;
+	border-top-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 2pt;
+	border-bottom-color: #000000;
+	max-id: 5;
+	cell-padding-left: 5pt;
+	cell-padding-right: 5pt;
+	cell-padding-top: 2pt;
+	cell-padding-bottom: 2pt;
+	margin-bottom: 12pt;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1pt;
+	separator-color: #000000;
+	name: Column1;
+	id: 0;
+	size: 2in;
+	font-family: Arial;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 4;
+	name: Column2;
+	size: 2in;
+	separator-style: solid;
+	separator-width: 1pt;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 5;
+	name: Column3;
+	size: 2in;
+	separator-style: solid;
+	separator-width: 1pt;
+	font-size: 12pt;
+	font-family: Arial;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1px;
+	separator-color: #000000;
+	name: Header1;
+	id: 2;
+	font-family: Arial;
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 12pt;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	separator-style: solid;
+	separator-width: 1pt;
+	separator-color: #000000;
+	name: Body1;
+	id: 1;
+	font-size: 12pt;
+	font-family: 'Times New Roman';
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+}
+
+
+/* Cell Styles: */
+ 
+@media print
+{
+	.TableStyle-ProcedureTable
+	{
+		border-spacing: 0px 0px;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column1-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column1-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column2-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column2-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column2-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column2-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column2-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadI-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column3-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadE-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadF-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column3-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadH-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+		border-bottom-width: 1pt;
+		border-bottom-color: #000000;
+		border-bottom-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-HeadD-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadC-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column3-Header1
+	{
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadB-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadA-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column3-Header1
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-HeadG-Column3-Header1 p
+	{
+		color: #000000;
+		font-family: Arial;
+		font-size: 10pt;
+		font-weight: bold;
+		font-style: normal;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column1-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column1- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column2-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column2- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootI-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootE-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootF-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootH-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootD-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootC-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-FootB-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootA-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column3-
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-FootG-Column3- p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column1-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column1-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column2-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column2-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyI-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyE-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyF-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyH-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyD-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyC-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+		border-right-width: 1pt;
+		border-right-color: #000000;
+		border-right-style: solid;
+	}
+
+	.TableStyle-ProcedureTable-BodyB-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyA-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column3-Body1
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+
+	.TableStyle-ProcedureTable-BodyG-Column3-Body1 p
+	{
+		font-family: 'Times New Roman';
+		font-size: 10pt;
+	}
+}
+
+.TableStyle-ProcedureTable
+{
+	border-collapse: separate;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-left-width: 2pt;
+	border-right-style: solid;
+	border-right-color: #000000;
+	border-right-width: 2pt;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-top-width: 2pt;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-bottom-width: 2pt;
+	margin-bottom: 12pt;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-ProcedureTable-Column-Column1
+{
+	width: 2in;
+}
+
+.TableStyle-ProcedureTable-Column-Column2
+{
+	width: 2in;
+}
+
+.TableStyle-ProcedureTable-Column-Column3
+{
+	width: 2in;
+}
+
+.TableStyle-ProcedureTable-Head-Header1
+{
+	
+}
+
+.TableStyle-ProcedureTable-HeadI-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadI-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column1-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column1-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadI-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadI-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column2-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column2-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadI-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadI-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadE-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadF-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadH-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	border-bottom-width: 1px;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+}
+
+.TableStyle-ProcedureTable-HeadD-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadC-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadB-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadA-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column3-Header1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-HeadG-Column3-Header1 p
+{
+	color: #000000;
+	font-family: Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.TableStyle-ProcedureTable-FootI-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootI-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootE-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootE-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootF-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootF-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootH-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootH-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootD-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootD-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootC-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootC-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootB-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootB-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootA-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootA-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootG-Column1-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootG-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-FootI-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootI-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootE-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootE-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootF-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootF-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootH-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootH-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootD-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootD-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootC-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootC-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootB-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootB-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootA-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootA-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootG-Column2-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootG-Column2- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootI-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootI-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootE-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootE-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootF-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootF-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootH-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootH-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootD-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootD-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootC-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootC-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootB-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-FootB-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootA-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootA-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootG-Column3-
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-FootG-Column3- p
+{
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-Body-Body1
+{
+	
+}
+
+.TableStyle-ProcedureTable-BodyI-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyI-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	border-right-width: 1pt;
+	border-right-color: #000000;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column1-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-size: 12pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column1-Body1 p
+{
+	font-size: 12pt;
+	font-style: normal;
+	font-family: Arial;
+}
+
+.TableStyle-ProcedureTable-BodyI-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyI-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column2-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column2-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyI-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyI-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyE-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyF-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyH-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #000000;
+	border-bottom-style: solid;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyD-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyC-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+	border-right-width: 1pt;
+	border-right-style: solid;
+}
+
+.TableStyle-ProcedureTable-BodyB-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyA-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column3-Body1
+{
+	padding-left: 5pt;
+	padding-right: 5pt;
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	font-style: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+.TableStyle-ProcedureTable-BodyG-Column3-Body1 p
+{
+	font-style: normal;
+	font-family: Arial;
+	font-size: 12pt;
+}
+
+
